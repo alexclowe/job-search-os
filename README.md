@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-0b1220?labelColor=ffb86b&color=0b1220"></a>
-  <a href="CHANGELOG.md"><img alt="Version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-0b1220?labelColor=ffb86b&color=0b1220"></a>
+  <a href="CHANGELOG.md"><img alt="Version 1.3.0" src="https://img.shields.io/badge/version-1.3.0-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="docs/skill-catalog.md"><img alt="38 skills" src="https://img.shields.io/badge/skills-38-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="#requirements"><img alt="Works with Claude Pro, Max, Team" src="https://img.shields.io/badge/works%20with-Claude%20Pro%20%C2%B7%20Max%20%C2%B7%20Team-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml/badge.svg"></a>
@@ -124,11 +124,15 @@ career-ops ships archetypes for a handful of technical roles. This registry is f
 
 An archetype is a short, hedged brief every job reads when you name your profession: the titles hiring teams actually use, where postings tend to live, what a recruiter screens for first, the story types that land, resume conventions, how interviews usually run, how pay is usually structured, what's usually negotiable, and red flags in postings. It sharpens the posting decode, the resume ordering, interview prep, and the negotiation asks. It never puts a claim, a number, or a keyword on your resume that your own record does not support.
 
-| Included | | |
+**108 archetypes ship today**, from nurses, teachers, and bookkeepers to electricians, cooks, truck drivers, physicians, and software developers. The full list, with every name and alias each one covers, is in [`archetypes/index.md`](archetypes/index.md); the jobs look your profession up there first. A few to start with:
+
+| | | |
 |---|---|---|
-| [Nurse](archetypes/nurse.md) | [Teacher](archetypes/teacher.md) | [Bookkeeper](archetypes/bookkeeper.md) |
-| [Loan officer](archetypes/loan-officer.md) | [Paralegal](archetypes/paralegal.md) | [Real estate agent](archetypes/real-estate-agent.md) |
-| [Social media manager](archetypes/social-media-manager.md) | [Personal trainer](archetypes/personal-trainer.md) | [Template for yours](archetypes/_template.md) |
+| [Nurse](archetypes/nurse.md) | [Electrician](archetypes/electrician.md) | [Restaurant front of house](archetypes/restaurant-front-of-house.md) |
+| [Teacher](archetypes/teacher.md) | [Truck driver](archetypes/truck-driver.md) | [Software developer](archetypes/software-developer.md) |
+| [Bookkeeper](archetypes/bookkeeper.md) | [Security guard](archetypes/security-guard.md) | [Template for yours](archetypes/_template.md) |
+
+Each one is written for how that line of work is actually paid (hourly, salary, commission, day rate, per mile, per visit, or a salary schedule), carries US pay, openings, and entry education from public BLS data, notes what differs in Canada with the official body to check, and cites its sources. The archetypes are CC BY 4.0 (credits in [`archetypes/NOTICE.md`](archetypes/NOTICE.md)); the rest of the repository is MIT.
 
 Know a profession well? Copy [`archetypes/_template.md`](archetypes/_template.md), keep every line hedged and short, cite an official body for anything about licensing, run `python3 scripts/validate.py`, and open a pull request. Or start with an [archetype request](https://github.com/alexclowe/job-search-os/issues/new?template=profession-archetype.yml). The [registry index](archetypes/README.md) has the house style.
 
@@ -238,4 +242,4 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md). The most useful thing you can send is a
 
 ## Licence
 
-MIT. See [LICENSE](LICENSE).
+MIT for the plugin and code. See [LICENSE](LICENSE). The profession archetypes in [`archetypes/`](archetypes/) are CC BY 4.0 and use BLS and O\*NET® 31.0 data; credits are in [`archetypes/NOTICE.md`](archetypes/NOTICE.md).

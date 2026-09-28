@@ -1,14 +1,14 @@
 # Social Media Manager — job-search archetype
 
-**Slug:** `social-media-manager` · **Aliases:** social media specialist, community manager (adjacent), content manager, digital marketing coordinator, social media strategist
-**Also read:** none
+**Slug:** `social-media-manager` · **Aliases:** social media specialist, social media strategist, content manager (social media), digital marketing coordinator
+**Also read:** `marketing-specialist`, `pr-specialist`, `writer-editor`
 
 ## Target titles (and the adjacent ones)
 - Social Media Manager, Social Media Specialist/Coordinator, Content Creator (in-house), Community Manager, Social Media Strategist, Digital Marketing Manager (with social ownership), Head of Social
 - Adjacent worth searching: Content Marketing Manager, Brand Marketing Coordinator, Influencer/Partnerships Manager, Marketing Generalist at a small company, Agency Account Coordinator
 
 ## Where the postings live
-- The general boards and marketing-specific boards, agency career pages, brand career sites, and creator/marketing communities; freelance and contract work comes largely through referral, agencies, and platform marketplaces
+- Usually the general boards and marketing-specific boards, agency career pages, brand career sites, and creator/marketing communities; freelance and contract work comes largely through referral, agencies, and platform marketplaces
 - Many roles are posted as "marketing coordinator" with social as the real job; search by duty, not only by title
 
 ## What a recruiter screens for first
@@ -30,13 +30,33 @@
 - Expect questions on results you can show, tools, and handling a public complaint
 
 ## How pay is usually structured
+<!-- facts:start (generated from the evidence pack by scripts/job-search-os/render-archetype-facts.py; do not edit by hand) -->
+- **US pay, nearest occupation only:** there is no federal occupation code for this role, so this is Market Research Analysts and Marketing Specialists, a rough guide at best: median $78,760 a year ($37.87 an hour); most earn between $43,390 and $155,480 a year (BLS OEWS May 2025, SOC 13-1161, the largest of the occupations this archetype covers). Ten percent earn less than the low figure and ten percent more than the high one.
+- **What those pay figures cover:** employees only, not the self-employed; they include commissions, production bonuses and tips, and leave out overtime, shift differentials and non-production bonuses (BLS OEWS technical note).
+- **Openings, nearest occupations:** about 105,000 a year projected for 2025–35 across the 2 occupations it covers (BLS Projections 2025–35).
+- **Typical entry education:** a bachelor's degree, the level BLS lists as typical for entry (BLS Projections 2025–35, SOC 13-1161). Individual employers may ask for more or less.
+<!-- facts:end -->
 - Annual salary for in-house roles; freelancers and contractors often bill a monthly retainer or hourly; agency roles sometimes add a bonus
 
 ## What's usually negotiable
-- Salary or retainer, the scope (channels, posting volume, whether paid ads or community management are included), take-home exercise compensation, remote days, and tools budget
+- Usually open to discussion: salary or retainer, the scope (channels, posting volume, whether paid ads or community management are included), take-home exercise compensation, remote days, and tools budget
 
 ## Red flags in postings
-- One person expected to own strategy, design, video, paid, and community for coordinator pay; "must be on call for the brand 24/7"; posting counts stated as the job
+- Often worth a second look: one person expected to own strategy, design, video, paid, and community for coordinator pay; "must be on call for the brand 24/7"; posting counts stated as the job
 
 ## Verify before relying on this
 - The platforms' own business resources for current features; the employer's live accounts for what the job actually looks like
+
+## In Canada
+<!-- canada:start (generated from the evidence pack by scripts/job-search-os/render-archetype-facts.py; do not edit by hand) -->
+- **NOC 2021:** possibly 11202. This is an uncertain title match by the maintainers, not an official concordance, so check the unit group's definition on Statistics Canada's NOC site first.
+- **Outlook and wages:** Job Bank publishes a three-year outlook and wage ranges by NOC and region; check your province there rather than using US figures.
+<!-- canada:end -->
+- Bilingual English and French is often asked for in Quebec and federal-sector roles, and Canada's anti-spam legislation (CASL) comes up for any role that runs email or messaging campaigns, so check the posting's language requirements.
+
+## Sources
+<!-- sources:start (generated from the evidence pack by scripts/job-search-os/render-archetype-facts.py; do not edit by hand) -->
+- Pay, openings and entry education: U.S. Bureau of Labor Statistics, OEWS May 2025 and Employment Projections 2025–35 (public domain); what the wage figures include is from the OEWS technical note, https://www.bls.gov/news.release/ocwage.tn.htm . SOC 13-1161, 27-3031. Retrieved 2026-09-28.
+- Canada: NOC 2021, Statistics Canada; Job Bank, Employment and Social Development Canada (Open Government Licence – Canada).
+- This archetype's text is licensed CC BY 4.0; see `LICENSE` and `NOTICE.md` in this folder.
+<!-- sources:end -->

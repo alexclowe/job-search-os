@@ -21,7 +21,7 @@ practice round: one question, your answer, honest feedback, the next question.
   brief and **Company brief — [Company].md** in this Project, and the posting.
 - **Profession archetype** — `./archetypes/<profession>.md` in this Project, then the
   `archetypes/` folder that ships with the Tailor & apply job — its **How interviews
-  usually run** section sets the format.
+  usually run** section sets the format. Find the file through `archetypes/index.md` first (it ships in the same folder): match the profession against its Name and Also called columns and open only that one file. If more than one row fits ("nurse" could be a registered nurse, an LPN, a nurse practitioner, or a nursing assistant), ask one short question with those rows as options before opening anything.
 
 Nothing found → run a general behavioral round and say so.
 

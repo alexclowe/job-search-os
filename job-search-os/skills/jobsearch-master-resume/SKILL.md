@@ -23,7 +23,7 @@ at one posting — Tailor & apply does that.
   a job description from a past role. Read it first and ask only about gaps.
 - **Profession archetype** — `./archetypes/<profession>.md` in this Project, then the
   `archetypes/` folder that ships with the Tailor & apply job; use its resume
-  conventions and the titles hiring teams use.
+  conventions and the titles hiring teams use. Find the file through `archetypes/index.md` first (it ships in the same folder): match the profession against its Name and Also called columns and open only that one file. If more than one row fits ("nurse" could be a registered nurse, an LPN, a nurse practitioner, or a nursing assistant), ask one short question with those rows as options before opening anything.
 
 ## The interview (short — three cards at most, then draft)
 

@@ -19,7 +19,7 @@ Continue only if the person gives their minimum pay now.
 If the profile or offer names a profession, read its archetype (`./archetypes/<profession>.md`
 in this Project, then `jobsearch-workflow-tailor-apply/archetypes/`) for how pay is
 usually structured and what's usually negotiable there. It shapes the asks; it never
-supplies a number.
+supplies a number. Find the file through `archetypes/index.md` first (it ships in the same folder): match the profession against its Name and Also called columns and open only that one file. If more than one row fits ("nurse" could be a registered nurse, an LPN, a nurse practitioner, or a nursing assistant), ask one short question with those rows as options before opening anything.
 
 ## Inputs
 

@@ -92,6 +92,7 @@ profile so I won't ask again — say 'undo' to remove it." Never block the job o
 profession, look for a matching archetype file — first `./archetypes/<profession>.md`
 in this Project, then the `archetypes/` folder that ships next to this skill (for
 example `archetypes/nurse.md`, `archetypes/teacher.md`, `archetypes/bookkeeper.md`).
+Find the file through `archetypes/index.md` first (it ships in the same folder): match the profession against its Name and Also called columns and open only that one file. If more than one row fits ("nurse" could be a registered nurse, an LPN, a nurse practitioner, or a nursing assistant), ask one short question with those rows as options before opening anything.
 An archetype is a short, hedged brief: the titles that hiring teams use for the role,
 where the postings tend to live, what a recruiter screens for first, the story types
 that land, the red flags in postings, how pay is usually structured, and what's

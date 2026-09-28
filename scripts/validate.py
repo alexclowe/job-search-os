@@ -12,9 +12,16 @@ Checks
   2. .claude-plugin/marketplace.json parses, every plugin `source` points at a
      folder in this repo that carries .claude-plugin/plugin.json, and the
      manifest's plugin name matches plugin.json.
-  3. Every archetypes/*.md (except _template.md and README.md) carries the
-     required sections, a Slug line that matches its filename, and no dollar
-     figures.
+  3. Every archetypes/*.md (except _template.md, README.md, index.md and
+     NOTICE.md) carries the required sections, a Slug line that matches its
+     filename, and the three generated-block markers (facts, canada, sources).
+     Dollar figures, percentages and thousands-separated numbers may appear
+     only inside those generated blocks, which the maintainers fill from
+     public BLS and O*NET data; contributors leave them empty. A filled Sources
+     block must carry the CC BY 4.0 line, and the verbatim O*NET credit when
+     the file is marked "uses: onet".
+  4. archetypes/ carries LICENSE (CC BY 4.0) and NOTICE.md, and every
+     archetype file is listed in archetypes/index.md.
 Exit status is non-zero on any failure; every problem is printed.
 """
 from __future__ import annotations
@@ -37,7 +44,18 @@ REQUIRED_ARCHETYPE_SECTIONS = [
     "## What's usually negotiable",
     "## Red flags in postings",
     "## Verify before relying on this",
+    "## In Canada",
+    "## Sources",
 ]
+NOT_ARCHETYPES = {"_template.md", "README.md", "index.md", "NOTICE.md"}
+BLOCKS = {name: re.compile(rf"<!-- {name}:start[^>]*-->\n(.*?)<!-- {name}:end -->", re.S)
+          for name in ("facts", "canada", "sources")}
+NUMBERS = re.compile(r"\$\s?\d|\d\s?%|\b\d{1,3},\d{3}\b")
+ONET_CREDIT = (
+    "This page includes information from the O*NET 31.0 Database by the U.S. Department of "
+    "Labor, Employment and Training Administration (USDOL/ETA). Used under the CC BY 4.0 "
+    "license. O*NET® is a trademark of USDOL/ETA."
+)
 
 SLUG_RE = re.compile(r"^\*\*Slug:\*\* `([a-z0-9-]+)`", re.M)
 
@@ -133,9 +151,14 @@ def check_archetypes() -> int:
     if not folder.exists():
         fail("archetypes/ folder is missing")
         return 0
+    for name in ("LICENSE", "NOTICE.md", "index.md"):
+        if not (folder / name).exists():
+            fail(f"archetypes/{name} is missing")
+    index = (folder / "index.md").read_text(encoding="utf-8") if (folder / "index.md").exists() else ""
+    listed = set(re.findall(r"^\| `([a-z0-9-]+)\.md` \|", index, re.M))
     count = 0
     for md in sorted(folder.glob("*.md")):
-        if md.name in {"_template.md", "README.md"}:
+        if md.name in NOT_ARCHETYPES:
             continue
         count += 1
         rel = md.relative_to(ROOT)
@@ -148,8 +171,32 @@ def check_archetypes() -> int:
         for section in REQUIRED_ARCHETYPE_SECTIONS:
             if not any(line.startswith(section) for line in text.splitlines()):
                 fail(f"{rel}: missing section `{section}`")
-        if re.search(r"\$\s?\d", text):
-            fail(f"{rel}: contains a dollar figure (archetypes carry no salary numbers)")
+        outside = text
+        for name, rx in BLOCKS.items():
+            if not rx.search(text):
+                fail(f"{rel}: missing the generated `{name}` block markers (copy them from _template.md)")
+            outside = rx.sub("", outside)
+        for n in sorted(set(NUMBERS.findall(outside))):
+            fail(f"{rel}: figure `{n}` outside the generated blocks (the maintainers add numbers from public data)")
+        src = BLOCKS["sources"].search(text)
+        if src and src.group(1).strip():
+            if "licensed CC BY 4.0" not in src.group(1):
+                fail(f"{rel}: Sources block lacks the CC BY 4.0 licence line")
+            if "<!-- uses: onet -->" in text and ONET_CREDIT not in src.group(1):
+                fail(f"{rel}: marked `uses: onet` but the Sources block lacks the O*NET credit")
+        also = re.search(r"^\*\*Also read:\*\*\s*(.*)$", text, re.M)
+        if not also:
+            fail(f"{rel}: missing `**Also read:**` line")
+        elif also.group(1).strip() != "none" and not re.fullmatch(r"`[a-z0-9-]+`(, `[a-z0-9-]+`)*", also.group(1).strip()):
+            fail(f"{rel}: Also read must be `slug` references separated by commas (or none), no other text")
+        canada = BLOCKS["canada"].search(text)
+        if canada and canada.group(1).strip() and "no clear match" not in canada.group(1):
+            m = re.search(r"\*\*NOC 2021:\*\* (?:possibly )?(.+?)(?:\.|,) ", canada.group(1))
+            codes = re.split(r" or |; ", m.group(1)) if m else []
+            if not codes or not all(re.fullmatch(r"\d{5}", c) for c in codes):
+                fail(f"{rel}: the NOC line must list only 5-digit unit groups")
+        if listed and md.stem not in listed:
+            fail(f"{rel}: not listed in archetypes/index.md")
     return count
 
 

@@ -47,7 +47,7 @@ and `Target level:` means career stage. Read them the same way.
 **Profession archetype (read, don't ask).** If the profile names a profession, read the
 matching archetype — `./archetypes/<profession>.md` in this Project first, then the
 `archetypes/` folder that ships with the Tailor & apply job
-(`jobsearch-workflow-tailor-apply/archetypes/`). Use its **Where the postings live**
+(`jobsearch-workflow-tailor-apply/archetypes/`). Find the file through `archetypes/index.md` first (it ships in the same folder): match the profession against its Name and Also called columns and open only that one file. If more than one row fits ("nurse" could be a registered nurse, an LPN, a nurse practitioner, or a nursing assistant), ask one short question with those rows as options before opening anything. Use its **Where the postings live**
 section when a move is about finding more openings (for example hospital and health-
 system career sites for nurses, district and state education job boards for teachers),
 and its **What's usually negotiable** section when an offer is in play. If no archetype

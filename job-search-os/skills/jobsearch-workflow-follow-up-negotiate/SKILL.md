@@ -45,7 +45,7 @@ person supplies the number.
 **Profession archetype (read, don't ask).** If the profile or the offer names a
 profession, read the matching archetype — `./archetypes/<profession>.md` in this
 Project first, then the `archetypes/` folder that ships with the Tailor & apply job
-(`jobsearch-workflow-tailor-apply/archetypes/`). Use its **How pay is usually structured**
+(`jobsearch-workflow-tailor-apply/archetypes/`). Find the file through `archetypes/index.md` first (it ships in the same folder): match the profession against its Name and Also called columns and open only that one file. If more than one row fits ("nurse" could be a registered nurse, an LPN, a nurse practitioner, or a nursing assistant), ask one short question with those rows as options before opening anything. Use its **How pay is usually structured**
 and **What's usually negotiable** sections to shape the questions to ask and the
 counter. It never supplies a figure; if no archetype matches, say nothing about it.
 

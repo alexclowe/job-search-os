@@ -2,6 +2,23 @@
 
 All notable changes to the Job Search AI Operating System are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow the plugin's `version` in `job-search-os/.claude-plugin/plugin.json`, and each version is also a [GitHub Release](https://github.com/alexclowe/job-search-os/releases) with the plugin zip and the documentation zip attached.
 
+## [1.3.0] — 2026-09-28
+
+Profession archetypes for 108 jobs.
+
+### Added
+- **108 profession archetypes** (up from 8), from nurses, teachers, and bookkeepers to electricians, cooks, truck drivers, security guards, physicians, and software developers. Each covers target titles, where postings live, what a recruiter screens for first, story types that land, resume conventions, how interviews usually run, how pay is usually structured, what's usually negotiable, red flags in postings, where to verify licensing, and what differs in Canada.
+- **Pay-type-aware archetypes:** each one is written for how that work is actually paid (hourly with overtime and differentials, salary, commission and draws, day rates, per-mile, per-visit, salary schedules, tips), so the minimum-pay check and the negotiation asks compare like with like.
+- **US facts from public data:** pay ranges, projected openings, and typical entry education from BLS Occupational Employment and Wage Statistics (May 2025) and Employment Projections 2025–35; titles and tasks from the O\*NET® 31.0 Database. Numbers appear only in generated blocks, never in hand-written text.
+- **Canada notes:** the NOC 2021 unit group where one fits (or a plain "no clear match"), Job Bank for outlook and wages, and the provincial regulator, college, or certification body to check, named only after it was checked on its official site.
+- **Index lookup:** `archetypes/index.md` lists every archetype with the names and aliases it covers; every job reads it first and opens only the matching file.
+- **"Also read"** links between related archetypes (for example paralegal and lawyer).
+- `archetypes/NOTICE.md` and `archetypes/LICENSE`.
+
+### Changed
+- The archetypes are licensed **CC BY 4.0**; the plugin and code stay MIT.
+- Every archetype was reviewed against official sources before release: two pilot reviews, then a review of each of the two batches, with each factual fix checked on the source the review cited.
+
 ## [1.2.0] — 2026-09-28
 
 The work before you apply and after you interview.

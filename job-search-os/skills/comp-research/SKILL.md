@@ -15,6 +15,7 @@ type and minimum pay (older profiles say `Minimum salary:` or `Salary floor:`).
 Continue without it if the person gives the role, pay type, and location now. If the
 profile names a profession, read its archetype (`./archetypes/<profession>.md`, then
 `jobsearch-workflow-tailor-apply/archetypes/`) for how pay is usually structured.
+Find the file through `archetypes/index.md` first (it ships in the same folder): match the profession against its Name and Also called columns and open only that one file. If more than one row fits ("nurse" could be a registered nurse, an LPN, a nurse practitioner, or a nursing assistant), ask one short question with those rows as options before opening anything.
 
 ## Inputs
 
