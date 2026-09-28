@@ -5,6 +5,9 @@ description: Work my inbox for the Job Search AI Operating System. Invoke when a
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Never name profile or connection filenames in conversation.
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
 
 The inbox is where searches quietly stall: an unanswered recruiter, a scheduling thread
 lost under newsletters, a rejection nobody learned from. This job clears it in one pass

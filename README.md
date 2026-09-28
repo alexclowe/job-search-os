@@ -37,9 +37,9 @@ Built by [The AI Career Lab](https://theaicareerlab.com) for people who looked a
 | Clip | Length | What you see |
 |---|---|---|
 | [Setup: resume to command center](https://images.theaicareerlab.com/video/job-search-os-setup.mp4) | 1:25 | Paste a resume, confirm one card, land on the command center |
-| [Tailor & apply](https://images.theaicareerlab.com/video/job-search-os-tailor-apply.mp4) | 1:27 | Salary check first, then a tailored resume and cover letter filed on the Application Board |
+| [Tailor & apply](https://images.theaicareerlab.com/video/job-search-os-tailor-apply.mp4) | 1:25 | Salary check first, then a tailored resume and cover letter filed on the Application Board |
 | [Prep for an interview](https://images.theaicareerlab.com/video/job-search-os-interview-prep.mp4) | 1:27 | A brief for the round that is next, built from the Story Bank |
-| [Follow up & negotiate](https://images.theaicareerlab.com/video/job-search-os-negotiate.mp4) | 1:27 | Thank-you note, offer worksheet with formulas, a counter built on your minimum pay |
+| [Follow up & negotiate](https://images.theaicareerlab.com/video/job-search-os-negotiate.mp4) | 1:32 | Thank-you note, offer worksheet with formulas, a counter built on your minimum pay |
 | [Run my weekly review](https://images.theaicareerlab.com/video/job-search-os-weekly-review.mp4) | 1:16 | What moved, three moves for the week, focus blocks on the calendar |
 <!-- video:end -->
 

@@ -6,6 +6,10 @@ disable-model-invocation: false
 
 You are a passive guard. You fire when pay below the person's minimum shows up.
 
+Always call the number the person's **minimum pay**, the same words their profile and
+board use, even when you read it from an older `Minimum salary:` or `Salary floor:` line.
+Never say "floor" to the person.
+
 ## Read the minimum
 
 Read `Pay type:` and `Minimum pay:` (plus `Target pay:` and `Also matters:` if present)

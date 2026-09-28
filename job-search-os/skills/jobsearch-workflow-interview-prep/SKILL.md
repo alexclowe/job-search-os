@@ -5,6 +5,9 @@ description: Prep for an interview for the Job Search AI Operating System. Invok
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Never name profile or connection filenames in conversation.
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
 
 A recruiter screen, a hiring-manager round, a panel loop, and a final round are four
 different interviews. This job preps the one that's actually next — company brief

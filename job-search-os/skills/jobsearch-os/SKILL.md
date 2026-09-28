@@ -6,6 +6,9 @@ description: The command center for the Job Search AI Operating System — your 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Profile and connection filenames are technical — never
 > name them in conversation.
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
 
 This is the home screen. It drafts nothing itself: it loads the person's career profile,
 shows their jobs as cards, runs the one they pick, and comes back here afterwards.

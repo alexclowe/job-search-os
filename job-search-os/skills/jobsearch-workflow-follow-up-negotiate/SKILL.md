@@ -5,6 +5,9 @@ description: Follow up and negotiate for the Job Search AI Operating System. Inv
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Never name profile or connection filenames in conversation.
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
 
 Everything after the interview: the note the same day, the nudge that isn't needy, and
 the counter that holds to your minimum pay without burning the offer.

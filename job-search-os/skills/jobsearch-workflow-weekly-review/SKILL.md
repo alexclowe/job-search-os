@@ -5,6 +5,9 @@ description: Run my weekly review for the Job Search AI Operating System. Invoke
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Never name profile or connection filenames in conversation.
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
 
 A search runs on a weekly rhythm or it runs on anxiety. Monday in one pass: what
 moved, what went quiet, the three moves that matter, and time protected for them.
