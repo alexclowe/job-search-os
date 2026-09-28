@@ -30,6 +30,25 @@ If there's no Source on older rows, ask once whether the person wants to fill it
 for the active ones (a quick clickable list per row) — or run the report without the
 by-source view.
 
+## Pre-flight — Moves saved on the board
+
+Before you read or change the **Application Board**, apply any moves the person made
+on the board itself. A board built from the template saves each move in the board
+artifact's storage: one document per row in its `moves` collection, holding the row
+id, the new stage, and when it was saved. Read that collection with the artifact
+storage tool. For each saved move whose row is still on the board:
+- set that row's **Stage** in the board's data block to the saved stage;
+- if the date for the new stage is blank, fill it with the date the move was saved
+  (Applied → Applied on, Screening → Screen on, Interviewing → Interview on, Onsite →
+  Final on, Offer → Offer on, Closed → Closed on);
+- a row moved to Closed with no Closed why: ask for the reason once, as clickable
+  choices, or leave it blank.
+Then republish the board once, delete exactly the saved-move documents you applied
+(and any for rows no longer on the board), update the CSV backup, and say it in one
+line: "Applied 2 moves you made on the board: Northwind → Interviewing, Harbor →
+Closed." If the board has no storage, the storage tool isn't available here, or
+nothing is saved, skip this without comment and use the board as it is.
+
 ## Count honestly
 
 For each source and in total: applications (rows with Applied on, or stage Applied or
@@ -76,6 +95,25 @@ fix for it. Mention a second only if it's close.
 
 Save as "Funnel — [date].md" in this Project when run on its own; inside the weekly
 review it goes in the week plan.
+
+## The Search Funnel view (read-only)
+
+When artifacts are available, also publish (or update, never duplicate) the **Search
+Funnel** artifact from the fixed template `templates/search-funnel.html` that ships
+with this skill (`jobsearch-funnel-report/templates/search-funnel.html`). Copy the
+file exactly and change **only the JSON inside `<script type="application/json"
+id="funnel-data">`**:
+- `rows`: one object per Application Board row after saved moves are applied
+  (samples excluded), with `stage`, `source`, `closedWhy`, `appliedOn`, `replyOn`,
+  `screenOn`, `interviewOn`, `finalOn`, `offerOn` copied as they are on the board
+  (blank as "").
+- `whereItStops` and `tryFirst`: the same one-line diagnosis and fix as the report,
+  in words. Leave both blank below the minimum sample.
+- `asOf`: today's date. Leave `minSample` at 10.
+Never type a count or a rate into it: the view computes every number from the rows.
+Publish it without storage or any other capability; it is a picture of the board, and
+it changes only when a job rebuilds it. If artifacts aren't available, the markdown
+report above is the whole output.
 
 ## Constraints
 

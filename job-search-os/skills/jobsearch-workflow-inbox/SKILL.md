@@ -21,12 +21,14 @@ and keeps the board honest.
 - **Anything you come back to** — the Application Board, the Story Bank, the Offer
   Tracker, the Weekly Search Log — **must be published or updated as a live artifact**
   in your Artifacts sidebar on every run (a CSV alone is not enough when artifacts are
-  available), with its data stored in the artifact so you can edit rows and stages in
-  place. Before creating one, look for an existing artifact with the same name
+  available). Before creating one, look for an existing artifact with the same name
   (including from earlier conversations) and update it instead of making a duplicate.
-  Keep a CSV copy of a tracker's rows in the Project as a backup and keep it in sync.
-  Sample-run items go in a separate "Samples" section and never count toward totals.
-  If artifacts aren't available in this environment, use the CSV alone and say so once.
+  The **Application Board** is always built from its fixed template (see "Application
+  Board" in the Tailor & apply job): a board with a column per stage, where the person
+  can move a card themselves. Keep a CSV copy of a tracker's rows in the Project as a
+  backup and keep it in sync. Sample-run items go in a separate "Samples" section and
+  never count toward totals. If artifacts aren't available in this environment, use the
+  CSV alone and say so once.
 - **Emails** are Gmail drafts when Gmail is connected, otherwise paste-ready text (also
   saved as a .txt file). Nothing is ever sent.
 - In the close, name the one output to look at first.
@@ -51,6 +53,25 @@ Read `./jobsearch-connections.md`. Present → route to connected tools. Absent 
 once: "I'm not connected to your tools yet — say 'connect my tools' anytime. For now
 everything comes out paste-ready." Check which connector tools exist; never assume a
 tool name. Never read or write an employer's mailbox.
+
+## Pre-flight — Moves saved on the board
+
+Before you read or change the **Application Board**, apply any moves the person made
+on the board itself. A board built from the template saves each move in the board
+artifact's storage: one document per row in its `moves` collection, holding the row
+id, the new stage, and when it was saved. Read that collection with the artifact
+storage tool. For each saved move whose row is still on the board:
+- set that row's **Stage** in the board's data block to the saved stage;
+- if the date for the new stage is blank, fill it with the date the move was saved
+  (Applied → Applied on, Screening → Screen on, Interviewing → Interview on, Onsite →
+  Final on, Offer → Offer on, Closed → Closed on);
+- a row moved to Closed with no Closed why: ask for the reason once, as clickable
+  choices, or leave it blank.
+Then republish the board once, delete exactly the saved-move documents you applied
+(and any for rows no longer on the board), update the CSV backup, and say it in one
+line: "Applied 2 moves you made on the board: Northwind → Interviewing, Harbor →
+Closed." If the board has no storage, the storage tool isn't available here, or
+nothing is saved, skip this without comment and use the board as it is.
 
 ## Intake
 

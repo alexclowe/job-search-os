@@ -15,11 +15,13 @@ Work inside your Project so your career profile loads. The rules under everythin
 | Clear the inbox | **"work my inbox"** · "reply to this recruiter" |
 | Get ready for a round | **"prep me for an interview"** · "hiring manager round tomorrow" |
 | The day after, or an offer | **"follow up and negotiate"** · "I got an offer" · "help me counter" |
+| Compare offers side by side | **"compare my offers"** (an **Offer Comparison** view) |
 | Plan the week | **"run my weekly review"** |
-| See where your search stalls | **"where is my search stalling"** · "funnel report" |
+| See where your search stalls | **"where is my search stalling"** · "funnel report" (also a **Search Funnel** view) |
+| Move an application | Use the card's **Stage** menu on the **Application Board**, or say **"move [company] to [stage]"** |
 | Check a posting or recruiter | **"is this job real?"** · "is this recruiter legit?" |
 | Find who you know there | **"import my LinkedIn connections"** · "who do I know at [company]" |
-| Practice out loud | **"mock interview"** · "practice it with me" |
+| Practice out loud | **"mock interview"** · "practice it with me" (a **Practice Round** view with a timer) |
 | Answer an online application | **"answer these application questions"** |
 | No resume yet | **"build my resume"** |
 | Link Gmail, Calendar, Drive | **"connect my tools"** (personal accounts only) |

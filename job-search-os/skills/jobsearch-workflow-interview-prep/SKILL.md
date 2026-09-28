@@ -21,12 +21,14 @@ first, then the person's own stories — and then lets them practice it out loud
 - **Anything you come back to** — the Application Board, the Story Bank, the Offer
   Tracker, the Weekly Search Log — **must be published or updated as a live artifact**
   in your Artifacts sidebar on every run (a CSV alone is not enough when artifacts are
-  available), with its data stored in the artifact so you can edit rows and stages in
-  place. Before creating one, look for an existing artifact with the same name
+  available). Before creating one, look for an existing artifact with the same name
   (including from earlier conversations) and update it instead of making a duplicate.
-  Keep a CSV copy of a tracker's rows in the Project as a backup and keep it in sync.
-  Sample-run items go in a separate "Samples" section and never count toward totals.
-  If artifacts aren't available in this environment, use the CSV alone and say so once.
+  The **Application Board** is always built from its fixed template (see "Application
+  Board" in the Tailor & apply job): a board with a column per stage, where the person
+  can move a card themselves. Keep a CSV copy of a tracker's rows in the Project as a
+  backup and keep it in sync. Sample-run items go in a separate "Samples" section and
+  never count toward totals. If artifacts aren't available in this environment, use the
+  CSV alone and say so once.
 - **Emails** are Gmail drafts when Gmail is connected, otherwise paste-ready text (also
   saved as a .txt file). Nothing is ever sent.
 - In the close, name the one output to look at first.
@@ -210,6 +212,8 @@ mock interview inline (the `jobsearch-mock-interview` method):
 - Clinical scenarios are practice only — feedback on structure and communication, not
   clinical correctness; say once to check clinical content against their training and
   facility policy.
+- **The Practice Round view**, when artifacts are available, exactly as the mock
+  interview publishes it (its template and its data rules).
 - **Debrief:** per-question read (strong · solid · needs a story · needs a shorter
   version), three fixes with the exact line to practice, and any new story the person
   told — offered for the Story Bank, only what they actually said. Saved as "Practice —

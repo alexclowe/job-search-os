@@ -70,6 +70,24 @@ Nothing found → run a general behavioral round and say so.
   not the subject content.
 - **Role-plays:** play the buyer or borrower realistically; one objection at a time.
 
+**The Practice Round view (read-only).** When artifacts are available, publish the
+**Practice Round** from the fixed template `jobsearch-mock-interview/templates/practice-view.html`
+with the first question, and update it each time you ask the next one: copy it verbatim
+and change only the JSON in its data block (`practice-data`). `company`, `round`, and
+`format` as set up; `secondsPerAnswer` 120 (90 for a recruiter screen); `next` is the
+question you are asking now, word for word as in chat (blank after the last one);
+`answered` lists every earlier question as {question, story, rating, feedback}: `story`
+is the Story Bank story the answer drew on, by its name on the Story Bank (blank if it
+used none, even when it told a good new story); `rating` is the debrief scale (strong,
+solid, needs a story, needs a shorter version; "needs a shorter version" only when the
+answer ran long; a thin or short answer is "solid" at best, with the feedback saying
+what to add); `feedback` is the one line that matters
+most from the feedback you gave. The view shows the question card with an answer timer
+and how many answers used a Story Bank story; it never stores the answers. Publish it with
+no capabilities, and name it once when you publish it ("The Practice Round view has the
+question and a timer"); the questions and feedback still appear in chat as above.
+Without artifacts, run the round in chat alone.
+
 ## Debrief (at the end)
 
 1. **Scorecard** — per question: strong · solid · needs a story · needs a shorter

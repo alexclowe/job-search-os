@@ -38,6 +38,25 @@ conversations; if it's missing, the wizard collects it fresh.
 - **Absent:** don't render the command center. Say: "Let's get your career story set up
   first — about two minutes. Say 'run the setup wizard'." Stop there.
 
+## Pre-flight — Moves saved on the board
+
+Before you read or change the **Application Board**, apply any moves the person made
+on the board itself. A board built from the template saves each move in the board
+artifact's storage: one document per row in its `moves` collection, holding the row
+id, the new stage, and when it was saved. Read that collection with the artifact
+storage tool. For each saved move whose row is still on the board:
+- set that row's **Stage** in the board's data block to the saved stage;
+- if the date for the new stage is blank, fill it with the date the move was saved
+  (Applied → Applied on, Screening → Screen on, Interviewing → Interview on, Onsite →
+  Final on, Offer → Offer on, Closed → Closed on);
+- a row moved to Closed with no Closed why: ask for the reason once, as clickable
+  choices, or leave it blank.
+Then republish the board once, delete exactly the saved-move documents you applied
+(and any for rows no longer on the board), update the CSV backup, and say it in one
+line: "Applied 2 moves you made on the board: Northwind → Interviewing, Harbor →
+Closed." If the board has no storage, the storage tool isn't available here, or
+nothing is saved, skip this without comment and use the board as it is.
+
 ## Step 1 — Gather the summary line
 
 List this Project's artifacts (including ones from earlier conversations). Ignore
@@ -52,6 +71,21 @@ anything named "SAMPLE — …". Count:
 
 Never guess a number. If no trackers exist, the summary is: "Nothing tracked yet — run
 any job below to start."
+
+**Your search this week (read-only home view).** When real trackers exist and artifacts
+are available, publish or update **Your Search This Week** from the fixed template
+`jobsearch-os/templates/search-this-week.html` before rendering the cards: copy it
+verbatim and change only the JSON in its data block (`week-data`), from the same
+trackers you just counted (after saved board moves are applied; never SAMPLE rows).
+`name` is the first name, `weekOf` the Monday of this week (YYYY-MM-DD). `applications`:
+every board row as {company, stage}. `offers`: every Offer Tracker row as {company,
+status}. `interviews`: this week's Screen on / Interview on / Final on dates as {date,
+company, round}. `due`: rows due in the next 7 days as {date, company, action} (action =
+Next action). `moves`: the latest Weekly Search Log row's three moves as {text, done}.
+Never type a count; the view counts the lists the same way as the summary line. Publish
+it with no capabilities. It adds nothing to the command center's layout: the only
+change on screen is "Your Search This Week" at the front of the "Your boards" line.
+Without artifacts, the summary line is the home view.
 
 ## Step 2 — Render the command center (fixed layout, identical every time)
 
@@ -175,8 +209,9 @@ sample. In the close, name the board and where to find it (Artifacts in the side
 ## Your boards
 
 Right under the summary line, if any live tracker artifacts exist (not "SAMPLE" ones),
-add one line naming them so the user can jump to them — e.g. "Your boards: Application
-Board · Story Bank · Offer Tracker · People (open them from Artifacts in the sidebar)". Jobs
+add one line naming them so the user can jump to them — e.g. "Your boards: Your Search
+This Week · Application Board · Story Bank · Offer Tracker · People (open them from
+Artifacts in the sidebar)". Jobs
 create and update these boards; the command center only points to them.
 
 ## About this skill

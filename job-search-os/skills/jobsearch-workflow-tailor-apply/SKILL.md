@@ -21,12 +21,14 @@ came of it, the form answers, and a row on the board so it doesn't vanish.
 - **Anything you come back to** — the Application Board, the Story Bank, the Offer
   Tracker, the Weekly Search Log — **must be published or updated as a live artifact**
   in your Artifacts sidebar on every run (a CSV alone is not enough when artifacts are
-  available), with its data stored in the artifact so you can edit rows and stages in
-  place. Before creating one, look for an existing artifact with the same name
+  available). Before creating one, look for an existing artifact with the same name
   (including from earlier conversations) and update it instead of making a duplicate.
-  Keep a CSV copy of a tracker's rows in the Project as a backup and keep it in sync.
-  Sample-run items go in a separate "Samples" section and never count toward totals.
-  If artifacts aren't available in this environment, use the CSV alone and say so once.
+  The **Application Board** is always built from its fixed template (see "Application
+  Board" in the Tailor & apply job): a board with a column per stage, where the person
+  can move a card themselves. Keep a CSV copy of a tracker's rows in the Project as a
+  backup and keep it in sync. Sample-run items go in a separate "Samples" section and
+  never count toward totals. If artifacts aren't available in this environment, use the
+  CSV alone and say so once.
 - **Emails** are Gmail drafts when Gmail is connected, otherwise paste-ready text (also
   saved as a .txt file). Nothing is ever sent or submitted.
 - In the close, name the one output to look at first.
@@ -54,6 +56,25 @@ Read `./jobsearch-connections.md`.
   anytime. For now everything comes out paste-ready." Continue.
 
 Check which connector tools actually exist in this session; never assume a tool name.
+
+## Pre-flight — Moves saved on the board
+
+Before you read or change the **Application Board**, apply any moves the person made
+on the board itself. A board built from the template saves each move in the board
+artifact's storage: one document per row in its `moves` collection, holding the row
+id, the new stage, and when it was saved. Read that collection with the artifact
+storage tool. For each saved move whose row is still on the board:
+- set that row's **Stage** in the board's data block to the saved stage;
+- if the date for the new stage is blank, fill it with the date the move was saved
+  (Applied → Applied on, Screening → Screen on, Interviewing → Interview on, Onsite →
+  Final on, Offer → Offer on, Closed → Closed on);
+- a row moved to Closed with no Closed why: ask for the reason once, as clickable
+  choices, or leave it blank.
+Then republish the board once, delete exactly the saved-move documents you applied
+(and any for rows no longer on the board), update the CSV backup, and say it in one
+line: "Applied 2 moves you made on the board: Northwind → Interviewing, Harbor →
+Closed." If the board has no storage, the storage tool isn't available here, or
+nothing is saved, skip this without comment and use the board as it is.
 
 ## Intake
 
@@ -180,6 +201,22 @@ What they want [three must-haves, in their words]
 - **Stretch fit** → say it once, kindly, and still let them choose.
 - **Someone there** → **Get the intro first** is pre-selected.
 
+**Show the choices every time.** Render the card with the visual card/widget tool
+when it is available: the checks as the card body, and the three choices as its
+buttons (with the changed labels above when a check fired). When that tool isn't
+available, or you can't tell whether it rendered, end the message with these three
+numbered lines, exactly, and nothing after them:
+
+```
+1. Tailor it
+2. Skip it
+3. Get the intro first
+```
+
+A check-card reply that ends without the three choices is incomplete: add them before
+you stop. Clicking a choice only stages it; act when the choice arrives, clicked,
+typed, or as its number.
+
 **On "Skip it":** add the row at stage **Closed**, Closed why "skipped — [reason]",
 and stop. **On "Get the intro first":** draft the intro request (the people-tracker
 method: 60–120 words in the person's voice, the role by name and link, one small ask,
@@ -303,9 +340,38 @@ elsewhere) · Last touch · Next action · Due · Contact · Notes.
 
 Set **Applied on** when the person says they've submitted (ask on the next run if it's
 still blank at stage Interested). **An older board without the newer columns keeps
-working:** add the missing columns and leave them blank — blank means unknown, never
-zero — rather than rebuilding it. Board views: by stage, plus a "Due this week" list at
-the top. Sample rows sit under "Samples" and never count.
+working:** carry its rows over and leave the missing columns blank — blank means
+unknown, never zero. Board views: by stage, plus a "Due this week" list at the top.
+Sample rows sit under "Samples" and never count.
+
+**Build it from the template, every time.** The board is the fixed template
+`templates/application-board.html` that ships with this job
+(`jobsearch-workflow-tailor-apply/templates/application-board.html`): a column per
+stage, a "Due this week" list, a Samples section, and every column in a table the
+person can open. Copy the file exactly and change **only the JSON inside
+`<script type="application/json" id="board-data">`** — never the markup, styles, or
+code. In that block, each row is one object with the keys `id`, `company`, `role`,
+`stage`, `postedRange`, `salaryCheck`, `realCheck`, `fit`, `source`, `referral`,
+`appliedOn`, `replyOn`, `screenOn`, `interviewOn`, `finalOn`, `offerOn`, `closedOn`,
+`closedWhy`, `lastTouch`, `nextAction`, `due`, `contact`, `notes` (dates as
+YYYY-MM-DD, blank as ""); sample rows go in `samples`, never in `rows`; `asOf` is
+today's date. **A row's `id` never changes;** a new row takes the next free id
+(`r1`, `r2`, …), because the moves the person saves are keyed to it.
+- **Publish it with the artifact's storage (database) capability turned on**, default
+  access rules, so the person's moves are saved and every job can read them. Keep the
+  title "Application Board".
+- **Updating** means: apply saved moves first (the pre-flight above), read the
+  board's current data block, change the rows, and republish the same template. An
+  older board that isn't built on the template (a plain table from an earlier
+  version) is rebuilt on it once, carrying every row and column over; say so in one
+  line.
+- **The first time** a board with storage is published, add one line to the close:
+  "Your board saves moves you make on it. Boards that save moves stay private to your
+  organization (no public link), and anyone you share it with as a viewer can see it
+  but not move cards."
+- **No artifacts or no storage here:** publish the board without storage (or keep
+  the CSV alone when artifacts aren't available) and say once: "Tell me when a card
+  moves, for example 'move Northwind to Interviewing'."
 
 ## Close
 

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search Funnel</title>
+<!--
+  Job Search AI Operating System — Search Funnel view (v1.4). READ-ONLY.
+  CONTRACT FOR JOBS: copy this file verbatim and change ONLY the JSON in the one data
+  block whose id is "funnel-data" (near the end): one entry per Application Board row
+  (samples excluded) with its source and stage dates, plus the one-line diagnosis text.
+  Never type counts or rates into it; the view computes them. No storage, no network.
+-->
+<style>
+  :root { --bg:#ffffff; --fg:#14181f; --muted:#5b6472; --line:#d9dee5; --bar:#b45309; --bar2:#f3d7b3; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1318; --fg:#e7ebf0; --muted:#9aa4b2; --line:#2a313b; --bar:#f5a524; --bar2:#4a3a1d; } }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:14px 16px 20px; font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--fg); }
+  h1 { font-size:18px; margin:0 0 2px; }
+  .muted { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .diag { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-bottom:12px; }
+  .diag p { margin:2px 0; }
+  .src { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-bottom:12px; }
+  .src h2 { font-size:14px; margin:0 0 8px; display:flex; justify-content:space-between; }
+  .src h2 span { color:var(--muted); font-weight:500; }
+  .row { display:grid; grid-template-columns:96px 1fr 72px; gap:8px; align-items:center; margin:4px 0; font-size:13px; }
+  @media (max-width: 420px) { .row { grid-template-columns:80px 1fr 64px; } }
+  .track { background:var(--bar2); border-radius:4px; height:14px; overflow:hidden; }
+  .fill { background:var(--bar); height:100%; }
+  .num { text-align:right; font-variant-numeric:tabular-nums; }
+  .few { color:var(--muted); font-size:13px; font-style:italic; margin:0; }
+</style>
+</head>
+<body>
+<h1 id="title">Search Funnel</h1>
+<p class="muted" id="sub"></p>
+<section class="diag" id="diag" aria-label="Where it stops"></section>
+<div id="out"></div>
+
+<script type="application/json" id="funnel-data">
+{
+  "title": "Search Funnel",
+  "asOf": "",
+  "minSample": 10,
+  "whereItStops": "",
+  "tryFirst": "",
+  "rows": []
+}
+</script>
+<script>
+(function () {
+  var d = JSON.parse(document.getElementById('funnel-data').textContent);
+  var STEPS = [["applied", "Applied"], ["reply", "Got a reply"], ["screen", "Screen"], ["interview", "Interview"], ["final", "Final round"], ["offer", "Offer"]];
+  var STAGE_INDEX = { "Interested": -1, "Applied": 0, "Screening": 2, "Interviewing": 3, "Onsite": 4, "Offer": 5, "Closed": 0 };
+  var DATE_INDEX = [["appliedOn", 0], ["replyOn", 1], ["screenOn", 2], ["interviewOn", 3], ["finalOn", 4], ["offerOn", 5]];
+  var min = d.minSample || 10;
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function reached(r) {
+    var i = STAGE_INDEX.hasOwnProperty(r.stage) ? STAGE_INDEX[r.stage] : -1;
+    if (r.stage === 'Closed' && /^skipped/i.test(r.closedWhy || '') && !r.appliedOn) i = -1;
+    DATE_INDEX.forEach(function (p) { if (r[p[0]]) i = Math.max(i, p[1]); });
+    return i;
+  }
+  var rows = (d.rows || []).filter(function (r) { return reached(r) >= 0; });
+  var unknown = rows.filter(function (r) { return !r.source; }).length;
+  document.getElementById('title').textContent = d.title || 'Search Funnel';
+  document.getElementById('sub').textContent = rows.length + ' applications' + (d.asOf ? ' · updated ' + d.asOf : '') +
+    ' · rates show only for sources with at least ' + min + ' applications' + (unknown ? ' · ' + unknown + ' without a source' : '') + '.';
+  var diag = document.getElementById('diag');
+  if (rows.length < min) { diag.appendChild(el('p', null, 'Come back after about ' + min + ' applications; before that, any pattern is noise.')); }
+  else {
+    if (d.whereItStops) diag.appendChild(el('p', null, 'Where it stops: ' + d.whereItStops));
+    if (d.tryFirst) diag.appendChild(el('p', null, 'Try first: ' + d.tryFirst));
+    if (!d.whereItStops && !d.tryFirst) diag.hidden = true;
+  }
+  function block(name, list) {
+    var box = el('section', 'src');
+    var h = el('h2', null, name); h.appendChild(el('span', null, list.length + ' applied')); box.appendChild(h);
+    if (list.length < min) { box.appendChild(el('p', 'few', 'Too few to tell yet.')); return box; }
+    STEPS.forEach(function (s, idx) {
+      var n = list.filter(function (r) { return reached(r) >= idx; }).length;
+      var pct = Math.round(100 * n / list.length);
+      var row = el('div', 'row');
+      row.appendChild(el('div', null, s[1]));
+      var tr = el('div', 'track'); tr.setAttribute('role', 'img'); tr.setAttribute('aria-label', s[1] + ': ' + n + ' of ' + list.length);
+      var fi = el('div', 'fill'); fi.style.width = pct + '%'; tr.appendChild(fi); row.appendChild(tr);
+      row.appendChild(el('div', 'num', n + ' (' + pct + '%)'));
+      box.appendChild(row);
+    });
+    return box;
+  }
+  var out = document.getElementById('out');
+  var bySrc = {};
+  rows.forEach(function (r) { var s = r.source || 'no source yet'; (bySrc[s] = bySrc[s] || []).push(r); });
+  out.appendChild(block('All sources', rows));
+  Object.keys(bySrc).sort(function (a, b) { return bySrc[b].length - bySrc[a].length; }).forEach(function (s) { out.appendChild(block(s, bySrc[s])); });
+})();
+</script>
+</body>
+</html>

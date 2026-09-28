@@ -2,6 +2,24 @@
 
 All notable changes to the Job Search AI Operating System are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow the plugin's `version` in `job-search-os/.claude-plugin/plugin.json`, and each version is also a [GitHub Release](https://github.com/alexclowe/job-search-os/releases) with the plugin zip and the documentation zip attached.
 
+## [1.4.0] — 2026-09-28
+
+Views you can see at a glance. Still five jobs.
+
+### Added
+- **An Application Board you can move.** The board is now a column per stage with a card per application, the stage written on every card (not just shown by colour), and a "Due this week" strip. Each card has a **Stage** menu: a move you make is saved on the board, and the next job you run (tailor & apply, work my inbox, follow up & negotiate, the weekly review, the command center, or the funnel report) applies it first, fills in that stage's date if it's blank, and tells you in one line.
+- **The Search Funnel view**, read-only, rebuilt from the board by the funnel report and the weekly review.
+- **The Offer Comparison view** (Follow up & negotiate): open offers side by side from the Offer Tracker, labelled for each pay type (differentials and overtime, bonus, commission and draw with the ramp, step and stipends), with schedule, benefits, and the salary check. Figures only as stated; "not stated" where you need to ask.
+- **Your Search This Week**, a read-only home view the command center keeps current: active applications, interviews this week, offers in play, follow-ups due, and the week's three moves.
+- **The Practice Round view** (mock interview, and "practice it with me" in Prep for an interview): the current question, an answer timer, how many answers used a Story Bank story, and each answer's rating (strong, solid, needs a story, needs a shorter version) with its one-line feedback. It never stores your answers.
+- The views ship as fixed templates inside the plugin (`skills/*/templates/`). Jobs change only the data in them, so they look the same every time.
+- A template check (`scripts/job-search-os/lint-artifact-templates.py`, with tests): no network calls or outside scripts, no browser storage as the record, the stage shown in words as well as colour, readable at phone width.
+
+### Changed
+- **Tailor & apply always shows the three choices** after the check card (tailor it, skip it, get the intro first), as buttons where the app supports them and as a numbered list where it doesn't.
+- The Offer Tracker gains **Schedule** and **Benefits** columns (added blank to an existing tracker).
+- A board that saves moves is private to your organization (no public link), and people you share it with as viewers can see it but can't move cards. Where the board can't save moves, the jobs fall back to a table and you say the move instead ("move Northwind to Interviewing"). The spreadsheet copy of the board is kept either way.
+
 ## [1.3.1] — 2026-09-28
 
 Fixes found in the full claude.ai smoke test, and a new video set.

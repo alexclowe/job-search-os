@@ -1,6 +1,6 @@
 ---
 name: jobsearch-workflow-follow-up-negotiate
-description: Follow up and negotiate for the Job Search AI Operating System. Invoke when a job seeker says "follow up and negotiate", "write my thank-you note", "I haven't heard back", "I got an offer", "help me counter", "negotiate this offer", "should I take it", or pastes offer terms or an interview recap and asks what to send next. Drafts thank-you and follow-up notes on a cadence, reads an offer against the minimum pay and market notes, builds a counter with the exact words, and keeps the Offer Tracker current. Never accepts or declines on its own.
+description: Follow up and negotiate for the Job Search AI Operating System. Invoke when a job seeker says "follow up and negotiate", "write my thank-you note", "I haven't heard back", "I got an offer", "help me counter", "negotiate this offer", "should I take it", "compare my offers", or pastes offer terms or an interview recap and asks what to send next. Drafts thank-you and follow-up notes on a cadence, reads an offer against the minimum pay and market notes, builds a counter with the exact words, and keeps the Offer Tracker current. Never accepts or declines on its own.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
@@ -20,12 +20,14 @@ the counter that holds to your minimum pay without burning the offer.
 - **Anything you come back to** — the Application Board, the Story Bank, the Offer
   Tracker, the Weekly Search Log — **must be published or updated as a live artifact**
   in your Artifacts sidebar on every run (a CSV alone is not enough when artifacts are
-  available), with its data stored in the artifact so you can edit rows and stages in
-  place. Before creating one, look for an existing artifact with the same name
+  available). Before creating one, look for an existing artifact with the same name
   (including from earlier conversations) and update it instead of making a duplicate.
-  Keep a CSV copy of a tracker's rows in the Project as a backup and keep it in sync.
-  Sample-run items go in a separate "Samples" section and never count toward totals.
-  If artifacts aren't available in this environment, use the CSV alone and say so once.
+  The **Application Board** is always built from its fixed template (see "Application
+  Board" in the Tailor & apply job): a board with a column per stage, where the person
+  can move a card themselves. Keep a CSV copy of a tracker's rows in the Project as a
+  backup and keep it in sync. Sample-run items go in a separate "Samples" section and
+  never count toward totals. If artifacts aren't available in this environment, use the
+  CSV alone and say so once.
 - **Emails** are Gmail drafts when Gmail is connected, otherwise paste-ready text (also
   saved as a .txt file). Nothing is ever sent.
 - In the close, name the one output to look at first.
@@ -55,6 +57,25 @@ Read `./jobsearch-connections.md`. Present → route to connected tools. Absent 
 once: "I'm not connected to your tools yet — say 'connect my tools' anytime. For now
 everything comes out paste-ready." Check which connector tools exist; never assume a
 tool name.
+
+## Pre-flight — Moves saved on the board
+
+Before you read or change the **Application Board**, apply any moves the person made
+on the board itself. A board built from the template saves each move in the board
+artifact's storage: one document per row in its `moves` collection, holding the row
+id, the new stage, and when it was saved. Read that collection with the artifact
+storage tool. For each saved move whose row is still on the board:
+- set that row's **Stage** in the board's data block to the saved stage;
+- if the date for the new stage is blank, fill it with the date the move was saved
+  (Applied → Applied on, Screening → Screen on, Interviewing → Interview on, Onsite →
+  Final on, Offer → Offer on, Closed → Closed on);
+- a row moved to Closed with no Closed why: ask for the reason once, as clickable
+  choices, or leave it blank.
+Then republish the board once, delete exactly the saved-move documents you applied
+(and any for rows no longer on the board), update the CSV backup, and say it in one
+line: "Applied 2 moves you made on the board: Northwind → Interviewing, Harbor →
+Closed." If the board has no storage, the storage tool isn't available here, or
+nothing is saved, skip this without comment and use the board as it is.
 
 ## Intake
 
@@ -186,12 +207,29 @@ declined, or the person withdraws, set stage Closed, **Closed on**, and **Closed
 ("accepted elsewhere" on the other rows, "offer declined", "withdrew"). Update the **Offer
 Tracker** (create only if absent): Company · Role · Pay type · Base (in its unit, e.g.
 $46/hour or $92,000/year or step 6) · Variable (differentials, bonus, or commission as
-stated) · Other (sign-on, equity, stipends, pension) · Est. first-year total · Salary
-check · Deadline · Status (Received → Countered → Accepted / Declined) · Counter ·
-Next. An existing tracker with the older columns (Base · Bonus · Equity · Other) keeps
+stated) · Other (sign-on, equity, stipends, pension) · Schedule (shifts, hours, or days
+as stated) · Benefits (as stated) · Est. first-year total · Salary check · Deadline ·
+Status (Received → Countered → Accepted / Declined) · Counter · Next. A tracker without
+Schedule or Benefits gets both columns added, left blank until the company states them. An existing tracker with the older columns (Base · Bonus · Equity · Other) keeps
 working — add the Pay type column and put hourly or commission details under Other
 and Variable rather than rebuilding it. When an offer is accepted, offer to move every other open row to
 Closed with a decline note each.
+
+**Offer Comparison (read-only view).** Whenever the Offer Tracker has an offer with
+status Received or Countered and artifacts are available, publish or update the
+**Offer Comparison** from the fixed template
+`jobsearch-workflow-follow-up-negotiate/templates/offer-comparison.html`: copy it
+verbatim and change only the JSON in its data block (`offers-data`). `asOf` is today;
+`minimumPay` and `targetPay` come from the profile in their own units. One entry per
+Received or Countered offer, side by side: company, role, status, payType (hourly,
+annual salary, commission, commission plus base, or salary schedule), base, variable
+(differentials and overtime, bonus, or commission and draw, as stated), ramp
+(commission only), schedule, benefits, other, firstYearTotal (only the worksheet's
+formula total, otherwise blank), deadline, salaryCheck ("above minimum pay", "at
+minimum pay", "below minimum pay", or "unknown"). Every value exactly as the
+company stated it, with its unit; blank when not stated (the view shows "not
+stated"); never estimate. Publish it with no capabilities, and name it in the close.
+Without artifacts, the Offer Tracker table is the comparison.
 
 ## Close
 

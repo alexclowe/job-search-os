@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Search This Week</title>
+<!--
+  Job Search AI Operating System — "Your search this week" home view (v1.4). READ-ONLY.
+  CONTRACT FOR JOBS: copy this file verbatim and change ONLY the JSON in the one data
+  block whose id is "week-data" (near the end), from the trackers after saved board moves
+  are applied: open applications (company + stage), open offers, this week's interviews,
+  what's due in the next 7 days, and the week's three moves from the Weekly Search Log.
+  Never type a count into it; the view counts the lists. No storage, no network.
+-->
+<style>
+  :root { --bg:#ffffff; --fg:#14181f; --muted:#5b6472; --line:#d9dee5; --card:#f6f8fa; --accent:#b45309; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1318; --fg:#e7ebf0; --muted:#9aa4b2; --line:#2a313b; --card:#171c23; --accent:#f5a524; } }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:14px 16px 20px; font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--fg); }
+  h1 { font-size:18px; margin:0 0 2px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.04em; margin:0 0 6px; }
+  .muted { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .tiles { display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; margin-bottom:12px; }
+  @media (max-width: 560px) { .tiles { grid-template-columns:repeat(2, 1fr); } }
+  .tile { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:8px 10px; }
+  .tile .n { font-size:22px; font-weight:700; }
+  .tile .l { font-size:12px; color:var(--muted); }
+  section { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-bottom:12px; }
+  ul { margin:0; padding-left:18px; }
+  li { margin:2px 0; }
+  .done { color:var(--muted); }
+  .empty { color:var(--muted); font-style:italic; margin:0; }
+</style>
+</head>
+<body>
+<h1 id="title">Your Search This Week</h1>
+<p class="muted" id="sub"></p>
+<div class="tiles" id="tiles"></div>
+<section aria-label="This week's three moves"><h2>This week's three moves</h2><div id="moves"></div></section>
+<section aria-label="Interviews this week"><h2>Interviews this week</h2><div id="interviews"></div></section>
+<section aria-label="Due in the next 7 days"><h2>Due in the next 7 days</h2><div id="due"></div></section>
+
+<script type="application/json" id="week-data">
+{
+  "title": "Your Search This Week",
+  "name": "",
+  "weekOf": "",
+  "applications": [],
+  "offers": [],
+  "interviews": [],
+  "due": [],
+  "moves": []
+}
+</script>
+<script>
+(function () {
+  var d = JSON.parse(document.getElementById('week-data').textContent);
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function list(id, items, fmt, emptyText) {
+    var box = document.getElementById(id);
+    if (!items.length) { box.appendChild(el('p', 'empty', emptyText)); return; }
+    var ul = el('ul'); items.forEach(function (x) { ul.appendChild(fmt(x)); }); box.appendChild(ul);
+  }
+  var ACTIVE = ['Applied', 'Screening', 'Interviewing', 'Onsite'];
+  var apps = (d.applications || []).filter(function (a) { return ACTIVE.indexOf(a.stage) !== -1; });
+  var offers = (d.offers || []).filter(function (o) { return /^(received|countered)/i.test(o.status || ''); });
+  var interviews = d.interviews || [], due = d.due || [], moves = d.moves || [];
+  document.getElementById('title').textContent = d.title || 'Your Search This Week';
+  document.getElementById('sub').textContent = [d.name ? d.name + "'s search" : '', d.weekOf ? 'week of ' + d.weekOf : ''].filter(Boolean).join(' · ');
+  var doneMoves = moves.filter(function (m) { return m.done; }).length;
+  [[apps.length, 'active application', 'active applications'], [interviews.length, 'interview this week', 'interviews this week'], [offers.length, 'offer in play', 'offers in play'], [due.length, 'follow-up due', 'follow-ups due']].forEach(function (t) {
+    var tile = el('div', 'tile'); tile.appendChild(el('div', 'n', String(t[0]))); tile.appendChild(el('div', 'l', t[0] === 1 ? t[1] : t[2])); document.getElementById('tiles').appendChild(tile);
+  });
+  list('moves', moves, function (m) { return el('li', m.done ? 'done' : null, (m.done ? 'Done: ' : 'To do: ') + (m.text || '')); }, 'No moves planned yet. Run your weekly review.');
+  if (moves.length) document.getElementById('moves').appendChild(el('p', 'muted', doneMoves + ' of ' + moves.length + ' done'));
+  list('interviews', interviews, function (i) { return el('li', null, [i.date, i.company, i.round].filter(Boolean).join(' · ')); }, 'No interviews on the calendar this week.');
+  list('due', due, function (x) { return el('li', null, [x.date, x.company, x.action].filter(Boolean).join(' · ')); }, 'Nothing due in the next 7 days.');
+})();
+</script>
+</body>
+</html>

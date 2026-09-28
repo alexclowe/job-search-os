@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice Round</title>
+<!--
+  Job Search AI Operating System — Practice Round view (v1.4). READ-ONLY.
+  CONTRACT FOR JOBS: copy this file verbatim and change ONLY the JSON in the one data
+  block whose id is "practice-data" (near the end), rebuilt by the mock-interview skill
+  after each answer: the round, the questions asked so far with the Story Bank story each
+  answer drew on (or blank), the rating from the debrief scale (strong, solid, needs a
+  story, needs a shorter version), the one-line feedback given in chat, and the next question.
+  Answers stay in the conversation; this view never stores anything. The timer is only on
+  this screen. No storage, no network.
+-->
+<style>
+  :root { --bg:#ffffff; --fg:#14181f; --muted:#5b6472; --line:#d9dee5; --card:#f6f8fa; --accent:#b45309; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1318; --fg:#e7ebf0; --muted:#9aa4b2; --line:#2a313b; --card:#171c23; --accent:#f5a524; } }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:14px 16px 20px; font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--fg); }
+  h1 { font-size:18px; margin:0 0 2px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.04em; margin:0 0 6px; }
+  .muted { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .qcard { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:10px; padding:12px 14px; margin-bottom:12px; }
+  .qcard .q { font-size:17px; font-weight:600; margin:4px 0 10px; }
+  .timer { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .timer .t { font-size:22px; font-variant-numeric:tabular-nums; font-weight:700; }
+  button { font:inherit; padding:6px 12px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--fg); cursor:pointer; }
+  .score { border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-bottom:12px; }
+  .meter { background:var(--line); border-radius:4px; height:12px; overflow:hidden; margin:6px 0; }
+  .fill { background:var(--accent); height:100%; }
+  ol { margin:0; padding-left:20px; }
+  li { margin:6px 0; }
+  .fb { color:var(--muted); font-size:13px; }
+  .empty { color:var(--muted); font-style:italic; margin:0; }
+  @media (max-width: 480px) { .qcard .q { font-size:16px; } }
+</style>
+</head>
+<body>
+<h1 id="title">Practice Round</h1>
+<p class="muted" id="sub"></p>
+<section class="qcard" aria-label="Current question">
+  <h2 id="qlabel">Next question</h2>
+  <p class="q" id="q"></p>
+  <div class="timer">
+    <span class="t" id="clock" aria-live="polite"></span>
+    <button type="button" id="start">Start timer</button>
+    <button type="button" id="reset">Reset</button>
+    <span class="muted" id="hint"></span>
+  </div>
+</section>
+<section class="score" aria-label="Running score">
+  <h2>Answers backed by your Story Bank</h2>
+  <div class="meter" role="img" id="meter" aria-label=""><div class="fill" id="fill"></div></div>
+  <p class="muted" id="scoreText"></p>
+</section>
+<section aria-label="Answered so far"><h2>Answered so far</h2><div id="done"></div></section>
+
+<script type="application/json" id="practice-data">
+{
+  "title": "Practice Round",
+  "company": "",
+  "round": "",
+  "format": "",
+  "secondsPerAnswer": 120,
+  "next": "",
+  "answered": []
+}
+</script>
+<script>
+(function () {
+  var d = JSON.parse(document.getElementById('practice-data').textContent);
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  var answered = d.answered || [];
+  var total = d.secondsPerAnswer || 120;
+  document.getElementById('title').textContent = d.title || 'Practice Round';
+  document.getElementById('sub').textContent = [d.company, d.round, d.format].filter(Boolean).join(' · ');
+  document.getElementById('qlabel').textContent = d.next ? 'Question ' + (answered.length + 1) : 'Round complete';
+  document.getElementById('q').textContent = d.next || 'That was the last question. Ask Claude for the debrief.';
+  var backed = answered.filter(function (a) { return a.story; }).length;
+  var pct = answered.length ? Math.round(100 * backed / answered.length) : 0;
+  document.getElementById('fill').style.width = pct + '%';
+  document.getElementById('meter').setAttribute('aria-label', backed + ' of ' + answered.length + ' answers used a Story Bank story');
+  document.getElementById('scoreText').textContent = answered.length ? backed + ' of ' + answered.length + (answered.length === 1 ? ' answer' : ' answers') + ' used a story from your Story Bank.' : 'No answers yet.';
+  var box = document.getElementById('done');
+  if (!answered.length) box.appendChild(el('p', 'empty', 'Answer in the chat; this view updates after each one.'));
+  else {
+    var ol = el('ol');
+    answered.forEach(function (a) {
+      var li = el('li'); li.appendChild(el('div', null, a.question || ''));
+      li.appendChild(el('div', 'fb', [a.rating ? 'Rating: ' + a.rating : '', a.story ? 'Story: ' + a.story : 'No Story Bank story yet', a.feedback || ''].filter(Boolean).join(' · ')));
+      ol.appendChild(li);
+    });
+    box.appendChild(ol);
+  }
+  var left = total, timer = null, clock = document.getElementById('clock'), hint = document.getElementById('hint'), btn = document.getElementById('start');
+  function show() { var m = Math.floor(Math.max(left, 0) / 60), s = Math.max(left, 0) % 60; clock.textContent = m + ':' + (s < 10 ? '0' : '') + s; }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } btn.textContent = 'Start timer'; }
+  btn.addEventListener('click', function () {
+    if (timer) { stop(); return; }
+    btn.textContent = 'Pause';
+    timer = setInterval(function () { left -= 1; show(); if (left <= 0) { stop(); hint.textContent = 'Time. Wrap up in one sentence.'; } }, 1000);
+  });
+  document.getElementById('reset').addEventListener('click', function () { stop(); left = total; hint.textContent = ''; show(); });
+  hint.textContent = 'About ' + Math.round(total / 60) + ' minute' + (total >= 120 ? 's' : '') + ' per answer.';
+  if (!d.next) { btn.disabled = true; document.getElementById('reset').disabled = true; }
+  show();
+})();
+</script>
+</body>
+</html>

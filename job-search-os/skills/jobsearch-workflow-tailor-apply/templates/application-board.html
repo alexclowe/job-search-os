@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application Board</title>
+<!--
+  Job Search AI Operating System — Application Board template (v1.4).
+  CONTRACT FOR JOBS: copy this file verbatim and change ONLY the JSON in the one data
+  block whose id is "board-data" (near the end). Never edit markup, styles or code.
+  Keep every row's "id" forever; a new row takes the next free id (r1, r2, ...).
+  Publish with the artifact storage (db) capability. Moves a person makes here are saved
+  one document per row at moves/<row id>; jobs apply them to the data block and delete them.
+  No network calls. Nothing here is the record except the data block and the saved moves.
+-->
+<style>
+  :root { --bg:#ffffff; --fg:#14181f; --muted:#5b6472; --line:#d9dee5; --card:#f6f8fa; --accent:#b45309; --warn:#9a3412; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1318; --fg:#e7ebf0; --muted:#9aa4b2; --line:#2a313b; --card:#171c23; --accent:#f5a524; --warn:#fdba74; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding:14px 16px 4px; }
+  h1 { font-size:18px; margin:0 0 2px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.04em; margin:0 0 8px; }
+  .muted { color:var(--muted); font-size:13px; margin:0; }
+  .due { margin:10px 16px 0; padding:8px 12px; border:1px solid var(--line); border-radius:10px; }
+  .due ul { margin:4px 0 0; padding-left:18px; }
+  .board { display:grid; grid-auto-flow:column; grid-auto-columns:minmax(210px, 1fr); gap:12px; padding:12px 16px; overflow-x:auto; }
+  @media (max-width: 700px) { .board { grid-auto-flow:row; grid-auto-columns:auto; } }
+  .col { border:1px solid var(--line); border-radius:10px; padding:10px; min-height:70px; }
+  .col h2 { display:flex; justify-content:space-between; }
+  .col h2 span { color:var(--muted); font-weight:500; }
+  .card { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:8px; padding:8px 10px; margin-bottom:8px; }
+  .card .t { font-weight:600; }
+  .card .m { color:var(--muted); font-size:13px; }
+  .card .stage { font-size:12px; font-weight:600; margin-top:4px; }
+  .card label { display:block; font-size:12px; color:var(--muted); margin-top:6px; }
+  .card select { width:100%; font:inherit; padding:4px; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px; }
+  .card.moved { border-style:dashed; }
+  .card .flag { font-size:12px; color:var(--warn); margin-top:4px; }
+  .samples { margin:0 16px 12px; padding:8px 12px; border:1px dashed var(--line); border-radius:10px; }
+  details { margin:0 16px 12px; }
+  table { border-collapse:collapse; font-size:12px; width:100%; }
+  th, td { border:1px solid var(--line); padding:4px 6px; text-align:left; vertical-align:top; }
+  .tablewrap { overflow-x:auto; }
+  .status { padding:0 16px 8px; font-size:13px; color:var(--muted); }
+  footer { padding:0 16px 16px; font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Application Board</h1>
+  <p class="muted" id="summary"></p>
+</header>
+<section class="due" id="due" aria-label="Due this week"></section>
+<main class="board" id="board" aria-label="Applications by stage"></main>
+<p class="status" id="status" role="status"></p>
+<section class="samples" id="samples" aria-label="Samples" hidden></section>
+<details>
+  <summary>All columns (table)</summary>
+  <div class="tablewrap"><table id="table"></table></div>
+</details>
+<footer>When this board can save moves, each card has a Stage menu, and your jobs pick up a move the next time they run. To change anything else, tell Claude. Boards that save moves are private to your organization, and people you share it with as viewers can see it but can't move cards.</footer>
+
+<script type="application/json" id="board-data">
+{
+  "title": "Application Board",
+  "asOf": "",
+  "stages": ["Interested", "Applied", "Screening", "Interviewing", "Onsite", "Offer", "Closed"],
+  "rows": [],
+  "samples": []
+}
+</script>
+<script>
+(function () {
+  var COLUMNS = [
+    ["company", "Company"], ["role", "Role"], ["stage", "Stage"], ["postedRange", "Posted range"],
+    ["salaryCheck", "Salary check"], ["realCheck", "Real check"], ["fit", "Fit"], ["source", "Source"],
+    ["referral", "Referral"], ["appliedOn", "Applied on"], ["replyOn", "Reply on"], ["screenOn", "Screen on"],
+    ["interviewOn", "Interview on"], ["finalOn", "Final on"], ["offerOn", "Offer on"], ["closedOn", "Closed on"],
+    ["closedWhy", "Closed why"], ["lastTouch", "Last touch"], ["nextAction", "Next action"], ["due", "Due"],
+    ["contact", "Contact"], ["notes", "Notes"]
+  ];
+  var data = JSON.parse(document.getElementById('board-data').textContent);
+  var stages = data.stages && data.stages.length ? data.stages : ["Interested", "Applied", "Screening", "Interviewing", "Onsite", "Offer", "Closed"];
+  var rows = (data.rows || []).filter(function (r) { return r && r.id; });
+  var moves = {};        // row id -> saved stage (from storage)
+  var pending = {};      // row id -> true while a write is in flight
+  var db = null;
+  var statusEl = document.getElementById('status');
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+  function stageOf(r) { return moves[r.id] || r.stage; }
+  function setStatus(t) { statusEl.textContent = t; }
+
+  function renderSummary() {
+    document.getElementById('title').textContent = data.title || 'Application Board';
+    var active = rows.filter(function (r) { return stageOf(r) !== 'Closed'; }).length;
+    var s = rows.length + ' applications · ' + active + ' active';
+    if (data.asOf) s += ' · updated ' + data.asOf;
+    document.getElementById('summary').textContent = s;
+  }
+
+  function renderDue() {
+    var box = document.getElementById('due'); clear(box);
+    box.appendChild(el('h2', null, 'Due this week'));
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var week = new Date(today.getTime() + 7 * 86400000);
+    var due = rows.filter(function (r) {
+      if (!r.due || stageOf(r) === 'Closed') return false;
+      var d = new Date(r.due + 'T00:00:00'); return !isNaN(d) && d <= week;
+    }).sort(function (a, b) { return a.due < b.due ? -1 : 1; });
+    if (!due.length) { box.appendChild(el('p', 'muted', 'Nothing due in the next 7 days.')); return; }
+    var ul = el('ul');
+    due.forEach(function (r) { ul.appendChild(el('li', null, r.due + ' · ' + r.company + ' · ' + (r.nextAction || 'follow up'))); });
+    box.appendChild(ul);
+  }
+
+  function card(r, movable) {
+    var c = el('article', 'card' + (moves[r.id] ? ' moved' : ''));
+    c.appendChild(el('div', 't', r.company || '(no company)'));
+    var meta = [r.role, r.source].filter(Boolean).join(' · ');
+    if (meta) c.appendChild(el('div', 'm', meta));
+    if (r.nextAction || r.due) c.appendChild(el('div', 'm', 'Next: ' + [r.nextAction, r.due].filter(Boolean).join(' · ')));
+    var st = el('div', 'stage', 'Stage: ' + stageOf(r)); st.setAttribute('data-stage-label', ''); c.appendChild(st);
+    if (moves[r.id]) c.appendChild(el('div', 'flag', 'Moved here from ' + r.stage + '. Your jobs apply this next time they run.'));
+    if (movable && db) {
+      var lab = el('label', null, 'Stage');
+      var sel = document.createElement('select');
+      sel.setAttribute('aria-label', 'Stage for ' + (r.company || r.id));
+      sel.disabled = !!pending[r.id];
+      stages.forEach(function (s) { var o = el('option', null, s); o.value = s; if (s === stageOf(r)) o.selected = true; sel.appendChild(o); });
+      sel.addEventListener('change', function () { move(r, sel.value); });
+      lab.appendChild(sel); c.appendChild(lab);
+    }
+    return c;
+  }
+
+  function renderBoard() {
+    var board = document.getElementById('board'); clear(board);
+    stages.forEach(function (stage) {
+      var inStage = rows.filter(function (r) { return stageOf(r) === stage; });
+      var col = el('section', 'col'); col.setAttribute('aria-label', stage);
+      var h = el('h2', null, stage); h.appendChild(el('span', null, String(inStage.length))); col.appendChild(h);
+      inStage.forEach(function (r) { col.appendChild(card(r, true)); });
+      board.appendChild(col);
+    });
+  }
+
+  function renderSamples() {
+    var box = document.getElementById('samples'); clear(box);
+    var samples = data.samples || [];
+    box.hidden = !samples.length;
+    if (!samples.length) return;
+    box.appendChild(el('h2', null, 'Samples (never counted)'));
+    samples.forEach(function (r) { box.appendChild(card(r, false)); });
+  }
+
+  function renderTable() {
+    var t = document.getElementById('table'); clear(t);
+    var head = el('tr'); COLUMNS.forEach(function (c) { head.appendChild(el('th', null, c[1])); }); t.appendChild(head);
+    rows.forEach(function (r) {
+      var tr = el('tr');
+      COLUMNS.forEach(function (c) { tr.appendChild(el('td', null, c[0] === 'stage' ? stageOf(r) : (r[c[0]] || ''))); });
+      t.appendChild(tr);
+    });
+  }
+
+  function render() { renderSummary(); renderDue(); renderBoard(); renderSamples(); renderTable(); }
+
+  function move(r, stage) {
+    if (!db || pending[r.id]) return;
+    var ref = db.doc('moves/' + r.id);
+    var before = moves[r.id];
+    pending[r.id] = true;
+    if (stage === r.stage) delete moves[r.id]; else moves[r.id] = stage;
+    render();
+    var op = stage === r.stage ? ref.delete() : ref.set({ rowId: r.id, company: r.company || '', from: r.stage, stage: stage, savedAt: new Date().toISOString() });
+    op.then(function () {
+      delete pending[r.id]; render();
+      setStatus(stage === r.stage ? 'Move undone.' : 'Saved: ' + (r.company || r.id) + ' → ' + stage + '. Your jobs apply it next time they run.');
+    }, function () {
+      delete pending[r.id];
+      if (before) moves[r.id] = before; else delete moves[r.id];
+      render();
+      setStatus("Couldn't save that move here (view-only access, or storage is off). Tell Claude instead: \"move " + (r.company || r.id) + ' to ' + stage + '".');
+    });
+  }
+
+  render();
+  setStatus('Loading saved moves…');
+  var claudeRt = (typeof window !== 'undefined' && window.claude && typeof window.claude.use === 'function') ? window.claude : null;
+  if (!claudeRt) { setStatus('Moves can\'t be saved in this view. Tell Claude to move a card, for example "move Northwind to Interviewing".'); return; }
+  claudeRt.use('db').then(function (ns) {
+    if (!ns) { setStatus('Moves can\'t be saved in this view. Tell Claude to move a card, for example "move Northwind to Interviewing".'); return; }
+    db = ns;
+    var known = {}; rows.forEach(function (r) { known[r.id] = true; });
+    db.collection('moves').onSnapshot(function (snap) {
+      var next = {};
+      snap.docs.forEach(function (d) { var v = d.data() || {}; if (known[d.id] && typeof v.stage === 'string' && stages.indexOf(v.stage) !== -1) next[d.id] = v.stage; });
+      Object.keys(pending).forEach(function (id) { if (moves[id]) next[id] = moves[id]; else delete next[id]; });
+      moves = next;
+      render();
+      var n = Object.keys(moves).length;
+      setStatus(n ? n + ' move' + (n > 1 ? 's' : '') + ' saved here, waiting for your next job to apply.' : 'Move a card with its Stage menu; it saves here.');
+    }, function () { setStatus('Saved moves are unavailable right now. Tell Claude to move a card instead.'); });
+  }, function () { setStatus('Moves can\'t be saved in this view. Tell Claude to move a card.'); });
+})();
+</script>
+</body>
+</html>

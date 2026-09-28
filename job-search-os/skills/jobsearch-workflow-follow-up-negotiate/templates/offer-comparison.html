@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Offer Comparison</title>
+<!--
+  Job Search AI Operating System — Offer Comparison view (v1.4). READ-ONLY.
+  CONTRACT FOR JOBS: copy this file verbatim and change ONLY the JSON in the one data
+  block whose id is "offers-data" (near the end): one entry per open offer on the Offer
+  Tracker, every figure exactly as the company stated it, in its own unit. Blank means
+  "not stated". Never estimate or invent a figure. No storage, no network.
+-->
+<style>
+  :root { --bg:#ffffff; --fg:#14181f; --muted:#5b6472; --line:#d9dee5; --card:#f6f8fa; --ok:#166534; --warn:#9a3412; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1318; --fg:#e7ebf0; --muted:#9aa4b2; --line:#2a313b; --card:#171c23; --ok:#86efac; --warn:#fdba74; } }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:14px 16px 20px; font:15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--fg); }
+  h1 { font-size:18px; margin:0 0 2px; }
+  .muted { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:12px; }
+  @media (max-width: 560px) { .grid { grid-template-columns:1fr; } }
+  .offer { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+  .offer h2 { font-size:15px; margin:0; }
+  .offer .role { color:var(--muted); font-size:13px; margin:0 0 8px; }
+  dl { margin:0; display:grid; grid-template-columns:minmax(96px, 40%) 1fr; gap:4px 10px; font-size:13px; }
+  dt { color:var(--muted); }
+  dd { margin:0; }
+  .check { margin-top:8px; font-size:13px; font-weight:600; }
+  .check.above { color:var(--ok); }
+  .check.below { color:var(--warn); }
+  .empty { color:var(--muted); font-style:italic; }
+  .notes { margin-top:12px; font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+<h1 id="title">Offer Comparison</h1>
+<p class="muted" id="sub"></p>
+<div class="grid" id="grid"></div>
+<p class="notes" id="notes"></p>
+
+<script type="application/json" id="offers-data">
+{
+  "title": "Offer Comparison",
+  "asOf": "",
+  "minimumPay": "",
+  "targetPay": "",
+  "offers": []
+}
+</script>
+<script>
+(function () {
+  var d = JSON.parse(document.getElementById('offers-data').textContent);
+  var VARIABLE_LABEL = { "hourly": "Differentials & overtime", "annual salary": "Bonus", "commission": "Commission & draw", "commission plus base": "Commission & draw", "salary schedule": "Step, lane & stipends" };
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function line(dl, label, value) {
+    dl.appendChild(el('dt', null, label));
+    var dd = el('dd', value ? null : 'empty', value || 'not stated'); dl.appendChild(dd);
+  }
+  var offers = d.offers || [];
+  document.getElementById('title').textContent = d.title || 'Offer Comparison';
+  var sub = offers.length + (offers.length === 1 ? ' offer' : ' offers') + ' side by side';
+  if (d.minimumPay) sub += ' · your minimum pay: ' + d.minimumPay;
+  if (d.targetPay) sub += ' · target: ' + d.targetPay;
+  if (d.asOf) sub += ' · updated ' + d.asOf;
+  document.getElementById('sub').textContent = sub;
+  var grid = document.getElementById('grid');
+  if (!offers.length) grid.appendChild(el('p', 'empty', 'No open offers on your Offer Tracker yet.'));
+  offers.forEach(function (o) {
+    var card = el('article', 'offer');
+    card.appendChild(el('h2', null, o.company || '(company)'));
+    card.appendChild(el('p', 'role', [o.role, o.status].filter(Boolean).join(' · ')));
+    var dl = el('dl');
+    var type = (o.payType || '').toLowerCase();
+    line(dl, 'Pay type', o.payType);
+    line(dl, 'Base', o.base);
+    line(dl, VARIABLE_LABEL[type] || 'Variable pay', o.variable);
+    if (type.indexOf('commission') === 0) line(dl, 'Ramp or guarantee', o.ramp);
+    line(dl, 'Schedule', o.schedule);
+    line(dl, 'Benefits', o.benefits);
+    line(dl, 'Other', o.other);
+    line(dl, 'First-year total', o.firstYearTotal);
+    line(dl, 'Deadline', o.deadline);
+    card.appendChild(dl);
+    var s = (o.salaryCheck || '').toLowerCase();
+    var cls = s.indexOf('below') === 0 ? 'below' : (s.indexOf('above') === 0 ? 'above' : '');
+    card.appendChild(el('p', 'check ' + cls, 'Salary check: ' + (o.salaryCheck || 'unknown')));
+    grid.appendChild(card);
+  });
+  document.getElementById('notes').textContent = 'Every figure is as the company stated it, in its own unit. "Not stated" means ask. The decision stays yours.';
+})();
+</script>
+</body>
+</html>
