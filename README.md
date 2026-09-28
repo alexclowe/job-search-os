@@ -29,18 +29,22 @@ Built by [The AI Career Lab](https://theaicareerlab.com) for people who looked a
     <img src="assets/first-run.gif" alt="First run: setup paste, command center, one tailored application on a sample" width="100%">
   </a>
   <br>
-  <sub>▶ Setup paste → command center → "Try it on a sample" → a tailored application filed on the Application Board. <a href="https://images.theaicareerlab.com/video/job-search-os-first-run.mp4">Watch the narrated first-run recording (mp4, 2:31).</a></sub>
+  <sub>▶ Setup paste → command center → "Try it on a sample" → a tailored application filed on the Application Board. <a href="https://images.theaicareerlab.com/video/job-search-os-first-run.mp4">Watch the narrated first-run recording (mp4, 2:16).</a></sub>
 </p>
 
-**Watch each job work** (narrated, 1 to 2 minutes each, recorded on claude.ai with a fictional job seeker):
+**Watch each job work** (narrated, about a minute each, recorded on claude.ai with fictional job seekers):
 
 | Clip | Length | What you see |
 |---|---|---|
-| [Setup: resume to command center](https://images.theaicareerlab.com/video/job-search-os-setup.mp4) | 1:25 | Paste a resume, confirm one card, land on the command center |
-| [Tailor & apply](https://images.theaicareerlab.com/video/job-search-os-tailor-apply.mp4) | 1:25 | Salary check first, then a tailored resume and cover letter filed on the Application Board |
-| [Prep for an interview](https://images.theaicareerlab.com/video/job-search-os-interview-prep.mp4) | 1:27 | A brief for the round that is next, built from the Story Bank |
-| [Follow up & negotiate](https://images.theaicareerlab.com/video/job-search-os-negotiate.mp4) | 1:32 | Thank-you note, offer worksheet with formulas, a counter built on your minimum pay |
-| [Run my weekly review](https://images.theaicareerlab.com/video/job-search-os-weekly-review.mp4) | 1:16 | What moved, three moves for the week, focus blocks on the calendar |
+| [Setup: resume to command center](https://images.theaicareerlab.com/video/job-search-os-setup.mp4) | 1:03 | Paste a resume, answer one card (minimum pay in your pay type), and land on the command center. |
+| [The check card: real, pay, fit, who you know](https://images.theaicareerlab.com/video/job-search-os-check-card.mp4) | 1:25 | One card before any tailoring: is the posting real, does the pay clear your minimum, how strong is the fit, and do you know anyone there. Then: tailor it, skip it, or get the intro first. |
+| [Who you know: LinkedIn import](https://images.theaicareerlab.com/video/job-search-os-people-tracker.mp4) | 0:57 | Upload your LinkedIn connections export; it keeps only people at companies you're applying to and drafts the intro asks. |
+| [Tailor & apply](https://images.theaicareerlab.com/video/job-search-os-tailor-apply.mp4) | 2:06 | A tailored resume, cover letter and form answers, with "did you do this?" questions for anything your record can't back up yet. |
+| [Prep for an interview](https://images.theaicareerlab.com/video/job-search-os-interview-prep.mp4) | 1:02 | A sourced company brief first, then the recruiter-screen questions and a day-of card. |
+| [Mock interview](https://images.theaicareerlab.com/video/job-search-os-mock-interview.mp4) | 1:18 | Practice one question at a time with short feedback, then a debrief that adds stories to your Story Bank. |
+| [Follow up & negotiate](https://images.theaicareerlab.com/video/job-search-os-negotiate.mp4) | 1:27 | An hourly offer checked hour for hour against your minimum pay, an offer worksheet, and a counter, with nothing sent for you. |
+| [Funnel report: where the search stalls](https://images.theaicareerlab.com/video/job-search-os-funnel-report.mp4) | 0:51 | Reply rate by source, "too few to tell yet" where the numbers are small, and one fix for the stage where things stop. |
+| [Run my weekly review](https://images.theaicareerlab.com/video/job-search-os-weekly-review.mp4) | 0:56 | What moved, what went quiet, three moves for the week, and a row in the Weekly Search Log. |
 <!-- video:end -->
 
 ## Install in three clicks

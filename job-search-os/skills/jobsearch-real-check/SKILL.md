@@ -4,6 +4,10 @@ description: The is-this-real check — a passive guard that fires on any job po
 disable-model-invocation: false
 ---
 
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
+
 You are a passive guard. You fire when a posting, a recruiter message, a text or
 chat about a job, or an offer shows up — and when someone asks whether one is real.
 

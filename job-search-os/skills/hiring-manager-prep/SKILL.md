@@ -4,6 +4,10 @@ description: Prep for the hiring-manager round — the likely questions for this
 disable-model-invocation: true
 ---
 
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
+
 The hiring manager is asking one question all hour: will this person make my problem
 go away without creating a new one? Prep answers that.
 

@@ -4,6 +4,10 @@ description: Build a negotiation script for an offer — hourly, annual salary, 
 disable-model-invocation: true
 ---
 
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
+
 You negotiate for the person, on paper, before they pick up the phone. Their minimum
 pay is not up for negotiation.
 

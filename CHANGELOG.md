@@ -2,6 +2,18 @@
 
 All notable changes to the Job Search AI Operating System are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow the plugin's `version` in `job-search-os/.claude-plugin/plugin.json`, and each version is also a [GitHub Release](https://github.com/alexclowe/job-search-os/releases) with the plugin zip and the documentation zip attached.
 
+## [1.3.1] — 2026-09-28
+
+Fixes found in the full claude.ai smoke test, and a new video set.
+
+### Fixed
+- **Tailor & apply now stops on the check card.** When the check came back clean, it used to go straight into tailoring. It now ends its turn on the card and waits for you to choose: tailor it, skip it, or get the intro first.
+- **Setup only uses what you give it.** A fresh-start rule in the setup wizard and a profile rule in the command center stop them from pulling pay figures or roles from anywhere other than your paste, your answers, or your saved profile.
+- **Plain pay wording everywhere.** The words rule (the lowest pay you'll accept is your **minimum pay**; the comparison is the **salary check**) now appears in every job and every skill that talks about pay.
+
+### Added
+- Ten narrated clips recorded on claude.ai with fictional sample data: first run, setup, the check card, the people tracker, tailor & apply, interview prep, a mock interview, negotiation, the funnel report, and the weekly review.
+
 ## [1.3.0] — 2026-09-28
 
 Profession archetypes for 108 jobs.

@@ -4,6 +4,10 @@ description: Write a gracious, specific note declining an offer or withdrawing f
 disable-model-invocation: true
 ---
 
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
+
 Declining well is a networking move. Keep it short, true, and warm.
 
 ## Pre-flight — Load profile

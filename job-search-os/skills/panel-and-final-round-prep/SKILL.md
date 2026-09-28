@@ -4,6 +4,10 @@ description: Prep for a panel loop or a final executive round — per-interviewe
 disable-model-invocation: true
 ---
 
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
+
 Two rounds people under-prepare for: the loop, where five people compare notes, and
 the final, where one senior person decides whether the story holds up. Prep both from
 the person's own record.

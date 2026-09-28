@@ -107,7 +107,10 @@ Four checks, in this order, on **one card** — not four interruptions. Decode t
 posting while you run them (must-haves vs. nice-to-haves in their own words, the three
 things the hiring manager is most likely worried about, the terms an
 applicant-tracking system will match on, the schedule and pay exactly as posted), then
-show the card and wait for one choice.
+show the card and wait for one choice. **End your turn on the card.** Do not draft,
+tailor, or file anything until the person picks, even when every check is clean; a
+clean card still ends with the three choices. (The one exception is the sample run,
+which picks Tailor it on the person's behalf and says so.)
 
 **1. Is this real?** Run the `jobsearch-real-check` signals on the posting and any
 recruiter message: the stop-and-check signals from official consumer-protection

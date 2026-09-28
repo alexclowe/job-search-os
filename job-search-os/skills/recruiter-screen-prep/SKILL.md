@@ -4,6 +4,10 @@ description: Prep for a recruiter screen — the five or six questions that alwa
 disable-model-invocation: true
 ---
 
+> **Words rule (never break):** the lowest pay the person will accept is their **minimum pay**
+> (in their pay type), in every status line, reply, file, and tracker. The comparison against
+> it is the **salary check**. Never call it a "floor", even if an older profile or memory does.
+
 A recruiter screen has one purpose: to decide whether to spend the hiring manager's
 time on you, and to find out what you cost. Prep for exactly that.
 
