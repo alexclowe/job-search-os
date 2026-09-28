@@ -145,6 +145,8 @@ action "thank-you note" with Due = interview date.
 
 ## Close
 
+Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
+
 The three stories to lead with in one line each, what was saved and where, the
 `[confirm]` list, then "What's next?" — offer the command center, and name **Follow up
 & negotiate** for the day after the interview.

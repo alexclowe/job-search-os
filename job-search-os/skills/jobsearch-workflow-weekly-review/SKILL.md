@@ -167,6 +167,8 @@ territory.
 
 ## Close
 
+Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
+
 List what was made and where (plan file / blocks / drafts / log row), the stale rows
 and the decision on each, the `[confirm]` items, then "What's next?" — offer the
 command center.

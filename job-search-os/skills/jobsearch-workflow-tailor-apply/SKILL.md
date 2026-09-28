@@ -177,6 +177,8 @@ rows sit under "Samples" and never count.
 
 ## Close
 
+Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
+
 List what was made and where (resume / letter / note / folder / board row), the
 `[confirm]` list, the floor-check verdict in one line, then "What's next?" — offer the
 command center. If a Story Bank exists and a strong story surfaced during tailoring

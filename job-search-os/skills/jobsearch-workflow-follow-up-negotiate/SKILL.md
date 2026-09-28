@@ -141,6 +141,8 @@ Closed with a decline note each.
 
 ## Close
 
+Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
+
 What was drafted and where, the floor verdict on any offer in one line, the
 `[confirm]` list, then "What's next?" — offer the command center. If they accepted,
 name `/thirty-sixty-ninety-plan` as the next thing to run.

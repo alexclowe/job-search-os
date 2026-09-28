@@ -61,6 +61,21 @@ This file will be replaced when the wizard completes.
 
 ### Step 0c — Two-minute setup (default)
 
+**Never seed the profile from memory.** Build the profile only from what the person
+gives you in this setup (their paste or their answers) and from an earlier profile
+block they hand you. Do not pull roles, employers, years, salary figures, or
+"frictions" from account memory, other conversations, or other Projects, and do not
+announce what you "already know" about them — a job search often runs on a fresh
+account, a shared screen, or a recording, and stale or half-remembered facts end up
+in a resume. If memory offers something, ignore it; the person will tell you what
+matters. Concretely: never write "from what I already know about you", never
+"pre-fill" or "seed" any field, never mention "your preferences" or "memory", and never
+say what you are choosing not to reuse. Say nothing about it at all: ask for the paste,
+read the paste, show the card built only from the paste. If the person's paste is a
+different person from anything you remember, that is normal (a friend's resume, a
+sample, a new account) and needs no comment.
+
+
 Say, briefly:
 
 > Let's get your career story set up — about two minutes. Paste **any one** of these

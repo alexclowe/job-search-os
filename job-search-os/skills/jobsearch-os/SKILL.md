@@ -19,6 +19,8 @@ Project file `./job-search-os-profile.md`, then this Project's instructions, the
 profile block pasted in this chat. Accept any block with the profile fields (current
 role, target roles, salary floor, positioning challenges, shipped artifacts, search
 stage) whatever its heading says. Check all three before deciding it's missing.
+Read the profile only from those three places — never from account memory or other
+conversations; if it's missing, the wizard collects it fresh.
 - **Present:** use the person's name and target roles in the header. Note whether the
   salary floor, shipped artifacts, and positioning challenges are filled in — the
   guards depend on them.

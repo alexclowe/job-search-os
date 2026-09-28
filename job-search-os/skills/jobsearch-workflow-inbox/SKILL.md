@@ -143,6 +143,8 @@ or touch your calendar on its own. You review, then say 'move these to Gmail'.
 
 ## Close
 
+Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
+
 What came in by group, what was drafted and where, stage moves on the board, the
 `[confirm]` list, then "What's next?" — offer the command center, and name **Prep for
 an interview** if any interview was confirmed.
