@@ -1,0 +1,59 @@
+name: Bug report
+description: A skill did something wrong, or the plugin would not install
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. Please remove anything personal (names, employers, salary numbers) before pasting.
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where were you running it?
+      options:
+        - Claude desktop app (macOS)
+        - Claude desktop app (Windows)
+        - Claude web (claude.ai)
+        - Claude Code (terminal)
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install it?
+      options:
+        - Add marketplace, then Add from a repository (alexclowe/job-search-os)
+        - Uploaded the zip from the Gumroad kit
+        - Forked this template and installed my fork
+        - /plugin marketplace add (Claude Code)
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill or job?
+      placeholder: e.g. Tailor & apply, /jobsearch-workflow-inbox, /salary-negotiation-script
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      description: The exact phrase you said helps. If a guardrail fired or a `[confirm]` appeared, say so.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Said "set up my Job Search OS" and pasted a resume
+        2. Said "tailor and apply" with a posting
+        3. ...
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed personal details (names, employers, salary figures) from this report
+          required: true

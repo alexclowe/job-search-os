@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and discussion
+    url: https://github.com/alexclowe/job-search-os/discussions
+    about: Ask how something works, share what you changed, or compare notes with other job seekers.
+  - name: Security report
+    url: https://github.com/alexclowe/job-search-os/blob/main/SECURITY.md
+    about: Please email instead of opening a public issue.

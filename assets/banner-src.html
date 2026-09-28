@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Job Search AI Operating System — banner</title>
+<style>
+  html,body{margin:0;padding:0;background:#0b1220;-webkit-font-smoothing:antialiased}
+  :root{--nav:#0b1220;--nav-mid:#101b34;--purple:#170c2a;--amber:#ffb86b;--amber-deep:#9b6b1a;
+    --paper:#f6efe2;--paper-shadow:#e9dfca;--ink:#1e293b;--ink-light:#475569;
+    --text:#f5f5f5;--text-dim:#c9d4e8;--text-dimmer:#7f8da6}
+  .banner{width:1280px;height:640px;position:relative;overflow:hidden;box-sizing:border-box;padding:64px 88px;
+    color:var(--text);font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;
+    background:radial-gradient(ellipse 80% 60% at 72% 50%, rgba(255,184,107,.07) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 22% 30%, rgba(255,184,107,.04) 0%, transparent 55%),
+      linear-gradient(135deg, var(--nav-mid) 0%, var(--nav) 50%, var(--purple) 100%)}
+  .banner::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px, transparent 1px);background-size:32px 32px}
+  .left{position:relative;width:640px;height:100%;display:flex;flex-direction:column;justify-content:center}
+  .kicker{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--amber);font-weight:800;margin-bottom:26px;display:flex;align-items:center;gap:14px}
+  .kicker::before{content:"";display:inline-block;width:36px;height:2px;background:var(--amber)}
+  h1{font-size:72px;line-height:.98;margin:0 0 4px;letter-spacing:-.025em;font-weight:800;color:#fff}
+  .accent{font-size:46px;line-height:1.1;margin:0 0 18px;font-style:italic;font-family:Georgia,'Times New Roman',serif;color:var(--amber);font-weight:700;letter-spacing:-.02em}
+  .sub{font-size:21px;line-height:1.4;margin:0 0 34px;color:var(--text-dim);max-width:600px}
+  .sub b{color:#fff;font-weight:700}
+  .pills{display:flex;gap:10px;flex-wrap:wrap}
+  .pill{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--text-dim);
+    border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:9px 14px;background:rgba(255,255,255,.04)}
+  .pill.hot{color:var(--nav);background:var(--amber);border-color:var(--amber)}
+  .doc-wrap{position:absolute;right:76px;top:50%;transform:translateY(-50%) rotate(-2.5deg)}
+  .doc{width:340px;height:470px;background:linear-gradient(180deg,var(--paper) 0%,var(--paper-shadow) 100%);border-radius:6px;padding:30px 30px 24px;box-sizing:border-box;color:var(--ink);
+    box-shadow:0 30px 60px rgba(0,0,0,.55),0 12px 24px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.4);display:flex;flex-direction:column}
+  .doc .dk{font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--amber-deep);font-weight:800;margin-bottom:6px}
+  .doc .ver{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-light);font-weight:700;margin-bottom:16px}
+  .doc h2{font-size:30px;line-height:1.04;margin:0;font-weight:800;letter-spacing:-.02em}
+  .doc .da{font-size:24px;line-height:1.08;margin:0 0 14px;font-style:italic;font-family:Georgia,'Times New Roman',serif;color:var(--amber-deep);font-weight:700}
+  .doc .jt{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-light);font-weight:700;margin-bottom:4px}
+  .doc .j{font-size:11px;line-height:1.55;padding-left:12px;text-indent:-12px}
+  .doc .dn{font-size:48px;font-weight:800;color:var(--amber-deep);line-height:1;letter-spacing:-.02em;margin:auto 0 0}
+  .doc .dl{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-light);margin-top:6px;font-weight:700}
+  .doc .by{font-size:9px;color:var(--ink-light);margin-top:12px;border-top:1px solid rgba(0,0,0,.08);padding-top:9px}
+  .badge{position:absolute;top:30px;right:44px;background:var(--amber);color:var(--nav);padding:10px 18px;border-radius:10px;box-shadow:0 14px 36px rgba(255,184,107,.3);text-align:center;font-weight:800}
+  .badge .pl{font-size:8px;letter-spacing:.24em;text-transform:uppercase;opacity:.7;display:block;margin-bottom:2px}
+  .badge .pn{font-size:22px;line-height:1;display:block}
+  .meta{position:absolute;left:88px;bottom:32px;display:flex;gap:28px;font-size:12px;color:var(--text-dimmer);font-weight:500}
+  .meta .b{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--amber);margin-right:10px;vertical-align:3px}
+</style></head>
+<body><div class="banner">
+  <div class="left">
+    <div class="kicker">Free · MIT · The AI Career Lab</div>
+    <h1>Job Search</h1>
+    <div class="accent">AI Operating System.</div>
+    <p class="sub">The job search that runs in the <b>Claude app</b>. No terminal. Five jobs start to finish, drafting into your Gmail, Calendar and Drive. <b>Nothing sends without your click.</b></p>
+    <div class="pills">
+      <span class="pill hot">Install in 3 clicks</span>
+      <span class="pill">30 skills</span>
+      <span class="pill">5 jobs</span>
+      <span class="pill">3 guardrails</span>
+      <span class="pill">Profession archetypes</span>
+    </div>
+  </div>
+  <div class="doc-wrap"><div class="doc">
+    <div class="dk">The AI Career Lab</div>
+    <div class="ver">v1.0 · Claude desktop app</div>
+    <h2>Job Search</h2>
+    <div class="da">AI Operating System</div>
+    <div class="jt">The jobs</div>
+    <div class="j">· Tailor &amp; apply</div><div class="j">· Work my inbox</div><div class="j">· Prep for an interview</div><div class="j">· Follow up &amp; negotiate</div><div class="j">· Run my weekly review</div>
+    <div class="dn">30</div>
+    <div class="dl">Skills · every prompt included</div>
+    <div class="by">github.com/alexclowe/job-search-os</div>
+  </div></div>
+  <div class="badge"><span class="pl">Open source</span><span class="pn">MIT</span></div>
+  <div class="meta">
+    <span><span class="b"></span>Claude desktop or web</span>
+    <span><span class="b"></span>Drafts only, approval before send</span>
+    <span><span class="b"></span>theaicareerlab.com</span>
+  </div>
+</div></body></html>

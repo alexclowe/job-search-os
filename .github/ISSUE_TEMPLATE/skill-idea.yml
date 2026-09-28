@@ -1,0 +1,28 @@
+name: Skill idea or improvement
+description: Propose a change to a skill or a new skill (the plugin folder is mirrored, so changes land upstream first)
+title: "skill: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `job-search-os/` is mirrored from the build repository on every release, so a pull request that edits it cannot be merged as-is. Describe the change here; accepted changes are folded upstream and arrive in the next mirror.
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill (or "new")?
+      placeholder: /cover-letter-draft
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change, and why?
+      description: If you can, paste the edited SKILL.md section. Keep the ground rules; nothing that sends, submits, or invents.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: Did you try it in your own fork?
+      description: This repo is a template. If you installed a fork with the change and it worked better, say what you saw.

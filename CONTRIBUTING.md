@@ -16,13 +16,15 @@ An archetype is a short markdown brief for one profession. The **Tailor & apply*
 
 We fold accepted archetypes into the plugin's source so they ship inside the plugin as well as in `archetypes/`.
 
-**Don't know the profession well enough to write it?** Open an [archetype request](../../issues/new?template=profession-archetype.md) with what you do know.
+**Don't know the profession well enough to write it?** Open an [archetype request](https://github.com/alexclowe/job-search-os/issues/new?template=profession-archetype.yml) with what you do know.
+
+**Before you open the pull request,** run `python3 scripts/validate.py` from the repo root. It checks the slug line, the required sections, and that no dollar figures slipped in; the same check runs in CI on every pull request.
 
 ## 2. Skill improvements
 
 The plugin folder is mirrored from a private build repository, so a pull request that edits `job-search-os/` directly cannot be merged as-is. Instead:
 
-- Open an issue describing the change and, if you can, paste the edited `SKILL.md` section. We fold accepted changes upstream and they arrive with the next mirror.
+- Open a [skill idea issue](https://github.com/alexclowe/job-search-os/issues/new?template=skill-idea.yml) describing the change and, if you can, paste the edited `SKILL.md` section. We fold accepted changes upstream and they arrive with the next mirror.
 - Or fork this repo (it is a template), make the change in your copy, and install your fork. If it works better, tell us in an issue.
 
 ## Ground rules

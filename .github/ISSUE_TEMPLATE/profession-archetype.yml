@@ -1,0 +1,55 @@
+name: Profession archetype request
+description: Ask for, or start, an archetype for a profession the registry does not cover yet
+title: "archetype: <profession>"
+labels: [archetype]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No statistics, salary figures, or named employers, please. Hedged language ("tend to", "often") is the house style. If you would rather write the file yourself, copy `archetypes/_template.md` and open a pull request.
+  - type: input
+    id: profession
+    attributes:
+      label: Profession and slug
+      placeholder: Dental hygienist (dental-hygienist)
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Your connection to it
+      options:
+        - I do this job
+        - I hire for it
+        - I recruit for it
+        - Other (say in the notes)
+    validations:
+      required: true
+  - type: textarea
+    id: titles
+    attributes:
+      label: Target titles you know hiring teams use
+      description: Junior to senior, plus adjacent titles worth searching.
+  - type: textarea
+    id: where
+    attributes:
+      label: Where the postings tend to live
+      placeholder: Boards, associations, agencies, "mostly referral"
+  - type: textarea
+    id: screens
+    attributes:
+      label: What a recruiter screens for first
+      placeholder: Licences, credentials, systems, scope lines
+  - type: textarea
+    id: stories
+    attributes:
+      label: Story types that land in interviews
+  - type: textarea
+    id: redflags
+    attributes:
+      label: Red flags in postings for this role
+  - type: textarea
+    id: verify
+    attributes:
+      label: Where to verify licensing or credential rules
+      description: Official bodies only (a state board, a certifying organisation).
