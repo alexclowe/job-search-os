@@ -31,10 +31,24 @@ moved, what went quiet, the three moves that matter, and time protected for them
 
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
-pasted in this chat. Present → use target roles, target companies, minimum salary,
+pasted in this chat. Present → use target roles, target companies, minimum pay,
 search stage, weekly hours available, and voice samples; don't re-ask. Absent → say
 setup takes about two minutes; if declined, continue with neutral defaults and say so
 in the close.
+
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
+**Profession archetype (read, don't ask).** If the profile names a profession, read the
+matching archetype — `./archetypes/<profession>.md` in this Project first, then the
+`archetypes/` folder that ships with the Tailor & apply job
+(`jobsearch-workflow-tailor-apply/archetypes/`). Use its **Where the postings live**
+section when a move is about finding more openings (for example hospital and health-
+system career sites for nurses, district and state education job boards for teachers),
+and its **What's usually negotiable** section when an offer is in play. If no archetype
+matches, say nothing about it.
 
 ## Pre-flight 2 — Connections
 
@@ -99,13 +113,13 @@ confirm."
   reason.
 - **No invented counts:** every number comes from the board or the log; unknown →
   `[confirm]`.
-- **Minimum salary:** any new target role with a posted range below your minimum salary is flagged in
+- **Minimum pay:** any new target role with a posted range below your minimum pay is flagged in
   the plan before it becomes a move.
 - **Traceability and AI-register:** outreach claims come from the profile; tells
   removed; the voice matches the samples.
 - **Volume check:** if the plan is "apply to twenty more", say so and replace one
   volume move with a positioning move — the product's philosophy is fewer, better,
-  and never below your minimum salary.
+  and never below your minimum pay.
 - **Privacy:** outreach never names the current employer's confidential work.
 Append one short **Before you commit** checklist with only the checks that fired.
 

@@ -25,6 +25,17 @@
 - Practice areas and systems near the top; per role: matter types, volume in relative terms, what you drafted versus what you supported; certifications listed with the issuing body
 - Never name clients or confidential matters; describe by type. "Assisted attorneys" is filler; say what you produced
 
+## How interviews usually run
+- Often an interview with the supervising attorney or the paralegal manager, sometimes with a writing or research exercise, or a test on the firm's document or case-management system
+- Expect questions on deadlines, docketing, the practice area's procedures, and confidentiality
+
+## How pay is usually structured
+- Annual salary or hourly, depending on the firm and whether the role is classified as overtime-eligible; bonuses are common at larger firms
+- Billable-hour expectations may apply and affect bonuses
+
+## What's usually negotiable
+- Salary or rate, overtime eligibility and how it's paid, bonus basis, certification or tuition support, and remote days
+
 ## Red flags in postings
 - Paralegal title with legal-secretary duties and pay, billable-hour targets without support, "notary required" as the main qualification, practice areas listed as "all"
 

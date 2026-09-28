@@ -1,6 +1,6 @@
 ---
 name: hiring-manager-prep
-description: Prep for the hiring-manager round — the likely questions for this specific role, the person's shipped-artifact stories mapped to the manager's probable worries, how to talk about the manager's known problem, and the questions to ask back that show judgment. Activates on "prep me for the hiring manager" / "hiring manager round" / "interview with my future boss".
+description: Prep for the hiring-manager round — the likely questions for this specific role, the person's win stories mapped to the manager's probable worries, how to talk about the manager's known problem, and the questions to ask back that show judgment. Activates on "prep me for the hiring manager" / "hiring manager round" / "interview with my future boss".
 disable-model-invocation: true
 ---
 
@@ -11,8 +11,13 @@ go away without creating a new one? Prep answers that.
 
 Look for the `Job Search AI Operating System — Profile` block: `./job-search-os-profile.md`
 (Project folder), then this Project's instructions, then a pasted block. If none, say:
-"Run `jobsearch-setup-wizard` first — I need your shipped artifacts to map stories to
+"Run `jobsearch-setup-wizard` first — I need your wins to map stories to
 their worries." Continue only with pasted material.
+
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
 
 ## Inputs
 
@@ -32,11 +37,11 @@ person's Story Bank if it exists.
      questions before proposing anything;
    - working style, disagreement with a manager, a project that failed and what
      changed after;
-   - the positioning challenge, asked the way a manager would ask it, answered before
+   - what a hiring manager might question, asked the way a manager would ask it, answered before
      they finish the question;
    - "how do you use AI in your work" — concrete and honest;
    - "what would you do in your first ninety days" — listen, map, one visible win.
-3. **The story you lead with** — the single artifact that most resembles their
+3. **The story you lead with** — the single win that most resembles their
    problem, told in 90 seconds.
 4. **Questions to ask back** — six, none answerable from the website: why the role is
    open, what the last person in it struggled with, what success at six months looks
@@ -51,7 +56,7 @@ person's Story Bank if it exists.
 - Every claim survives "what exactly did you do?".
 - No confidential current-employer detail beyond what the profile allows.
 - Comp does not come up in this round unless they raise it; if they do, the answer holds to
-  the minimum salary and gives no history.
+  the minimum pay and gives no history.
 
 ## About this plugin
 

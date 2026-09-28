@@ -4,7 +4,7 @@ Thanks for looking. Two kinds of contribution land here.
 
 ## 1. Profession archetypes (the most useful thing you can send)
 
-An archetype is a short markdown brief for one profession. The **Tailor & apply** job reads it when someone names that profession, to sharpen how it decodes a posting and orders a resume. It never adds a claim to anyone's resume.
+An archetype is a short markdown brief for one profession. Every job reads it when someone names that profession: to decode postings and order a resume, to shape interview prep, to know how pay is usually structured and what's usually negotiable, and to know where the postings live. It never adds a claim or a number to anyone's resume.
 
 **To add one**
 

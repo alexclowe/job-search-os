@@ -25,6 +25,18 @@
 - Licence and certifications near the top with numbers/expiry where the employer expects them; unit type, bed count, and patient population per role; one page for early career, two for experienced
 - "Provided compassionate care" reads as filler; "12-bed ICU, 1:2 ratio, vents and drips" reads as credible. Keep the specifics; drop the adjectives
 
+## How interviews usually run
+- Often a recruiter screen, then a panel with the nurse manager and staff nurses; scenario and behavioral questions ("tell me about a time a patient's condition changed") are common, and some units add a shadow shift or a unit tour
+- Outpatient and clinic roles tend to ask more about patient education, phone triage, care coordination, and the scheduling or charting system
+
+## How pay is usually structured
+- Usually hourly, with differentials for nights, weekends, charge, or specialty; overtime rules, on-call and call-back pay, and guaranteed hours matter as much as the base rate
+- Many systems place new hires on an internal step or clinical-ladder scale by years of experience; unionized hospitals publish their wage steps in the contract
+
+## What's usually negotiable
+- Where a published scale exists, the base rate usually follows it; placement on the scale (years credited), schedule, shift, sign-on bonus and its repayment terms, relocation, and start date tend to move more easily
+- Continuing-education support and certification pay are worth asking about
+
 ## Red flags in postings
 - "Must be flexible with floating" plus no unit named, unrealistic ratios stated as a positive, sign-on bonus with an unusually long clawback, "self-scheduling" paired with mandatory overtime language
 

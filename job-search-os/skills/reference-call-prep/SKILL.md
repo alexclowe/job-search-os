@@ -13,6 +13,11 @@ Look for the `Job Search AI Operating System — Profile` block: `./job-search-o
 (Project folder), then this Project's instructions, then a pasted block; and the Story
 Bank if it exists. Continue with pasted material if none.
 
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
 ## Inputs
 
 The role and company, what the process has focused on (from the Application Board and
@@ -25,7 +30,7 @@ know about the search, is there a layoff to explain).
 1. **What this role is worried about** — two lines.
 2. **What I'd love you to emphasize** — the two or three stories this reference
    actually witnessed (named from the Story Bank), with the result in the person's own
-   figures; the positioning challenge addressed in one line if this reference can
+   figures; what a hiring manager might question addressed in one line if this reference can
    speak to it.
 3. **Questions you'll probably get** — strengths, the area for growth (with the honest
    answer the person is comfortable with), how they handle conflict, would you hire

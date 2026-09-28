@@ -32,6 +32,9 @@ REQUIRED_ARCHETYPE_SECTIONS = [
     "## What a recruiter screens for first",
     "## Story types that land",
     "## Resume conventions",
+    "## How interviews usually run",
+    "## How pay is usually structured",
+    "## What's usually negotiable",
     "## Red flags in postings",
     "## Verify before relying on this",
 ]

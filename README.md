@@ -8,14 +8,16 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-0b1220?labelColor=ffb86b&color=0b1220"></a>
-  <a href="CHANGELOG.md"><img alt="Version 1.0.0" src="https://img.shields.io/badge/version-1.0.0-0b1220?labelColor=ffb86b&color=0b1220"></a>
+  <a href="CHANGELOG.md"><img alt="Version 1.1.0" src="https://img.shields.io/badge/version-1.1.0-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="docs/skill-catalog.md"><img alt="30 skills" src="https://img.shields.io/badge/skills-30-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="#requirements"><img alt="Works with Claude Pro, Max, Team" src="https://img.shields.io/badge/works%20with-Claude%20Pro%20%C2%B7%20Max%20%C2%B7%20Team-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml/badge.svg"></a>
   <a href="https://github.com/alexclowe/job-search-os/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/alexclowe/job-search-os?style=social"></a>
 </p>
 
-A free, MIT-licensed Claude plugin for anyone running a real job search: five end-to-end jobs, living trackers, and three guardrails that keep your resume honest and your time off roles below your minimum salary. Drafts land in your own Gmail, Calendar, and Drive, and nothing is sent, submitted, accepted, or declined without your click.
+A free, MIT-licensed Claude plugin for anyone running a real job search, in any profession: five end-to-end jobs, living trackers, and three guardrails that keep your resume honest and your time off roles below your minimum pay. Drafts land in your own Gmail, Calendar, and Drive, and nothing is sent, submitted, accepted, or declined without your click.
+
+It is built for how people actually get paid and where they actually are. **Hourly** (with shift differentials, overtime, and guaranteed hours), **annual salary**, **commission** (base or draw plus a split), or a **salary schedule** (step and lane): every posting and offer is checked against your minimum pay in the same unit. And every stage, from a first job to a career change or a return to work, not only senior roles.
 
 Built by [The AI Career Lab](https://theaicareerlab.com) for people who looked at the excellent open-source job-search tools for Claude Code and thought "I don't use a terminal." Same idea. Different door. [Here is the longer version of that comparison.](https://theaicareerlab.com/blog/career-ops-ai-job-search-without-terminal)
 
@@ -37,7 +39,7 @@ Built by [The AI Career Lab](https://theaicareerlab.com) for people who looked a
 | [Setup: resume to command center](https://images.theaicareerlab.com/video/job-search-os-setup.mp4) | 1:25 | Paste a resume, confirm one card, land on the command center |
 | [Tailor & apply](https://images.theaicareerlab.com/video/job-search-os-tailor-apply.mp4) | 1:27 | Salary check first, then a tailored resume and cover letter filed on the Application Board |
 | [Prep for an interview](https://images.theaicareerlab.com/video/job-search-os-interview-prep.mp4) | 1:27 | A brief for the round that is next, built from the Story Bank |
-| [Follow up & negotiate](https://images.theaicareerlab.com/video/job-search-os-negotiate.mp4) | 1:27 | Thank-you note, offer worksheet with formulas, a counter built on your minimum salary |
+| [Follow up & negotiate](https://images.theaicareerlab.com/video/job-search-os-negotiate.mp4) | 1:27 | Thank-you note, offer worksheet with formulas, a counter built on your minimum pay |
 | [Run my weekly review](https://images.theaicareerlab.com/video/job-search-os-weekly-review.mp4) | 1:16 | What moved, three moves for the week, focus blocks on the calendar |
 <!-- video:end -->
 
@@ -81,7 +83,7 @@ Download `job-search-os-claude-plugin-v*.zip` from the [latest release](https://
 
 1. Start a conversation **inside a Project** (the profile and trackers live there) and say **"set up my Job Search OS"**.
 2. Paste your current resume. Setup asks at most three questions, saves your profile, and ends on your command center.
-3. Pick **"Try it on a sample"**. It tailors one application for a made-up job seeker so you see the salary check, the decoded posting, the resume and cover letter, and the Application Board row before you paste anything real.
+3. Pick **"Try it on a sample"** and choose a made-up job seeker: **Maria, a nurse moving to a clinic job (paid hourly)**, or **Sam, a data engineer going back to hands-on work (paid a salary)**. It tailors one application so you see the salary check, the decoded posting, the resume and cover letter, and the Application Board row before you paste anything real.
 4. Optional: say **"connect my tools"** to link Gmail, Google Calendar, and Google Drive. Personal accounts only. Not connected, you get the same work copy-paste-ready with files saved in your Project.
 
 ## What it does
@@ -90,7 +92,7 @@ Say **"open my command center"** (or `/jobsearch-os`) and pick a job. Each one r
 
 | Job | Say | What you get | Where it lands |
 |---|---|---|---|
-| **Tailor & apply** | "tailor and apply", "here's a posting" | Salary check *first*, the posting decoded (must-haves, wishlist, the three worries behind it, the words an ATS will match), a tailored resume (Word) that leads with what you shipped, a 250 to 350 word cover letter that could not be sent anywhere else, an application note | A per-company Drive folder, the note as a Gmail draft, a row on the **Application Board** |
+| **Tailor & apply** | "tailor and apply", "here's a posting" | Salary check *first*, the posting decoded (must-haves, wishlist, the three worries behind it, the words an ATS will match), a tailored resume (Word) that leads with what you did and what came of it, a 250 to 350 word cover letter that could not be sent anywhere else, an application note | A per-company Drive folder, the note as a Gmail draft, a row on the **Application Board** |
 | **Work my inbox** | "work my inbox", "reply to this recruiter", "I got a rejection" | Every message sorted (outreach, scheduling, next round, rejection, offer), a reply drafted in your voice for each one you choose, a two-line rejection read, the board moved to the right stage | Gmail drafts in the original thread, interviews on your calendar with a prep hold, the **Application Board** updated, offers on the **Offer Tracker** |
 | **Prep for an interview** | "prep me for an interview", "hiring manager round tomorrow" | A 2 to 4 page brief for the round that is actually next: their likely worries with the story that answers each, your answers built from named Story Bank entries, five questions to ask back, a half-page day-of card | The company's Drive folder, a prep hold on your calendar, the **Story Bank** updated |
 | **Follow up & negotiate** | "write my thank-you note", "I haven't heard back", "I got an offer" | Thank-you notes per interviewer, a two-touch follow-up cadence, an offer worksheet (Excel) with the salary check in the first line, a counter script with the exact words, a decision memo against your must-haves | Gmail drafts in the interview thread, the worksheet in Drive, dates on your calendar, the **Offer Tracker** updated |
@@ -102,7 +104,7 @@ Say **"open my command center"** (or `/jobsearch-os`) and pick a job. Each one r
 
 | Guard | Speaks up when |
 |---|---|
-| **Minimum salary** | a role, message, or offer is at or below the minimum salary you set, before you spend an hour on it |
+| **Minimum pay** | a role, message, or offer pays at or below the minimum you set, compared like with like (hourly to hourly, salary to salary, a commission role's base and realistic total to yours), before you spend an hour on it |
 | **Every claim holds up** | a resume, letter, or answer claims more than your record; could you back it in the room? |
 | **No invention** | a figure, title, or date has no source in your profile or resume; it becomes `[confirm]` |
 
@@ -118,9 +120,9 @@ The plugin is 30 markdown skill files and one manifest. There is no server, no s
 
 career-ops ships archetypes for a handful of technical roles. This registry is for everyone else.
 
-An archetype is a short, hedged brief the **Tailor & apply** job reads when you name your profession: the titles hiring teams actually use, where postings tend to live, what a recruiter screens for first, the story types that land, resume conventions, and red flags in postings. It sharpens the posting decode and the resume ordering. It never puts a claim, a number, or a keyword on your resume that your own record does not support.
+An archetype is a short, hedged brief every job reads when you name your profession: the titles hiring teams actually use, where postings tend to live, what a recruiter screens for first, the story types that land, resume conventions, how interviews usually run, how pay is usually structured, what's usually negotiable, and red flags in postings. It sharpens the posting decode, the resume ordering, interview prep, and the negotiation asks. It never puts a claim, a number, or a keyword on your resume that your own record does not support.
 
-| Shipped | | |
+| Included | | |
 |---|---|---|
 | [Nurse](archetypes/nurse.md) | [Teacher](archetypes/teacher.md) | [Bookkeeper](archetypes/bookkeeper.md) |
 | [Loan officer](archetypes/loan-officer.md) | [Paralegal](archetypes/paralegal.md) | [Real estate agent](archetypes/real-estate-agent.md) |
@@ -141,8 +143,8 @@ Know a profession well? Copy [`archetypes/_template.md`](archetypes/_template.md
 | Email, calendar, files | No | No (draft-only, never sends) | Drafts into your own Gmail, Calendar, Drive, behind approval |
 | Evaluation rubric | Company research checklist | A to H report, 1 to 5 score | Salary check and posting decode; no numeric score |
 | Interview prep | Yes | Yes, with practice and debrief modes | Yes, by round, from your Story Bank |
-| Negotiation | Salary benchmarking | Offer prep | Script that holds to your minimum salary, counter-offer handler, offer worksheet |
-| Guardrails | Profile-driven | Story provenance (no invented numbers) | Minimum salary, every claim holds up, no invention; AI-register tells stripped |
+| Negotiation | Salary benchmarking | Offer prep | Script that holds to your minimum pay, counter-offer handler, offer worksheet |
+| Guardrails | Profile-driven | Story provenance (no invented numbers) | Minimum pay, every claim holds up, no invention; AI-register tells stripped |
 | Profession focus | General, technical-leaning | Tech archetypes (LLMOps, Agentic, PM, SA, FDE, …) | Profession archetype registry (nurses, teachers, bookkeepers, …) |
 | Cost to run | Free tiers possible | Free tiers possible | Needs a paid Claude plan (plugins are not on Free) |
 | Licence | MIT | MIT | MIT |
@@ -187,7 +189,7 @@ Yes, two ways. Inside your Project, ask Claude to change a skill ("make the cove
 
 ## Fork and own it
 
-This is a GitHub template repository: **Use this template → Create a new repository** gives you your own copy. Skills are plain markdown (`SKILL.md` files); change the voice, the minimum-salary rules, the job steps, or add an archetype, then install your fork with your own `owner/repo`. The [validation workflow](.github/workflows/validate.yml) runs on your fork too.
+This is a GitHub template repository: **Use this template → Create a new repository** gives you your own copy. Skills are plain markdown (`SKILL.md` files); change the voice, the minimum-pay rules, the job steps, or add an archetype, then install your fork with your own `owner/repo`. The [validation workflow](.github/workflows/validate.yml) runs on your fork too.
 
 ## Roadmap
 

@@ -25,6 +25,17 @@
 - Licence and designations; production by year (sides, volume) only with records to back it; lead sources; tools; team versus solo made explicit
 - Inflated production is the fastest way to lose an interview in this industry; say "team volume" when it was team volume
 
+## How interviews usually run
+- Joining a brokerage is usually a conversation with the managing broker or team lead about your license, sphere, marketing plan, and production, more than a formal interview
+- Salaried roles (transaction coordinator, showing agent, inside sales) run more like a standard interview
+
+## How pay is usually structured
+- Usually commission: a split with the brokerage or team on each closed deal, sometimes with a cap, desk or franchise fees, and transaction fees; salaried support roles are the exception
+
+## What's usually negotiable
+- The split and any cap, who pays for leads and marketing, fees, training and mentoring, and whether a team provides a guaranteed lead flow
+- Ask what a typical first-year agent on that team actually closes, not the top producer's numbers
+
 ## Red flags in postings
 - "Unlimited earning potential" with desk fees and no leads, mandatory lead-purchase programs, splits that change with undefined "caps", team roles that require you to bring your own database
 

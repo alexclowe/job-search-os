@@ -14,6 +14,11 @@ Look for the `Job Search AI Operating System — Profile` block: `./job-search-o
 "Run `jobsearch-setup-wizard` first — outreach in a generic voice gets ignored."
 Continue only with pasted material.
 
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
 ## Inputs
 
 Who (name, role, company, how they're connected), which kind of message, the one
@@ -28,12 +33,12 @@ or said).
 2. **Former colleague:** one real memory, what the person is looking for now in one
    line, one small ask.
 3. **Cold, relevant hiring manager:** something specific about their team's work, the
-   shipped artifact that rhymes with it, one question — no resume attached unless
+   win that rhymes with it, one question — no resume attached unless
    they ask.
 4. **Alum or community member:** the shared thing, the specific ask, an easy out.
 5. **Inbound recruiter reply** (interested): two lines on fit leading with an
-   artifact, then the three qualifying questions — range for the level, remote terms,
-   where the role sits. Your minimum salary is stated only if the profile says so; otherwise ask
+   win, then the three qualifying questions — range for the level, remote terms,
+   where the role sits. Your minimum pay is stated only if the profile says so; otherwise ask
    for their range first. (Declining: specific, kind, door open.)
 
 Each message ends with a one-sentence ask and no pressure. Subject lines under 50

@@ -25,6 +25,16 @@
 - Link to the portfolio at the top; per role: platforms owned, cadence, team size, paid budget in relative terms if confidential, tools; results as growth or engagement only where you have the data
 - Avoid "viral" and "storytelling" as claims; show the piece and say what it did
 
+## How interviews usually run
+- Often a screen, then an interview with the marketing lead; a portfolio review and a take-home exercise (a content calendar, a campaign idea, or an audit of their channels) are common
+- Expect questions on results you can show, tools, and handling a public complaint
+
+## How pay is usually structured
+- Annual salary for in-house roles; freelancers and contractors often bill a monthly retainer or hourly; agency roles sometimes add a bonus
+
+## What's usually negotiable
+- Salary or retainer, the scope (channels, posting volume, whether paid ads or community management are included), take-home exercise compensation, remote days, and tools budget
+
 ## Red flags in postings
 - One person expected to own strategy, design, video, paid, and community for coordinator pay; "must be on call for the brand 24/7"; posting counts stated as the job
 

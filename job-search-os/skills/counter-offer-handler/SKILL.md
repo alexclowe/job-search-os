@@ -1,6 +1,6 @@
 ---
 name: counter-offer-handler
-description: Handle a counter-offer from the current employer after resigning, or a revised offer from the new company — a clear-eyed comparison against why the person started looking, their minimum salary and must-haves, the questions to ask each side, and the words for accepting or declining without burning either bridge. Activates on "my company countered" / "they matched the offer" / "should I stay" / "revised offer".
+description: Handle a counter-offer from the current employer after resigning, or a revised offer from the new company — a clear-eyed comparison against why the person started looking, their minimum pay and must-haves, the questions to ask each side, and the words for accepting or declining without burning either bridge. Activates on "my company countered" / "they matched the offer" / "should I stay" / "revised offer".
 disable-model-invocation: true
 ---
 
@@ -14,6 +14,11 @@ Look for the `Job Search AI Operating System — Profile` block: `./job-search-o
 **Offer Tracker** if it exists. If none, continue with what the person pastes and say
 the salary check is off.
 
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
 ## Inputs
 
 Which kind (current employer countering a resignation, or the new company revising),
@@ -23,9 +28,11 @@ said to each side.
 
 ## Output
 
-1. **The two offers, side by side** — base, bonus, equity, title, remote, manager,
-   start or continuation, each against your minimum salary and the must-haves. Numbers only
-   from what the person pasted.
+1. **The two offers, side by side** — pay in its own unit (hourly rate and
+   differentials, salary and bonus, base or draw and commission, or schedule
+   placement), equity only if offered, title, schedule, remote, manager, start or
+   continuation, each against your minimum pay (like with like: hourly to hourly,
+   annual to annual) and the must-haves. Numbers only from what the person pasted.
 2. **The reasons test** — the three reasons they started looking, and whether the
    counter fixes any of them beyond the money (a raise doesn't change a manager, a
    roadmap, or a ceiling). Stated plainly; the decision is theirs.
@@ -43,12 +50,12 @@ said to each side.
 
 ## Constraints
 
-- Your minimum salary and must-haves are checked first; a counter below your minimum salary is named as
+- Your minimum pay and must-haves are checked first; a counter below your minimum pay is named as
   such.
 - No invented figures or tendencies about either company.
 - Never resign, accept, or decline for the person — words only.
-- Contracts, equity clawbacks, non-competes, and notice obligations: "worth a
-  professional's eyes".
+- Contracts, equity clawbacks, sign-on repayment, draw recovery, union contract
+  terms, non-competes, and notice obligations: "worth a professional's eyes".
 
 ## About this plugin
 

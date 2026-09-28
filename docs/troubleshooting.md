@@ -15,11 +15,11 @@ Open **Customize → Plugins → Yours** and check it's listed with its toggle o
 **Error: "zip cannot contain nested zip files."**
 You picked the documentation zip. Upload the **plugin** zip (the smaller one with `-claude-plugin` in the name).
 
-**It keeps asking for my minimum salary.**
-That's the one field the wizard insists on — the salary guard can't run without it. If you genuinely don't want one, say "no minimum" and it records that the guard is off; roles below market will not be flagged until you set one.
+**It keeps asking for my minimum pay.**
+That's the one field the wizard insists on — the salary guard can't run without it. If you genuinely don't want one, say "no minimum" and it records that the guard is off; roles below what you'd take will not be flagged until you set one. Paid hourly or on commission? Give the minimum in that unit ("$44/hour", "$55,000 base or $120,000 expected total") and the check compares like with like.
 
 **Outputs don't use my background / sound generic.**
-Work inside the Project where you ran setup. If you skipped setup, say **set up my Job Search OS** — paste your resume and it fills in most of your profile in two minutes. If setup ran but drafts still feel thin, the fix is almost always more **shipped artifacts** and better **voice samples**: say "complete my profile".
+Work inside the Project where you ran setup. If you skipped setup, say **set up my Job Search OS** — paste your resume and it fills in most of your profile in two minutes. If setup ran but drafts still feel thin, the fix is almost always more **wins** and better **voice samples**: say "complete my profile".
 
 ---
 
@@ -48,12 +48,12 @@ Say **"open my command center"** from anywhere — it drops what was in progress
 
 ---
 
-## Claims, numbers & your minimum salary
+## Claims, numbers & your minimum pay
 
 **It put something on my resume I didn't do, or a number I don't recognize.**
 It shouldn't — every figure, title, and date is meant to trace to your resume or profile, and anything without a source becomes `[confirm]`. If one slipped through, say "where did this come from?" and give the real figure or tell it to cut the line. Never send a draft with an unconfirmed claim.
 
-**It flagged a role as below my minimum salary and I want to apply anyway.**
+**It flagged a role as below my minimum pay and I want to apply anyway.**
 Say "applying anyway." It marks the row "below minimum — applying" on your board and carries on. The flag exists so a role below your minimum doesn't quietly become your main option.
 
 **It won't tell me what the role "should" pay.**

@@ -25,6 +25,18 @@
 - Certifications and endorsements at the top; grade levels, subjects, and class sizes per role; curricula and platforms by name (the district's LMS, assessment tools)
 - Avoid "passionate about learning"; prefer what you taught, to whom, and what happened. Portfolios and sample lesson plans are commonly requested at interview
 
+## How interviews usually run
+- Often a screening interview, then a panel with the principal and teachers; many schools ask for a demo lesson or a sample unit, and some add a writing sample or a data-use question
+- Expect questions on classroom management, differentiation, family communication, and how you use assessment results
+
+## How pay is usually structured
+- Public schools usually pay from a published salary schedule: a step for years of experience and a lane for education (bachelor's, master's, credits beyond); stipends are added for coaching, extra duties, or hard-to-fill subjects
+- A pension or state retirement system is part of total pay in most public districts; private and charter schools may set salary individually
+
+## What's usually negotiable
+- The schedule itself rarely moves; step placement (how many prior years are credited, including out-of-state or private-school years) and lane placement for coursework often can
+- Stipend roles, start-of-year classroom budget, and mentoring support are worth asking about
+
 ## Red flags in postings
 - Multiple subjects across grade bands in one role, "must be willing to coach" without stipend language, roles posted repeatedly through the year, vague "other duties as assigned" carrying a heavy load
 

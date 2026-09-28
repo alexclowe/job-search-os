@@ -13,12 +13,17 @@ Look for the `Job Search AI Operating System — Profile` block: `./job-search-o
 (Project folder), then this Project's instructions, then a pasted block. Continue with
 what the person pastes if none; the plan will be generic and say so.
 
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
 ## Inputs
 
 The role and company, the posting, what the interviews revealed about the team's
 problems (from the Application Board notes and prep briefs in this Project if they
 exist), who the person will report to, whether this is for an interview or for real,
-and the shipped artifact most like the job ahead.
+and the win most like the job ahead.
 
 ## Output — the plan (.docx, 1–2 pages)
 

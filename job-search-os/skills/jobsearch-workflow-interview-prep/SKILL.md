@@ -32,10 +32,25 @@ own stories.
 
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
-pasted in this chat. Present → use current role, target roles, minimum salary,
-positioning challenges, shipped artifacts, and voice samples; don't re-ask. Absent →
+pasted in this chat. Present → use current role, target roles, minimum pay,
+what a hiring manager might question, wins, and voice samples; don't re-ask. Absent →
 say setup takes about two minutes; if declined, continue from what they paste and say
 so in the close.
+
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
+**Profession archetype (read, don't ask).** If the profile or the posting names a
+profession, read the matching archetype — `./archetypes/<profession>.md` in this
+Project first, then the `archetypes/` folder that ships with the Tailor & apply job
+(`jobsearch-workflow-tailor-apply/archetypes/`). Use its **How interviews usually run**
+section to shape the brief for this round (for example a nursing panel with
+scenario and behavioral questions, a teaching demo lesson, a bookkeeping skills test,
+a loan officer's pipeline and compliance questions) and its **Story types that land**
+to pick which stories to lead with. It never supplies a story, a claim, or a number the
+person's own record doesn't support; if no archetype matches, say nothing about it.
 
 ## Pre-flight 2 — Connections
 
@@ -66,7 +81,7 @@ draft. Unknowns go in the brief as `[confirm]`.
 4. **What worries you about this one** — one free-text line.
 
 **Missing profile detail?** If the Story Bank is empty or has fewer than five stories,
-build it now from the shipped artifacts (run the story-bank method inline: for each
+build it now from your wins (run the story-bank method inline: for each
 artifact — situation, what the person did, what changed, which questions it answers)
 and save it as the **Story Bank** artifact before writing the brief. Ask for at most
 one missing detail per story; the rest is `[confirm]`.
@@ -82,7 +97,7 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
 1. **This round in one paragraph** — what it decides, who decides it, and what a
    strong outcome looks like.
 2. **Their likely worries** — three to five, inferred from the posting, the round, and
-   the positioning challenges (e.g. "will a former manager be happy back in the
+   what a hiring manager might question (e.g. "will a former manager be happy back in the
    weeds?"). Each with the story that answers it.
 3. **Questions to expect** — for the round:
    - *Recruiter screen:* why this role, walk me through your background, compensation
@@ -100,9 +115,9 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
 4. **Your answers** — for each expected question, a tight answer in the person's voice
    (60–120 words), built from a named Story Bank entry: situation, what you did, what
    changed, in that order. The **compensation answer** for the recruiter screen: ask
-   for their range first; if pushed, state your minimum salary as the lowest you'd take, not a target; never
+   for their range first; if pushed, state your minimum pay as the lowest you'd take, not a target; never
    give salary history.
-5. **Getting ahead of the positioning challenge** — one prepared paragraph that
+5. **Getting ahead of what a hiring manager might question** — one prepared paragraph that
    addresses it before they ask, plus the one-line version.
 6. **Questions to ask back** — five, specific to this company and round, none
    answerable from the website.
@@ -119,7 +134,7 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
   these three from your record" rather than a fabricated one.
 - **Every claim holds up:** every claim survives a follow-up question ("what exactly did you
   do?"); soften anything the person didn't personally do.
-- **Minimum salary:** the compensation answer holds to your minimum salary and gives no history.
+- **Minimum pay:** the compensation answer holds to your minimum pay and gives no history.
 - **AI-register tells** removed; answers sound like the voice samples, spoken.
 - **Privacy:** nothing confidential about the current employer; competitors' names and
   figures only from public sources.
@@ -138,7 +153,7 @@ Append one short **Before you walk in** checklist with only the checks that fire
 ## Trackers (living)
 
 List this Project's artifacts first, including ones from earlier conversations. Update
-the **Story Bank** with any story refined during prep (columns: Story · Artifact ·
+the **Story Bank** with any story refined during prep (columns: Story · Win ·
 Situation · What I did · What changed · Answers these questions · Used with). Update
 the **Application Board** row: stage, interview date, interviewers in Contact, Next
 action "thank-you note" with Due = interview date.

@@ -25,6 +25,18 @@
 - NMLS number where customary; production by year in units and volume only if you can substantiate it; product mix; systems (LOS by name, CRM); licences by state
 - Avoid inflating production or claiming team numbers as your own; "closed" means funded in this industry
 
+## How interviews usually run
+- Often a conversation with a branch or sales manager focused on your pipeline, referral sources, and production history, plus compliance questions about licensing and disclosures
+- Some lenders ask for a business plan for your first year
+
+## How pay is usually structured
+- Usually commission on funded loans (often in basis points), sometimes with a base salary or a draw against commission; ramp periods for new hires are common
+- Whether a draw is recoverable, how splits work, who pays for leads, and any clawback on early payoffs change the real pay a great deal
+
+## What's usually negotiable
+- The commission rate or split, a ramp guarantee or non-recoverable draw, marketing and lead support, processing support, and licensing costs; base is often the least movable piece
+- Ask what a typical first-year loan officer at that company actually earns, not the top producer's figure
+
 ## Red flags in postings
 - 100% commission with no leads, no marketing support, and a non-compete; "must bring your own book" with an aggressive draw clawback; compensation described only as "unlimited"
 

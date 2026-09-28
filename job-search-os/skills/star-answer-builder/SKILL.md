@@ -11,8 +11,13 @@ One question in, one answer out — from a real story, or an honest "no story ye
 Look for the `Job Search AI Operating System — Profile` block: `./job-search-os-profile.md`
 (Project folder), then this Project's instructions, then a pasted block; and the
 **Story Bank** artifact in this Project if it exists. If neither, say: "Run
-`jobsearch-setup-wizard` first — answers come from your shipped artifacts, not from a
+`jobsearch-setup-wizard` first — answers come from your wins, not from a
 question bank." Continue only with pasted material.
+
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
 
 ## Input
 
@@ -23,7 +28,7 @@ The question, and (optional) the role and round it's for.
 1. Name what the question is really testing (ownership, conflict, judgment under
    ambiguity, influence, learning from failure).
 2. Pick the Story Bank entry or resume line that best answers it. If two fit, show both
-   and recommend one. If none fits, say so and suggest which three artifacts could be
+   and recommend one. If none fits, say so and suggest which three wins could be
    built into a story for it — never invent one.
 3. Write the answer.
 

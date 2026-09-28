@@ -2,7 +2,7 @@
 
 _One page. Print it or keep it open. Setup is in `START HERE`; each job is explained in [jobs-guide.md](./jobs-guide.md)._
 
-Work inside your Project so your career profile loads. The rules under everything: **never below your minimum salary, nothing invented goes on a resume — and the decisions stay yours.**
+Work inside your Project so your career profile loads. The rules under everything: **never below your minimum pay, nothing invented goes on a resume — and the decisions stay yours.**
 
 ---
 
@@ -38,7 +38,7 @@ All of them: say "browse all skills" or type `/`.
 
 | Guard | Speaks up when |
 |---|---|
-| Minimum salary | a role, message, or offer is at or below your minimum salary — before you spend an hour on it |
+| Minimum pay | a role, message, or offer is at or below your minimum pay — before you spend an hour on it |
 | Every claim holds up | a resume, letter, or answer claims more than your record — could you back it in the room? |
 | No invention | a figure, title, or date has no source in your profile or resume — it becomes `[confirm]` |
 
@@ -46,7 +46,7 @@ All of them: say "browse all skills" or type `/`.
 
 ## The 5 things the system should never decide for you
 
-1. **Your minimum salary** — it holds to the number; you set it.
+1. **Your minimum pay** — it holds to the number; you set it.
 2. **Whether to take the offer** — the memo lays it against your must-haves; the yes is yours.
 3. **Anything with legal weight** — separation agreements, equity, non-competes, notice periods: it flags, a professional answers.
 4. **What to say about why you're leaving** — it uses the one line you approved, nothing more.
@@ -76,7 +76,7 @@ Don't restate your whole background — the profile already carries that.
 
 | Problem | Fix |
 |---|---|
-| Sounds generic, not like me | Say "set up my Job Search OS" → Complete my profile and paste better voice samples and more shipped artifacts |
+| Sounds generic, not like me | Say "set up my Job Search OS" → Complete my profile and paste better voice samples and more wins |
 | It claimed something I didn't do | Say "where did this come from?" — anything without a source becomes `[confirm]`; give the real figure or cut it |
 | It flagged a role I want anyway | Say "applying anyway" — it marks the board and carries on |
 | Asks for a message I have in Gmail | Paste it — or say "connect my tools" to check what's connected |

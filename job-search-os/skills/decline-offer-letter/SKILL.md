@@ -12,6 +12,11 @@ Look for the `Job Search AI Operating System — Profile` block: `./job-search-o
 (Project folder), then this Project's instructions, then a pasted block. Continue with
 pasted material if none.
 
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
 ## Inputs
 
 Company, role, who to write to (recruiter, hiring manager, or both), where in the

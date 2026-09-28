@@ -13,10 +13,15 @@ Look for the `Job Search AI Operating System — Profile` block: `./job-search-o
 (Project folder), then this Project's instructions, then a pasted block. Continue
 without it; this skill mostly needs the offer.
 
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
 ## Inputs
 
 The separation offer or what they were told (weeks of pay, healthcare continuation,
-equity treatment, bonus and commission owed, unused leave, the deadline, any
+equity treatment if any, bonus and commission owed (including deals in the pipeline), unused leave, the deadline, any
 non-disparagement or non-compete terms, whether it's a group layoff), the person's
 tenure and level, jurisdiction (country and state or province), and age band (over or
 under 40, because review periods can differ in the US).
@@ -45,7 +50,7 @@ under 40, because review periods can differ in the US).
    deadlines, final pay date, how references will be handled, what "non-disparagement"
    covers.
 6. **What to run next** — the approved one-line reason for leaving for the profile;
-   `jobsearch-setup-wizard` to set your minimum salary; the Layoff Center's free triage tools.
+   `jobsearch-setup-wizard` to set your minimum pay; the Layoff Center's free triage tools.
 
 ## Constraints
 

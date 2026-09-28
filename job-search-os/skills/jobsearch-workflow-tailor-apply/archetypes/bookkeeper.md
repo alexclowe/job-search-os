@@ -25,6 +25,16 @@
 - Software list near the top; per role: entity count, revenue scale in relative terms if confidential, what you owned in the close; one to two pages
 - Avoid "detail-oriented" as a claim; show it with a specific catch. Numbers only where you actually know them
 
+## How interviews usually run
+- Often a phone screen, then an interview with the owner, controller, or accounting manager; a short practical test (a reconciliation, journal entries, or a software exercise) is common
+- Expect questions on month-end close, the specific accounting software, accuracy habits, and confidentiality
+
+## How pay is usually structured
+- Hourly is common for part-time and small-business roles; annual salary for full-time roles in larger firms; contract and fractional bookkeepers often bill hourly or a monthly fee per client
+
+## What's usually negotiable
+- Base rate or salary, hours and remote days, software certification support, and for contract work the scope and monthly fee
+
 ## Red flags in postings
 - "Bookkeeper/office manager/HR/receptionist" in one title, full-charge duties at clerk pay, "must be available for month-end weekends", no mention of software
 

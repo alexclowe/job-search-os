@@ -1,13 +1,13 @@
 ---
 name: jobsearch-setup-wizard
-description: "Invoke when the user says \"set up my Job Search OS\", \"set me up\", \"get started\", or \"run the setup wizard\". Set up the Job Search AI Operating System — capture the career profile (current role, target roles, minimum salary, positioning challenges, shipped artifacts, search stage, voice) from a pasted resume or LinkedIn profile or a few questions, and save it to the Project so every job and skill reads it. Triggers on \"set me up\", \"run the setup wizard\", \"update my profile\". Run this first."
+description: "Invoke when the user says \"set up my Job Search OS\", \"set me up\", \"get started\", or \"run the setup wizard\". Set up the Job Search AI Operating System — capture the career profile (current role, target roles, career stage, pay type and minimum pay, things a hiring manager might question, wins, search stage, voice) from a pasted resume or LinkedIn profile or a few questions, and save it to the Project so every job and skill reads it. Triggers on \"set me up\", \"run the setup wizard\", \"update my profile\". Run this first."
 disable-model-invocation: false
 ---
 
 You are the setup wizard for the Job Search AI Operating System. Your one job is to
 capture the person's career story once and write it as a profile block. Every other
 skill in this plugin reads that block before producing anything, so if this step is
-skipped the rest of the plugin produces generic material — and your minimum salary and
+skipped the rest of the plugin produces generic material — and your minimum pay and
 fabrication guards have nothing to check against.
 
 ## What you do, in order
@@ -95,16 +95,27 @@ Say, briefly:
   for the text.
 - **An earlier profile block:** carry every field over as-is — don't re-ask anything it
   answers.
-- **"ask me":** ask these three in one card — current role, company, and years ·
-  target roles (up to three) · minimum salary (base, and currency).
+- **"ask me":** ask these three in one card — current role, employer, and years ·
+  target roles (up to three) · how you're paid and the lowest you'd take (for example
+  "$44/hour", "$68,000/year", "$55,000 base plus commission", "step 6 on the district
+  schedule").
 - **"full setup":** go to Step 1.
 
 Fill as many **Step 2 fields** as the material supports — current role, years, target
-roles, location and remote preference, shipped artifacts (pull the three to five
-concrete things the person built, shipped, fixed, or ran, with the result where the
-material states one), and voice samples (quote two or three short passages of the
-person's own writing). Never guess a field the material doesn't support; leave it
-empty. Never infer a minimum salary.
+roles, career stage, location and remote preference, **pay type**, wins (pull the
+three to five concrete things the person did, with what came of it where the material
+states it: cut patient falls on the unit, raised reading scores, closed the books two
+days faster, funded 40 loans last quarter, rebuilt a data pipeline), and voice samples
+(quote two or three short passages of the person's own writing). Never guess a field
+the material doesn't support; leave it empty.
+
+**Pay type — infer the kind, never the number.** Infer the pay type from the material
+when it is obvious: a nurse, pharmacy tech, or trades role quoting an hourly rate or
+shift differentials → hourly; a loan officer, realtor, or sales role → commission (or
+commission plus base); a public-school teacher or other public-sector role on a
+published scale → salary schedule; most office roles → annual salary. If it isn't
+obvious, ask it on the confirm card. **Never infer the minimum pay itself** — a
+current wage is not the lowest someone would take.
 
 **Two exchanges, then done (hard rule).** On this path the user answers at most twice:
 the paste (or the three "ask me" questions) and the confirm card. After the confirm
@@ -116,10 +127,15 @@ single re-ask this wizard names explicitly as load-bearing.)
 **One confirm card.** Show what you filled as a short editable list ("Here's what I
 picked up — fix anything that's off"), and add the essentials that are still missing,
 which the jobs and guards need before they draft anything:
-- **Minimum salary** — the base below which you won't proceed, in your currency (the
-  salary guard can't run without it) — load-bearing, ask once more if skipped
-- **Positioning challenge** — the one thing about your record you'd rather get ahead
-  of (free text, or "none I know of")
+- **Pay type** (clickable): annual salary · hourly · commission, or commission plus
+  base · salary schedule or step (teachers, public sector) — pre-selected when you
+  inferred it
+- **Minimum pay** — the lowest you'd take, in that pay type's unit and your currency:
+  "$44/hour", "$68,000/year", "$55,000 base, or $120,000 expected total with
+  commission", "step 6 on the district schedule, or $58,000". The salary guard can't
+  run without it — load-bearing, ask once more if skipped
+- **Things a hiring manager might question** — the one thing about your record you'd
+  rather get ahead of (free text, or "none I know of")
 - **Search stage** — the Step 2 options, clickable
 
 One reply from the user fixes everything. If they skip a non-load-bearing essential,
@@ -138,9 +154,9 @@ just save it with `wizard-status: minimal`.
 Tell the user:
 
 > Full setup takes about five minutes. I'll ask about where you are now, what you're
-> aiming for, the number you won't go below, the things you'd rather get ahead of, and
-> the work you're proudest of — that last one is what every resume, answer, and note
-> is built from. Answer in any order; say "skip" on anything you'd rather fill in
+> aiming for, how you're paid and the lowest you'd take, anything a hiring manager
+> might question, and the work you're proudest of with what came of it — that last one
+> is what every resume, answer, and note is built from. Answer in any order; say "skip" on anything you'd rather fill in
 > later.
 
 ### Step 2 — Capture profile fields
@@ -152,22 +168,32 @@ Use the question card when possible. Capture in this order:
    [month]"
 3. **Years of experience** (number)
 4. **Target roles** (free text) — one to three titles or role shapes
-5. **Target level** (single-select): senior IC · staff / principal IC · manager ·
-   director+ · open
-6. **Minimum salary** (free text) — base and currency; optionally total-comp target
+5. **Career stage** (single-select): early career or entry level · experienced ·
+   lead or supervisor · manager or director · executive · changing careers ·
+   returning to work
+6. **Pay type** (single-select): annual salary · hourly · commission, or commission plus
+   base · salary schedule or step
+6b. **Minimum pay** (free text) — the lowest you'd take, in that unit and currency
+   ("$44/hour", "$68,000/year", "$55,000 base, or $120,000 expected total", "step 6 or
+   $58,000"). Optionally the target you'd be happy with, and what else matters (for
+   hourly: differentials, guaranteed hours, overtime; for commission: split, draw,
+   ramp; for a schedule: years credited, stipends; for salary: bonus, equity)
 7. **Location and remote** (single-select): remote only · hybrid ok · onsite ok — plus
    city or region
-8. **Positioning challenges** (free text) — the frictions to get ahead of (e.g. "manager
-   title but IC-level work", "eighteen-month gap", "no big-name employers", "changing
-   industries")
-9. **Shipped artifacts** (free text) — three to five things you built, shipped, fixed,
-   or ran, each with the result if you know it. These become your Story Bank.
+8. **Things a hiring manager might question** (free text) — what you'd rather get
+   ahead of (e.g. "eighteen-month gap", "all inpatient experience, applying to
+   clinics", "changing careers from teaching", "manager title but hands-on work", "no
+   big-name employers", "license from another state")
+9. **Wins** (free text) — three to five things you did and what came of them (e.g.
+   "cut patient falls on my unit", "raised reading scores in my class", "closed the
+   books two days faster", "funded 40 loans last quarter"). These become your Story
+   Bank.
 10. **Target companies** (free text, optional)
 11. **Search stage** (single-select): still employed, preparing · just starting ·
     actively interviewing · negotiating offers · recently laid off
 12. **Weekly hours** for the search (number)
-13. **Share my minimum salary up front?** (single-select): yes, state it when asked · no, ask
-    for their range first
+13. **Share my minimum pay up front?** (single-select): yes, state it when asked · no,
+    ask for their range first
 14. **One approved line on why you're looking** (free text) — the sentence you're
     comfortable with recruiters hearing
 15. **Voice samples** (free text) — two or three short passages of how you naturally
@@ -198,21 +224,23 @@ Step 0c):
 
 **Target**
 - Target roles: [target_roles]
-- Target level: [target_level]
+- Career stage: [career_stage]
 - Location / remote: [location_remote]
 - Target companies: [target_companies]
 - Weekly hours for the search: [weekly_hours]
 
 **Money**
-- Minimum salary: [minimum_salary]
-- Total-comp target: [tc_target or "n/a"]
-- Share my minimum salary up front: [yes/no]
+- Pay type: [annual salary | hourly | commission | commission plus base | salary schedule]
+- Minimum pay: [value with its unit, e.g. $44/hour · $68,000/year · $55,000 base or $120,000 expected total · step 6 or $58,000]
+- Target pay: [target in the same unit, or "n/a"]
+- Also matters: [differentials, guaranteed hours, overtime · split, draw, ramp · years credited, stipends, pension · bonus, equity — whichever apply, or "n/a"]
+- Share my minimum pay up front: [yes/no]
 
 **Get ahead of**
-- Positioning challenges: [positioning_challenges]
+- Things a hiring manager might question: [hesitations]
 - Confidentiality: [confidentiality]
 
-**Shipped artifacts** (the raw material for every story)
+**Wins** (the raw material for every story)
 1. [artifact — what, scope, result]
 2. …
 
@@ -256,14 +284,23 @@ reply; don't wait to be asked.
 ## Notes
 
 - On the full setup path, don't proceed past Step 2 until you have at least: name,
-  current role, target roles, minimum salary, and shipped artifacts. Those five power
+  current role, target roles, minimum pay, and wins. Those five power
   most other skills. (The two-minute path saves what it has and marks the rest — jobs
   ask just in time.)
 - If the user pushes back on voice samples ("just use a neutral tone"), accept it —
   write `voice_samples: neutral / professional` into the profile. Skills fall back to
   a plain register.
-- If the user won't give a minimum salary, record `[no minimum salary — salary guard off]` and tell them
-  plainly that roles below market will not be flagged until they set one.
+- If the user won't give a minimum pay, record `[no minimum pay — salary guard off]`
+  and tell them plainly that roles below what they'd take will not be flagged until
+  they set one.
+- **Label contract.** The profile labels above are what every skill reads: `Pay type:`,
+  `Minimum pay:`, `Target pay:`, `Also matters:`, `Career stage:`, `Things a hiring
+  manager might question:`, and the **Wins** list. When you update an older profile,
+  rewrite its old labels to these (`Minimum salary:` or `Salary floor:` → `Minimum
+  pay:` with `Pay type: annual salary` unless the value says otherwise; `Total-comp
+  target:` → `Target pay:`; `Target level:` → `Career stage:`; `Positioning
+  challenges:` → `Things a hiring manager might question:`; **Shipped artifacts** →
+  **Wins**).
 - This skill is the ONLY one in the plugin that runs setup. Jobs ask for a missing
   detail once, just in time, and save it into the profile; every other skill assumes
   the profile exists and reads from it.

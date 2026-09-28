@@ -1,6 +1,6 @@
 ---
 name: jobsearch-workflow-inbox
-description: Work my inbox for the Job Search AI Operating System. Invoke when a job seeker says "work my inbox", "check my inbox for recruiters", "reply to this recruiter", "they want to schedule a call", "I got a rejection", "here's what came in this week", or pastes recruiter messages, scheduling requests, or rejections and asks what to do. Sorts what came in, drafts replies in the person's voice with the minimum salary protected, puts interviews on the calendar, and moves each application to its new stage on the Application Board. Can run on a schedule.
+description: Work my inbox for the Job Search AI Operating System. Invoke when a job seeker says "work my inbox", "check my inbox for recruiters", "reply to this recruiter", "they want to schedule a call", "I got a rejection", "here's what came in this week", or pastes recruiter messages, scheduling requests, or rejections and asks what to do. Sorts what came in, drafts replies in the person's voice with the minimum pay protected, puts interviews on the calendar, and moves each application to its new stage on the Application Board. Can run on a schedule.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
@@ -32,10 +32,15 @@ and keeps the board honest.
 
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
-pasted in this chat. Present → use target roles, minimum salary, remote and location
+pasted in this chat. Present → use target roles, minimum pay, remote and location
 preference, search stage, and voice samples; don't re-ask. Absent → say setup takes
 about two minutes; if declined, continue with neutral defaults and no salary check, and
 say so in the close.
+
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
 
 ## Pre-flight 2 — Connections
 
@@ -75,10 +80,9 @@ this task** covers the rest of this run; tracker updates always take a quick con
 
 One reply per message the person chose, 40–150 words, in their voice, no "Thank you
 for reaching out!" opener:
-- **Recruiter outreach, interested:** two lines on fit that lead with a shipped
-  artifact, then the three qualifying questions before a call — the compensation range
+- **Recruiter outreach, interested:** two lines on fit that lead with a win, then the three qualifying questions before a call — the compensation range
   for the level, remote terms, and where the role sits (team, manager, why it's open).
-  State your minimum salary only if the person's profile says "share my minimum salary up front";
+  State your minimum pay only if the person's profile says "share my minimum pay up front";
   otherwise ask for their range first.
 - **Recruiter outreach, declining:** specific, kind, door open — name the one thing
   that would change the answer (level, comp, location).
@@ -94,13 +98,13 @@ for reaching out!" opener:
 
 **Rejection read** (in chat, per human rejection): one line on the most likely cause
 from the record — stage it died at, whether the keyword match was thin, whether the
-positioning challenge showed — and one thing to change. No spirals, no guessing beyond
+what a hiring manager might question showed — and one thing to change. No spirals, no guessing beyond
 the evidence.
 
 ## Compliance pass (inline — do not hand off)
 
-- **Minimum salary:** every new role is compared to your minimum salary before a reply is drafted; below
-  your minimum salary gets the plain flag, not a softened one.
+- **Minimum pay:** every new role is compared to your minimum pay before a reply is drafted; below
+  your minimum pay gets the plain flag, not a softened one.
 - **No commitments:** no reply accepts, declines, or promises a start date, references,
   or a number the person hasn't decided.
 - **Traceability:** claims in replies come from the profile and resume only.
@@ -128,11 +132,12 @@ Append one short **Before you send** checklist with only the checks that apply.
 List this Project's artifacts first, including ones from earlier conversations. Update
 the **"Application Board"** if it exists; create it only if absent (columns as in Tailor
 & apply). For each message: move the stage, set Last touch to today, set Next action
-and Due, add the contact. New inbound roles get a row at Interested with your minimum salary
+and Due, add the contact. New inbound roles get a row at Interested with your minimum pay
 check filled in. Rejections move to Closed with the read in Notes. Offers get a row on
-the **Offer Tracker** too (created if absent: Company · Role · Base · Bonus · Equity ·
-Other · Total · Salary check · Deadline · Status (Received → Countered → Accepted /
-Declined) · Counter · Next).
+the **Offer Tracker** too (created if absent, columns as in Follow up & negotiate:
+Company · Role · Pay type · Base (in its unit) · Variable · Other · Est. first-year
+total · Salary check · Deadline · Status (Received → Countered → Accepted / Declined) ·
+Counter · Next).
 
 ## Make it automatic
 

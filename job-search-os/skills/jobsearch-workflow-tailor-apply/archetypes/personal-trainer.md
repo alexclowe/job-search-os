@@ -25,6 +25,16 @@
 - Certifications with issuing body and expiry near the top; per role: client load, session types, populations, retention in relative terms if that is all you can document; sales targets met only with records
 - Avoid "transform lives" language; describe the work and the results you can show
 
+## How interviews usually run
+- Often a conversation with the fitness manager plus a practical session: coaching a mock client or a staff member through a short workout
+- Expect questions on certifications, client retention, and how you'd build a client base
+
+## How pay is usually structured
+- Commonly an hourly base for floor time plus a per-session rate or a commission on training packages; independent trainers set their own session rates; some studios pay a salary
+
+## What's usually negotiable
+- The per-session rate or commission percentage, paid floor or onboarding time, continuing-education support, schedule, and whether the gym provides leads
+
 ## Red flags in postings
 - Commission-only with floor-time requirements and no client pipeline, sales quotas stated as the primary metric, "must purchase branded apparel", non-competes that follow you to your own clients
 

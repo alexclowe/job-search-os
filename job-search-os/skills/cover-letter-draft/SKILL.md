@@ -1,6 +1,6 @@
 ---
 name: cover-letter-draft
-description: Write a specific, 250–350 word cover letter for one company and role in the person's own voice — a real opening about their problem, two artifacts paired with the posting's top worries, one line that gets ahead of the positioning challenge, no adjectives about yourself, no pay. Activates on "write my cover letter" / "cover letter for [company]" / a pasted posting with "letter".
+description: Write a specific, 250–350 word cover letter for one company and role in the person's own voice — a real opening about their problem, two wins paired with the posting's top worries, one line that gets ahead of what a hiring manager might question, no adjectives about yourself, no pay. Activates on "write my cover letter" / "cover letter for [company]" / a pasted posting with "letter".
 disable-model-invocation: true
 ---
 
@@ -11,8 +11,13 @@ different company without rewriting it.
 
 Look for the `Job Search AI Operating System — Profile` block: `./job-search-os-profile.md`
 (Project folder), then this Project's instructions, then a pasted block. If none, say:
-"Run `jobsearch-setup-wizard` first — I need your shipped artifacts and voice samples
+"Run `jobsearch-setup-wizard` first — I need your wins and voice samples
 so this reads like you, not like a template." Continue only with pasted material.
+
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
 
 ## Inputs
 
@@ -26,10 +31,10 @@ so this reads like you, not like a template." Continue only with pasted material
 1. **Opening (2–3 sentences):** something specific about this company or the problem
    the role exists to solve, and why the person is the one writing. Never "I am
    excited to apply for…". A referral is named in the first sentence.
-2. **Paragraph two:** the shipped artifact that answers the posting's biggest worry —
+2. **Paragraph two:** the win that answers the posting's biggest worry —
    what they built, the scope, what changed. Written as a short story, not a bullet.
-3. **Paragraph three:** the second artifact, paired with the second worry; or, if the
-   positioning challenge is the elephant, this paragraph gets ahead of it in one plain
+3. **Paragraph three:** the second win, paired with the second worry; or, if the
+   something on the record might make a hiring manager hesitate, this paragraph gets ahead of it in one plain
    sentence and then shows the evidence.
 4. **Close (2 sentences):** what they'd want to talk about first, and a plain
    sign-off. No "I look forward to the opportunity".

@@ -15,6 +15,11 @@ Look for the `Job Search AI Operating System — Profile` block: `./job-search-o
 "Run `jobsearch-setup-wizard` first — the stories have to be yours." Continue only
 with pasted material.
 
+Older profiles use other labels for the same fields: `Minimum salary:` or `Salary floor:`
+mean minimum pay (annual salary unless the value says otherwise), **Shipped artifacts**
+means wins, `Positioning challenges:` means things a hiring manager might question,
+and `Target level:` means career stage. Read them the same way.
+
 ## Inputs
 
 Company, role, the schedule (names, titles, and formats for each session if known),
@@ -24,7 +29,7 @@ Bank if it exists.
 ## Output — prep brief
 
 **For a panel or loop**
-1. **The one story** — the two-sentence version of who you are and what you shipped
+1. **The one story** — the two-sentence version of who you are and what you did
    that every interviewer should hear the same way. Consistency is what a debrief
    rewards.
 2. **Per-interviewer plan** — for each session: their likely angle (peer: can I work
@@ -46,7 +51,7 @@ Bank if it exists.
 7. **Judgment questions** — the thing you'd push back on, the biggest risk you've
    taken, what you'd want to be true a year from now.
 8. **The close** — how to ask about next steps and timing, and how to state interest
-   without over-promising. If comp comes up: holding to your minimum salary, no history.
+   without over-promising. If comp comes up: holding to your minimum pay, no history.
 
 **Both:** a **day-of card** — lead with, avoid, close with, names.
 

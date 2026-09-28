@@ -1,6 +1,6 @@
 # Job Search AI Operating System
 
-**The AI operating system for a senior job search.** 30 skills: a command center and five end-to-end jobs — tailor and apply, work my inbox, prep for an interview, follow up and negotiate, run my weekly review — plus every individual skill a search needs: posting decoder, resume and cover letter, LinkedIn, story bank, stage-by-stage interview prep, negotiation, counter-offers, references, outreach, and a severance script, with three guardrails built in (minimum salary, every claim holds up, no invention).
+**The AI operating system for a job search in any profession — hourly, salaried, or commission.** 30 skills: a command center and five end-to-end jobs — tailor and apply, work my inbox, prep for an interview, follow up and negotiate, run my weekly review — plus every individual skill a search needs: posting decoder, resume and cover letter, LinkedIn, story bank, stage-by-stage interview prep, negotiation, counter-offers, references, outreach, and a severance script, with three guardrails built in (minimum pay, every claim holds up, no invention).
 
 Built by The AI Career Lab. https://clowealex.gumroad.com/l/job-search-ai-os
 
@@ -19,7 +19,7 @@ Built by The AI Career Lab. https://clowealex.gumroad.com/l/job-search-ai-os
 - `jobsearch-skill-catalog` — browse every skill in the plugin
 
 **1 setup wizard:**
-- `jobsearch-setup-wizard` — captures your career story once (current role, target roles, minimum salary, positioning challenges, shipped artifacts, voice); every other skill reads from it
+- `jobsearch-setup-wizard` — captures your career story once (current role, target roles, minimum pay, what a hiring manager might question, wins, voice); every other skill reads from it
 
 **18 individual skills:**
 
@@ -36,7 +36,7 @@ Built by The AI Career Lab. https://clowealex.gumroad.com/l/job-search-ai-os
 *Just laid off:* `severance-leverage-script`
 
 **3 passive guards:**
-- `jobsearch-salary-guard` — flags any role, message, or offer at or below your minimum salary before you spend time on it
+- `jobsearch-salary-guard` — flags any role, message, or offer at or below your minimum pay before you spend time on it
 - `jobsearch-oversell-guard` — checks that every claim holds up on every resume, letter, and answer; strips AI-register tells
 - `jobsearch-fabrication-guard` — any figure, title, or date with no source in your record becomes `[confirm]`
 
@@ -47,7 +47,7 @@ Built by The AI Career Lab. https://clowealex.gumroad.com/l/job-search-ai-os
 ### Claude desktop app (recommended)
 1. **Create a Project first.** Open **Projects** in the left sidebar and create one (suggested name: `My Job Search`). Your profile and trackers are saved there.
 2. **Install the plugin.** Click **Customize → Plugins → Add ▾ → Upload plugin** and choose the `job-search-os-claude-plugin…zip` file as-is (don't unzip it).
-3. **Start a conversation inside the Project and say "set me up".** Paste your resume — it fills in most of your profile — confirm one card (your minimum salary is the one thing it will insist on), and your command center opens. About two minutes.
+3. **Start a conversation inside the Project and say "set me up".** Paste your resume — it fills in most of your profile — confirm one card (your minimum pay is the one thing it will insist on), and your command center opens. About two minutes.
 
 ### Claude Code — CLI (advanced / optional)
 From the unzipped plugin folder, run `claude plugin install ./job-search-os`, then `/job-search-os:jobsearch-setup-wizard`.

@@ -45,6 +45,21 @@ body:
     attributes:
       label: Story types that land in interviews
   - type: textarea
+    id: interviews
+    attributes:
+      label: How interviews usually run
+      placeholder: Rounds and formats (panel, skills test, demo lesson, ride-along), the questions this profession is known for
+  - type: textarea
+    id: pay
+    attributes:
+      label: How pay is usually structured
+      description: Hourly, salary, commission, or a published schedule, and what else counts (differentials, stipends, pension). No dollar figures, please.
+  - type: textarea
+    id: negotiable
+    attributes:
+      label: What's usually negotiable
+      placeholder: What tends to move and what usually doesn't
+  - type: textarea
     id: redflags
     attributes:
       label: Red flags in postings for this role

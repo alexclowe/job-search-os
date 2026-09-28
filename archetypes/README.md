@@ -1,6 +1,6 @@
 # Profession archetype registry
 
-An archetype is a short, hedged brief for one profession. The **Tailor & apply** job reads it when you name your profession, to sharpen how it decodes a posting and orders a resume. It never puts a claim, a number, or a keyword on a resume that your own record does not support.
+An archetype is a short, hedged brief for one profession. Every job reads it when you name your profession: Tailor & apply to decode a posting and order a resume, Prep for an interview to shape the brief for how that profession interviews, Follow up & negotiate for how pay is structured and what's usually negotiable, and the weekly review for where the postings live. It never puts a claim, a number, or a keyword on a resume that your own record does not support.
 
 career-ops ships archetypes for a handful of technical roles. This registry is for everyone else.
 
@@ -15,7 +15,7 @@ career-ops ships archetypes for a handful of technical roles. This registry is f
 | [`social-media-manager`](./social-media-manager.md) | Social media manager | community manager, content manager |
 | [`personal-trainer`](./personal-trainer.md) | Personal trainer | fitness coach, group fitness instructor |
 
-Each file follows [`_template.md`](./_template.md): target titles, where the postings live, what a recruiter screens for first, story types that land, resume conventions, red flags in postings, and where to verify licensing rules.
+Each file follows [`_template.md`](./_template.md): target titles, where the postings live, what a recruiter screens for first, story types that land, resume conventions, how interviews usually run, how pay is usually structured, what's usually negotiable, red flags in postings, and where to verify licensing rules.
 
 ## Add one
 
