@@ -1,0 +1,25 @@
+{
+  "name": "job-search-os",
+  "displayName": "Job Search AI Operating System",
+  "description": "The AI operating system for a senior job search: a command center and five end-to-end jobs — tailor and apply, work my inbox, prep for an interview, follow up and negotiate, run my weekly review — that draft into Gmail, Calendar, and Drive with your approval and keep living trackers (Application Board, Story Bank, Offer Tracker). Every claim traces to your own record, roles below your salary floor are flagged before you spend an hour on them, and three guardrails stop overselling and invention.",
+  "version": "1.0.0",
+  "author": {
+    "name": "The AI Career Lab",
+    "email": "alex@theaicareerlab.com"
+  },
+  "homepage": "https://github.com/alexclowe/job-search-os",
+  "repository": "https://github.com/alexclowe/job-search-os",
+  "license": "MIT",
+  "keywords": [
+    "job-search",
+    "resume",
+    "cover-letter",
+    "interview-prep",
+    "salary-negotiation",
+    "career",
+    "layoff",
+    "linkedin",
+    "operating-system"
+  ],
+  "category": "career-tools"
+}
