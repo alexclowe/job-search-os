@@ -1,6 +1,6 @@
 ---
 name: job-posting-decoder
-description: Read a job posting the way a hiring manager wrote it — must-haves vs. wishlist, the real level and scope, the three worries behind the requirements, the pay range against the person's minimum pay, and the red flags worth a question — before an hour goes into the application. Activates on "decode this posting" / "is this role worth applying to" / "what are they really asking for" / a pasted job description.
+description: Read a job posting the way a hiring manager wrote it — whether it shows signs it isn't real or isn't an open role, must-haves vs. wishlist, the real level and scope, the three worries behind the requirements, the pay against the person's minimum pay, fit, who they know there, and the red flags worth a question — before an hour goes into the application. Activates on "decode this posting" / "is this role worth applying to" / "what are they really asking for" / a pasted job description.
 disable-model-invocation: true
 ---
 
@@ -28,13 +28,15 @@ that too.
 ```markdown
 # [Company] — [Title] · decoded
 
+**Is this real?** [N stop-and-check signals · M maybe-not-an-open-role signals — the `jobsearch-real-check` list: pay to start, a check to send back, ID or bank details before an interview, crypto, an unexpected text about a job never applied for, chat-only interviews, a free or look-alike email domain, big pay for vague work, pressure, reshipping; softer: not on the employer's own careers page, old or reposted, no named team, a legally required pay range missing. Signals and how to check them, never a verdict.]
 **Salary check:** [the pay as posted, compared like with like to your minimum pay (hourly to hourly, annual to annual, a commission role's base and realistic expected total each against the matching minimum, a schedule placement against the minimum) — above / below, flagging before you spend time / no pay posted — ask on the first call]
 
 **What they actually need (must-haves):** 3–5 lines, in their words
 **Wishlist (nice-to-have):** the rest
 **Real level and scope:** what the requirements and the range imply about level, team size, and whether this is one job or three
 **The three worries behind the posting:** what the manager is afraid of hiring wrong
-**Your fit, honestly:** strong / partial / weak on each must-have, from your record; the artifact that answers each; the gap you'd have to get ahead of
+**Your fit, honestly:** overall strong / partial / stretch; for each must-have, the win or resume line that answers it; the two biggest gaps, and whether each is a real gap or just missing from the resume
+**Who you know there:** [from the People board or the LinkedIn connections file in this Project, matched by company — names and roles, or "nobody on your list yet"]
 **Applicant-tracking vocabulary:** the 8–12 terms to mirror, exactly as written
 **Questions to ask before or on the first call:** 3–5, including the pay if unposted (in the unit the role is paid in: hourly rate and differentials, salary range, base and commission structure, or schedule placement)
 **Red flags (named once, no drama):** e.g. a wishlist of six jobs, a range far below the title's market, "wear many hats" in a role with a big title, commission-only pay described as "unlimited earning potential" with no base or draw, "flexible scheduling" paired with mandatory overtime, an unposted range where the law likely requires one [verify your state's rule]
@@ -43,7 +45,8 @@ that too.
 
 ## Constraints
 
-- Below your minimum pay is stated in the first line, not softened.
+- Any stop-and-check signal is stated first, then pay below your minimum — neither
+  softened, neither a verdict.
 - Fit reads come from the person's record only; no assumed experience.
 - Market-rate claims only when the person supplies a figure with a source; otherwise
   "unknown".

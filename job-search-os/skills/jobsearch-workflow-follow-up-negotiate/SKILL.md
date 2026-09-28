@@ -177,7 +177,10 @@ Append one short **Before you send** checklist with only the checks that fired.
 ## Trackers (living)
 
 List this Project's artifacts first, including ones from earlier conversations. Update
-the **Application Board** row: Last touch, Next action, Due. Update the **Offer
+the **Application Board** row (columns as in Tailor & apply): Last touch, Next action,
+Due; **Offer on** when an offer arrives; stage Offer. When an offer is accepted or
+declined, or the person withdraws, set stage Closed, **Closed on**, and **Closed why**
+("accepted elsewhere" on the other rows, "offer declined", "withdrew"). Update the **Offer
 Tracker** (create only if absent): Company · Role · Pay type · Base (in its unit, e.g.
 $46/hour or $92,000/year or step 6) · Variable (differentials, bonus, or commission as
 stated) · Other (sign-on, equity, stipends, pension) · Est. first-year total · Salary

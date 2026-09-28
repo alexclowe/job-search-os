@@ -8,7 +8,7 @@
 
   <!-- guard band -->
   <rect x="40" y="40" width="1120" height="440" rx="18" fill="none" stroke="#ffb86b" stroke-width="2" stroke-dasharray="10 8" opacity="0.7"/>
-  <text x="70" y="70" fill="#ffb86b" font-size="13" font-weight="700" letter-spacing="2">THREE GUARDRAILS, ALWAYS ON: MINIMUM SALARY · EVERY CLAIM HOLDS UP · NO INVENTION</text>
+  <text x="70" y="70" fill="#ffb86b" font-size="13" font-weight="700" letter-spacing="2">GUARDRAILS, ALWAYS ON: IS THIS REAL? · MINIMUM PAY · EVERY CLAIM HOLDS UP · NOTHING UNDERSOLD · NO INVENTION</text>
   <text x="70" y="465" fill="#7f8da6" font-size="12">They flag; the decisions stay yours. Nothing is sent, submitted, accepted, or declined without your click.</text>
 
   <!-- you -->
@@ -47,7 +47,8 @@
   <text x="990" y="298" text-anchor="middle" fill="#ffb86b" font-size="12" font-weight="700" letter-spacing="2">LIVING TRACKERS</text>
   <text x="990" y="324" text-anchor="middle" fill="#f5f5f5" font-size="13">Application Board · Story Bank</text>
   <text x="990" y="344" text-anchor="middle" fill="#f5f5f5" font-size="13">Offer Tracker · Weekly Search Log</text>
-  <text x="990" y="374" text-anchor="middle" fill="#c9d4e8" font-size="12">artifacts you edit in place; the next job picks up here</text>
+  <text x="990" y="364" text-anchor="middle" fill="#f5f5f5" font-size="13">People (who you know where)</text>
+  <text x="990" y="388" text-anchor="middle" fill="#c9d4e8" font-size="12">artifacts you edit in place; the next job picks up here</text>
 
   <!-- arrows -->
   <line x1="240" y1="255" x2="288" y2="255" stroke="#7f8da6" stroke-width="2" marker-end="url(#arrow)"/>

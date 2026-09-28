@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>job-search-os social preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c10;
+    --panel: rgba(22, 27, 34, 0.82);
+    --line: rgba(240, 246, 252, 0.10);
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --amber: #f5a524;
+    --green: #3fb950;
+    --blue: #58a6ff;
+    --violet: #a371f7;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1280px; height: 640px; overflow: hidden; background: var(--bg); }
+  body {
+    font-family: Inter, system-ui, sans-serif;
+    color: var(--text);
+    position: relative;
+    background:
+      radial-gradient(circle at 1px 1px, rgba(240,246,252,0.07) 1px, transparent 0) 0 0 / 28px 28px,
+      radial-gradient(600px 380px at 88% 18%, rgba(163,113,247,0.20), transparent 70%),
+      radial-gradient(560px 360px at 12% 100%, rgba(245,165,36,0.16), transparent 70%),
+      var(--bg);
+  }
+  .wrap { position: absolute; inset: 56px 64px; display: grid; grid-template-columns: 1fr 470px; gap: 56px; align-items: center; }
+
+  .repo { font-family: "JetBrains Mono", monospace; font-size: 20px; color: var(--muted); display: flex; align-items: center; gap: 10px; }
+  .repo svg { width: 22px; height: 22px; fill: var(--muted); }
+  .repo b { color: var(--text); font-weight: 600; }
+
+  h1 { margin-top: 22px; font-size: 76px; line-height: 1.0; font-weight: 800; letter-spacing: -2.5px; }
+  h1 span { background: linear-gradient(90deg, var(--amber), #ffd28a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .tag { margin-top: 20px; font-size: 23px; line-height: 1.4; color: #c9d1d9; max-width: 600px; }
+  .tag b { color: var(--text); font-weight: 600; }
+
+  .chips { margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .chip { font-family: "JetBrains Mono", monospace; font-size: 15px; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--line); color: #c9d1d9; background: rgba(240,246,252,0.03); display: inline-flex; align-items: center; gap: 8px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  .install { margin-top: 26px; font-family: "JetBrains Mono", monospace; font-size: 16px; color: var(--muted); }
+  .install code { color: var(--text); background: rgba(240,246,252,0.06); border: 1px solid var(--line); padding: 5px 10px; border-radius: 8px; }
+
+  /* app window */
+  .win { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.02) inset; overflow: hidden; }
+  .bar { display: flex; align-items: center; gap: 8px; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: #30363d; }
+  .bar .t { margin-left: 10px; font-family: "JetBrains Mono", monospace; font-size: 13px; color: var(--muted); }
+  .body { padding: 22px 22px 20px; }
+  .kicker { font-family: "JetBrains Mono", monospace; font-size: 12.5px; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
+  .title { margin-top: 6px; font-size: 21px; font-weight: 700; }
+  .sub { margin-top: 3px; font-size: 14.5px; color: var(--muted); }
+  .rows { margin-top: 16px; display: grid; gap: 9px; }
+  .row { display: grid; grid-template-columns: 26px 1fr auto; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: rgba(240,246,252,0.025); font-size: 15.5px; }
+  .ic { width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #0a0c10; }
+  .row .k { color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 13px; }
+  .acts { margin-top: 16px; display: flex; gap: 9px; }
+  .btn { flex: 1; text-align: center; font-size: 14.5px; font-weight: 600; padding: 10px 0; border-radius: 9px; border: 1px solid var(--line); color: #c9d1d9; }
+  .btn.primary { background: var(--amber); color: #1a1204; border-color: transparent; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <div class="repo">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/></svg>
+        alexclowe / <b>job-search-os</b>
+      </div>
+      <h1>Your job search,<br><span>run in Claude.</span></h1>
+      <p class="tag">An open-source Claude plugin for <b>every profession</b>.<br>Tailor, apply, prep and negotiate, <b>no terminal</b>.<br>Nothing sends without your click.</p>
+      <div class="chips">
+        <span class="chip"><span class="dot" style="background:var(--green)"></span>MIT</span>
+        <span class="chip"><span class="dot" style="background:var(--amber)"></span>Free</span>
+        <span class="chip"><span class="dot" style="background:var(--violet)"></span>Claude plugin</span>
+        <span class="chip"><span class="dot" style="background:var(--blue)"></span>PRs welcome</span>
+      </div>
+      <p class="install">Add marketplace → <code>alexclowe/job-search-os</code></p>
+    </div>
+
+    <div class="win">
+      <div class="bar"><i></i><i></i><i></i><span class="t">Tailor &amp; apply</span></div>
+      <div class="body">
+        <div class="kicker">Before you tailor</div>
+        <div class="title">Charge Nurse, Outpatient Clinic</div>
+        <div class="sub">Brightline Health · sample posting</div>
+        <div class="rows">
+          <div class="row"><span class="ic" style="background:var(--green)">✓</span>Posting looks real<span class="k">recruiter verified</span></div>
+          <div class="row"><span class="ic" style="background:var(--green)">✓</span>Pay clears your minimum<span class="k">$46/hr vs $44</span></div>
+          <div class="row"><span class="ic" style="background:var(--blue)">≈</span>Strong fit, 2 gaps<span class="k">asks, not adds</span></div>
+          <div class="row"><span class="ic" style="background:var(--amber)">★</span>You know 2 people there<span class="k">intro first?</span></div>
+        </div>
+        <div class="acts">
+          <span class="btn primary">Tailor it</span>
+          <span class="btn">Intro first</span>
+          <span class="btn">Skip</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

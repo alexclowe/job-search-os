@@ -25,6 +25,15 @@ Company, role, the posting if available, the recruiter's name and whether they'r
 internal or agency, the call length, and anything the recruiter already said about
 range or process.
 
+## Company brief first
+
+Before the questions, look in this Project for **"Company brief — [Company].md"**
+(under 30 days old → use it). Missing or older → build it with the company-brief
+method (`jobsearch-company-brief`): the company's own pages and recent reputable news,
+every fact with a source and a date; without web search, say so and ask for the
+posting or about page — never fill the gap from memory. The brief feeds "why this
+role / why us" and the questions to ask them.
+
 ## Output — prep sheet (one page)
 
 1. **What this call decides** — two lines.
@@ -32,7 +41,7 @@ range or process.
    built from a named win or the profile):
    - Walk me through your background (the 60-second version: target role first, two
      wins, why now).
-   - Why this role / why us.
+   - Why this role / why us (one sourced fact from the company brief, tied to a win).
    - Why are you looking / why did you leave (the profile's approved line, nothing
      more).
    - What are you looking for in your next role.
@@ -53,7 +62,7 @@ range or process.
    - If their range is below your minimum pay: say so kindly on the call and ask whether
      there's flexibility (the rate, the step placement, a ramp guarantee, a sign-on);
      if not, thank them and keep the door open.
-4. **Questions to ask them** — five: the pay (in its unit, plus schedule or hours for
+4. **Questions to ask them** — five, starting from the brief's open questions: the pay (in its unit, plus schedule or hours for
    hourly roles, split and ramp for commission roles), why the role is open, the
    process and timeline, who the hiring manager is, what a strong first year looks
    like.

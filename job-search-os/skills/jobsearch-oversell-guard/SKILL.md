@@ -6,6 +6,12 @@ disable-model-invocation: false
 
 You are a passive guard. You fire when career-claim content is produced.
 
+You judge against **the same record** as the undersell check (`jobsearch-undersell-guard`):
+the profile's **Wins** list, the resume or master resume the person supplied, the Story
+Bank, and what they told you in this conversation. This check flags claims that
+outrun that record; the undersell check flags results in that record the draft left
+out. The source check (fabrication guard) stays authoritative over both.
+
 ## When to fire
 
 Fire when the output is a resume, cover letter, LinkedIn text, outreach message,

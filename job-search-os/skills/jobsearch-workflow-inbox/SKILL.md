@@ -131,9 +131,18 @@ Append one short **Before you send** checklist with only the checks that apply.
 
 List this Project's artifacts first, including ones from earlier conversations. Update
 the **"Application Board"** if it exists; create it only if absent (columns as in Tailor
-& apply). For each message: move the stage, set Last touch to today, set Next action
-and Due, add the contact. New inbound roles get a row at Interested with your minimum pay
-check filled in. Rejections move to Closed with the read in Notes. Offers get a row on
+& apply — an older board without the newer columns gets them added, blank where
+unknown). For each message: move the stage, set Last touch to today, set Next action
+and Due, add the contact, and fill the stage date the message marks — **Reply on** for
+the first real reply from the employer on that application (if blank), **Screen on** or
+**Interview on** (one date per round, separated by semicolons) or **Final on** when an
+interview is confirmed. New inbound roles get a row at Interested with Source
+"recruiter reached out", the salary check filled in, and the "Is this real?" signal
+count in Real check (an unexpected text or chat about a job the person never applied
+for is a stop-and-check signal — never draft a "YES" reply). Rejections move to Closed
+with Closed on the message date, Closed why "rejected after screen", "rejected after
+interview", "rejected after final", or "no reply" by the last stage reached, and the
+read in Notes. Offers get a row on
 the **Offer Tracker** too (created if absent, columns as in Follow up & negotiate:
 Company · Role · Pay type · Base (in its unit) · Variable · Other · Est. first-year
 total · Salary check · Deadline · Status (Received → Countered → Accepted / Declined) ·

@@ -8,14 +8,14 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-0b1220?labelColor=ffb86b&color=0b1220"></a>
-  <a href="CHANGELOG.md"><img alt="Version 1.1.0" src="https://img.shields.io/badge/version-1.1.0-0b1220?labelColor=ffb86b&color=0b1220"></a>
-  <a href="docs/skill-catalog.md"><img alt="30 skills" src="https://img.shields.io/badge/skills-30-0b1220?labelColor=ffb86b&color=0b1220"></a>
+  <a href="CHANGELOG.md"><img alt="Version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-0b1220?labelColor=ffb86b&color=0b1220"></a>
+  <a href="docs/skill-catalog.md"><img alt="38 skills" src="https://img.shields.io/badge/skills-38-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="#requirements"><img alt="Works with Claude Pro, Max, Team" src="https://img.shields.io/badge/works%20with-Claude%20Pro%20%C2%B7%20Max%20%C2%B7%20Team-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml/badge.svg"></a>
   <a href="https://github.com/alexclowe/job-search-os/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/alexclowe/job-search-os?style=social"></a>
 </p>
 
-A free, MIT-licensed Claude plugin for anyone running a real job search, in any profession: five end-to-end jobs, living trackers, and three guardrails that keep your resume honest and your time off roles below your minimum pay. Drafts land in your own Gmail, Calendar, and Drive, and nothing is sent, submitted, accepted, or declined without your click.
+A free, MIT-licensed Claude plugin for anyone running a real job search, in any profession: five end-to-end jobs, living trackers, and guardrails that keep your resume honest, your time off roles below your minimum pay, and your details away from job scams. Drafts land in your own Gmail, Calendar, and Drive, and nothing is sent, submitted, accepted, or declined without your click.
 
 It is built for how people actually get paid and where they actually are. **Hourly** (with shift differentials, overtime, and guaranteed hours), **annual salary**, **commission** (base or draw plus a split), or a **salary schedule** (step and lane): every posting and offer is checked against your minimum pay in the same unit. And every stage, from a first job to a career change or a return to work, not only senior roles.
 
@@ -83,7 +83,7 @@ Download `job-search-os-claude-plugin-v*.zip` from the [latest release](https://
 
 1. Start a conversation **inside a Project** (the profile and trackers live there) and say **"set up my Job Search OS"**.
 2. Paste your current resume. Setup asks at most three questions, saves your profile, and ends on your command center.
-3. Pick **"Try it on a sample"** and choose a made-up job seeker: **Maria, a nurse moving to a clinic job (paid hourly)**, or **Sam, a data engineer going back to hands-on work (paid a salary)**. It tailors one application so you see the salary check, the decoded posting, the resume and cover letter, and the Application Board row before you paste anything real.
+3. Pick **"Try it on a sample"** and choose a made-up job seeker: **Maria, a nurse moving to a clinic job (paid hourly)**, or **Sam, a data engineer going back to hands-on work (paid a salary)**. It tailors one application so you see the check card (is it real, the pay, the fit, who you know there), the resume and cover letter, the posting terms that made it in, and the Application Board row before you paste anything real.
 4. Optional: say **"connect my tools"** to link Gmail, Google Calendar, and Google Drive. Personal accounts only. Not connected, you get the same work copy-paste-ready with files saved in your Project.
 
 ## What it does
@@ -92,27 +92,29 @@ Say **"open my command center"** (or `/jobsearch-os`) and pick a job. Each one r
 
 | Job | Say | What you get | Where it lands |
 |---|---|---|---|
-| **Tailor & apply** | "tailor and apply", "here's a posting" | Salary check *first*, the posting decoded (must-haves, wishlist, the three worries behind it, the words an ATS will match), a tailored resume (Word) that leads with what you did and what came of it, a 250 to 350 word cover letter that could not be sent anywhere else, an application note | A per-company Drive folder, the note as a Gmail draft, a row on the **Application Board** |
+| **Tailor & apply** | "tailor and apply", "here's a posting" | **One check card first:** is it real (scam and not-an-open-role signals, never verdicts), the pay against your minimum, your fit (strong, partial, or stretch, with the two biggest gaps), and who you know there. Then **tailor it**, **skip it**, or **get the intro first**. A tailored resume (Word) that leads with what you did and what came of it, the posting terms that made it in and the ones your record can't support yet (asked as questions, never added), a 250 to 350 word cover letter, the application-form answers (never the voluntary self-ID questions), an application note | A per-company Drive folder, the note as a Gmail draft, a row on the **Application Board** |
 | **Work my inbox** | "work my inbox", "reply to this recruiter", "I got a rejection" | Every message sorted (outreach, scheduling, next round, rejection, offer), a reply drafted in your voice for each one you choose, a two-line rejection read, the board moved to the right stage | Gmail drafts in the original thread, interviews on your calendar with a prep hold, the **Application Board** updated, offers on the **Offer Tracker** |
-| **Prep for an interview** | "prep me for an interview", "hiring manager round tomorrow" | A 2 to 4 page brief for the round that is actually next: their likely worries with the story that answers each, your answers built from named Story Bank entries, five questions to ask back, a half-page day-of card | The company's Drive folder, a prep hold on your calendar, the **Story Bank** updated |
+| **Prep for an interview** | "prep me for an interview", "hiring manager round tomorrow" | A **company brief first** (every fact with a source and a date), then a 2 to 4 page brief for the round that is actually next: their likely worries with the story that answers each, your answers built from named Story Bank entries, five questions to ask back, a half-page day-of card. Then a **practice round**, one question at a time, in your profession's interview format | The company's Drive folder, a prep hold on your calendar, the **Story Bank** updated |
 | **Follow up & negotiate** | "write my thank-you note", "I haven't heard back", "I got an offer" | Thank-you notes per interviewer, a two-touch follow-up cadence, an offer worksheet (Excel) with the salary check in the first line, a counter script with the exact words, a decision memo against your must-haves | Gmail drafts in the interview thread, the worksheet in Drive, dates on your calendar, the **Offer Tracker** updated |
-| **Run my weekly review** | "run my weekly review", "plan my search week" | Last week in five lines, stale applications named with a decision each, exactly three moves with "done looks like", a not-doing list, up to five outreach drafts | Three focus blocks on your calendar, the plan in Drive, the **Weekly Search Log**. Can run every Monday on a schedule |
+| **Run my weekly review** | "run my weekly review", "plan my search week" | Last week in five lines, stale applications named with a decision each, **where your search stalls** (reply rate by source and the stage where applications stop, with one fix; "too few to tell yet" under 10 applications), exactly three moves with "done looks like", a not-doing list, up to five outreach drafts | Three focus blocks on your calendar, the plan in Drive, the **Weekly Search Log**. Can run every Monday on a schedule |
 
-**Living trackers** you edit in place, in the Artifacts section of the sidebar: Application Board, Story Bank, Offer Tracker, Weekly Search Log. The next job picks up where the last one left off.
+**Living trackers** you edit in place, in the Artifacts section of the sidebar: Application Board, Story Bank, Offer Tracker, Weekly Search Log, and People (who you know at the companies you're applying to). The next job picks up where the last one left off.
 
-**Three guardrails, always on.** They flag; the decisions stay yours.
+**Guardrails, always on.** They flag; the decisions stay yours.
 
 | Guard | Speaks up when |
 |---|---|
+| **Is this real?** | a posting or message shows the caution signals official consumer-protection guidance names for job scams (pay to start, a check to send back, ID or bank details before an interview, an unexpected text about a job you never applied for), or softer signs it isn't an open role; signals and how to check, never a verdict |
 | **Minimum pay** | a role, message, or offer pays at or below the minimum you set, compared like with like (hourly to hourly, salary to salary, a commission role's base and realistic total to yours), before you spend an hour on it |
 | **Every claim holds up** | a resume, letter, or answer claims more than your record; could you back it in the room? |
+| **Nothing undersold** | a real win from your record got buried, understated, or left out of a draft |
 | **No invention** | a figure, title, or date has no source in your profile or resume; it becomes `[confirm]` |
 
-**Every skill also runs on its own.** Posting decoder, resume tailor, cover letter, LinkedIn rewrite, story bank, STAR answers, recruiter-screen, hiring-manager, panel and final-round prep, reference-call prep, comp research, salary-negotiation script, counter-offer handler, decline letter, 30-60-90 plan, outbound networking, an honest answer to "how do you use AI in your work", and a severance-leverage script for the first 24 hours after a layoff. Type `/` in Claude to see all 30, or read the [skill catalog](docs/skill-catalog.md).
+**Every skill also runs on its own.** Posting decoder, resume tailor, cover letter, LinkedIn rewrite, story bank, STAR answers, recruiter-screen, hiring-manager, panel and final-round prep, reference-call prep, comp research, salary-negotiation script, counter-offer handler, decline letter, 30-60-90 plan, outbound networking, an honest answer to "how do you use AI in your work", and a severance-leverage script for the first 24 hours after a layoff. New in 1.2: a **build-a-resume-from-scratch** interview that writes a master resume in current US and Canadian conventions, a **people tracker** that reads your LinkedIn connections export and keeps only the people at companies you're applying to, **company briefs** with sources, **mock interviews**, **application-form answers**, and a **funnel report**. Type `/` in Claude to see all 38, or read the [skill catalog](docs/skill-catalog.md).
 
 ## How it works
 
-<p align="center"><img src="assets/how-it-works.svg" alt="You talk to the command center; it runs one of five jobs; jobs draft into your connected tools behind approval and write to living trackers; three guardrails surround everything" width="100%"></p>
+<p align="center"><img src="assets/how-it-works.svg" alt="You talk to the command center; it runs one of five jobs; jobs draft into your connected tools behind approval and write to living trackers; five guardrails surround everything" width="100%"></p>
 
 The plugin is 30 markdown skill files and one manifest. There is no server, no scraper, and no code of its own; Claude reads the skill for the job you asked for, your profile, and the trackers, and does the work inside your account.
 
@@ -156,7 +158,10 @@ Honest summary: they scan and score more; this one lives where non-developers al
 - **Drafts only.** Every email is a Gmail draft, every calendar item is created for you to see, every file lands in your own Drive or Project. The plugin is written never to send, submit, accept, decline, resign, or click on your behalf.
 - **Nothing leaves your Claude account.** There is no server behind this project, no telemetry, and no scraping. The skills are markdown; Claude runs them under the permissions you granted it.
 - **Personal accounts only.** The connect-tools flow asks you not to link an employer's mailbox or Drive.
-- **No invention.** Any figure, title, date, or employer without a source in your own record is marked `[confirm]` instead of asserted.
+- **No invention.** Any figure, title, date, or employer without a source in your own record is marked `[confirm]` instead of asserted. A term a posting wants but your record doesn't show comes back as a question, never as a resume line.
+- **Your contacts' data stays put.** Your LinkedIn connections export lists other people's names and jobs. It stays in your Project; only the people at companies you're applying to are copied onto your People board, and nobody is ever messaged — every intro request is a draft you send yourself.
+- **Scam-aware.** Postings and recruiter messages are checked for the caution signals official consumer-protection guidance names. The plugin never drafts a "YES" reply to an unsolicited job text and never puts a Social Security or Social Insurance number, bank details, or ID into anything before a written offer.
+- **Your demographic answers are yours.** It never answers the voluntary self-identification questions (race, gender, veteran, disability) on an application.
 - **Not legal, tax, or salary advice.** Separation agreements, equity, non-competes, and notice periods get a "worth a professional's eyes" line, not an answer.
 
 Details and how to report a problem: [SECURITY.md](SECURITY.md).
@@ -201,7 +206,7 @@ This is a GitHub template repository: **Use this template → Create a new repos
 ## Repository layout
 
 ```
-job-search-os/          the plugin (30 skills), installable as-is; mirrored from the build repo
+job-search-os/          the plugin (38 skills), installable as-is; mirrored from the build repo
 .claude-plugin/         marketplace.json, which makes this repo its own marketplace
 archetypes/             the profession archetype registry (open to pull requests)
 docs/                   the jobs guide, cheat sheet, skill catalog, troubleshooting, and why it works

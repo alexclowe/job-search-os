@@ -37,8 +37,9 @@ List this Project's artifacts (including ones from earlier conversations). Ignor
 anything named "SAMPLE — …". Count:
 - rows on the "Application Board" with stage Applied, Screening, Interviewing, or
   Onsite → active applications; rows with a Due date in the next 7 days → follow-ups due
-- rows on the Application Board with stage Interviewing or Onsite and an interview
-  date this week → interviews this week
+- rows on the Application Board with a date this week in Screen on, Interview on, or
+  Final on (or, on an older board, stage Screening, Interviewing, or Onsite with an
+  interview date this week) → interviews this week
 - rows on the "Offer Tracker" with status Received or Countered → offers in play
 - the latest "Weekly Search Log" row → the three moves for this week and how many are done
 
@@ -61,19 +62,22 @@ Bank, Offer Tracker, or Weekly Search Log exists yet, show this one extra card a
 Jobs list. Hide it once any real tracker exists.
 
 **Jobs** — all five, this order, these labels:
-1. **Tailor & apply** — a posting and your resume → a salary check first, then a
-   tailored resume and cover letter that lead with what you did and what came of it, filed on your
+1. **Tailor & apply** — a posting and your resume → one check card first (is it real,
+   the pay, your fit, who you know there), then a tailored resume and cover letter
+   that lead with what you did and what came of it, the form answers, filed on your
    Application Board.
 2. **Work my inbox** — recruiter messages, scheduling requests, and rejections → replies
    drafted in your voice, interviews on your calendar, the board updated.
    *(Can run on a schedule.)*
-3. **Prep for an interview** — the company, the round, and your Story Bank → a prep
-   brief for that stage: likely questions, your stories mapped to their concerns, the
-   questions to ask back.
+3. **Prep for an interview** — the company, the round, and your Story Bank → a sourced
+   company brief, then a prep brief for that stage: likely questions, your stories
+   mapped to their concerns, the questions to ask back — and a practice round, one
+   question at a time.
 4. **Follow up & negotiate** — after any round or an offer → thank-you notes, a
    follow-up cadence, and a counter built on your minimum pay, logged on the Offer Tracker.
 5. **Run my weekly review** — your board and your week → what moved, what's stale,
-   three moves for the week, outreach drafted, focus blocks on your calendar.
+   where your search stalls (reply rate by source), three moves for the week, outreach
+   drafted, focus blocks on your calendar.
    *(Can run on a schedule.)*
 
 **"Suggested" tag** (at most two, cosmetic only — never reorder or hide a card): an
@@ -83,6 +87,9 @@ yet → tag 1.
 
 **Setup & more** — always these, in this order:
 - **Connect my tools** — Gmail, Google Calendar, and Google Drive.
+- **No resume? Build one** — *only when there's no master resume in this Project*.
+  A short interview → a master resume in current conventions
+  (`jobsearch-master-resume`).
 - **Complete your profile** — *only when the profile has no wins, no
   what a hiring manager might question, or no minimum pay*. Adds the three fields every draft and
   guard depends on.
@@ -93,7 +100,11 @@ yet → tag 1.
 **Try it on a sample** → first offer the two samples as clickable options: **A nurse
 moving to a clinic job (hourly pay)** · **A data engineer (annual salary)**. Then run
 **Tailor & apply** (`jobsearch-workflow-tailor-apply`) on the one they pick, end to end,
-without asking intake questions. Label every output **SAMPLE**, prefix saved files and
+without asking intake questions. Show the check card exactly as a real run would (is
+it real, pay, fit, people — the sample's People line reads "nobody on your list yet —
+samples never import connections"), then choose **Tailor it** automatically and say
+"In a real run you pick here." Show the posting-terms list with its "did you do these?"
+questions answered by the sample's own record, and skip the form answers unless asked. Label every output **SAMPLE**, prefix saved files and
 the tracker with "SAMPLE — ", and make **no connector writes and no inbox reads**: show
 what would land in Drive and on the calendar instead ("This is the folder that would
 appear in your Drive"). Close with: "That's one application, checked against your
@@ -133,6 +144,7 @@ asking about differentials and guaranteed hours on the first call).
 - Follow up & negotiate → `jobsearch-workflow-follow-up-negotiate`
 - Run my weekly review → `jobsearch-workflow-weekly-review`
 - Connect my tools → `jobsearch-connect-tools`
+- No resume? Build one → `jobsearch-master-resume`
 - Complete your profile → `jobsearch-setup-wizard`
 - Browse all skills → `jobsearch-skill-catalog`
 
@@ -157,7 +169,7 @@ sample. In the close, name the board and where to find it (Artifacts in the side
 
 Right under the summary line, if any live tracker artifacts exist (not "SAMPLE" ones),
 add one line naming them so the user can jump to them — e.g. "Your boards: Application
-Board · Story Bank · Offer Tracker (open them from Artifacts in the sidebar)". Jobs
+Board · Story Bank · Offer Tracker · People (open them from Artifacts in the sidebar)". Jobs
 create and update these boards; the command center only points to them.
 
 ## About this skill

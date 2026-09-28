@@ -2,6 +2,27 @@
 
 All notable changes to the Job Search AI Operating System are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow the plugin's `version` in `job-search-os/.claude-plugin/plugin.json`, and each version is also a [GitHub Release](https://github.com/alexclowe/job-search-os/releases) with the plugin zip and the documentation zip attached.
 
+## [1.2.0] — 2026-09-28
+
+The work before you apply and after you interview.
+
+### Added
+- **One check card before every application** (Tailor & apply): is this real, the pay against your minimum, your fit (strong, partial, or stretch, with the two biggest gaps), and who you know there — then one choice: tailor it, skip it, or get the intro first.
+- **Is this real?** (`jobsearch-real-check`): the caution signals official consumer-protection guidance names for job scams, plus softer signs a posting isn't an open role, and how to check. Signals, never verdicts.
+- **Posting terms after tailoring**: the posting's terms your resume now uses, and the ones your record can't support yet — asked as questions ("Did you do X?"), never added.
+- **Nothing undersold** (`jobsearch-undersell-guard`): the mirror of the oversell check, against the same record.
+- **Application-form answers** (`jobsearch-application-questions`): why us, why this job, desired pay in your pay unit, how you heard, licenses. Never the voluntary self-identification questions.
+- **People tracker** (`jobsearch-people-tracker`) and a **People** board: reads your LinkedIn connections export (finds the header row, matches by company because email is usually blank), keeps only people at companies you're applying to, drafts the intro request.
+- **Company brief** (`jobsearch-company-brief`): one page, every fact with a source and a date; runs before recruiter-screen prep and carries into later rounds.
+- **Mock interviews** (`jobsearch-mock-interview`) and a practice round inside Prep for an interview: one question at a time, feedback after each answer, profession formats (clinical scenarios, demo lessons, sell-me-this role-plays, technical plus behavioral), new stories added to the Story Bank.
+- **Build a resume from scratch** (`jobsearch-master-resume`): a short interview and a master resume in current US and Canadian conventions, including the two-page federal limit and licenses near the top for nurses and teachers.
+- **Funnel report** (`jobsearch-funnel-report`) inside the weekly review: reply rate by source and where applications stall, with one fix; "too few to tell yet" under 10 applications.
+
+### Changed
+- The Application Board gains Real check, Fit, Referral, and stage dates (Reply on, Screen on, Interview on, Final on, Offer on, Closed on, Closed why). Older boards keep working; missing columns are added blank and read as unknown.
+- The Weekly Search Log gains a "Where it stops" column.
+- Scam signals, resume conventions, and pay-transparency notes follow official sources (FTC and FBI IC3 job-scam guidance, state attorney general alerts, USAJOBS and OPM, Canada's Job Bank, university career centers, state and provincial labour pages), with anything unsettled worded as "check your state's current rule".
+
 ## [1.1.0] — 2026-09-28
 
 Built for every profession, not just senior tech roles.

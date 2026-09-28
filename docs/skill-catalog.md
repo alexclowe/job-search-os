@@ -1,6 +1,6 @@
 # Job Search AI Operating System — Skill Catalog
 
-_All **30 skills** in this pack, grouped by what they do. This page is generated from the plugin — it always matches what you installed. Run `/jobsearch-skill-catalog` inside your Project to see the same list live._
+_All **38 skills** in this pack, grouped by what they do. This page is generated from the plugin — it always matches what you installed. Run `/jobsearch-skill-catalog` inside your Project to see the same list live._
 
 Type `/` in any task inside your Project and pick a skill, or type the command directly.
 
@@ -14,30 +14,35 @@ Type `/` in any task inside your Project and pick a skill, or type the command d
 - **`/jobsearch-workflow-weekly-review`** — Run my weekly review for the Job Search AI Operating System
 - **`/jobsearch-connect-tools`** — Connect Gmail, Google Calendar, and Google Drive to the Job Search AI Operating System
 
-## Setup & navigation (2)
+## Setup & navigation (3)
 
 - **`/jobsearch-setup-wizard`** — "Invoke when the user says \"set up my Job Search OS\", \"set me up\", \"get started\", or \"run the setup wizard\"
 - **`/jobsearch-skill-catalog`** — List every skill in the Job Search AI Operating System, grouped by category
+- **`/jobsearch-master-resume`** — Build a resume from scratch for the Job Search AI Operating System — a short interview, then a master resume in current US and Canadian conventions (reverse-chronological, one or two pages, no photo or personal details, a layout applicant-tracking systems can read), saved as the base every tailored resume starts from
 
-## Guardrails (always-on) (3)
+## Guardrails (always-on) (5)
 
 - **`/jobsearch-salary-guard`** — Passive guard that fires when a role, posting, recruiter message, or offer pays at or below the person's minimum pay — hourly, annual salary, commission, or a salary schedule, compared like with like
 - **`/jobsearch-oversell-guard`** — Passive guard that fires on any resume, cover letter, profile rewrite, or interview answer
 - **`/jobsearch-fabrication-guard`** — Passive guard that fires when any output contains a metric, title, date, employer, or accomplishment that does not trace to the person's profile, resume, or Story Bank
+- **`/jobsearch-undersell-guard`** — Passive guard that fires on any resume, cover letter, LinkedIn text, application answer, or interview answer
+- **`/jobsearch-real-check`** — The is-this-real check — a passive guard that fires on any job posting, recruiter message, text, or offer, counts the caution signals official consumer-protection guidance names for job scams (pay to start, a check to send back, ID or bank details before an interview, crypto, an unexpected text about a job you never applied for) plus softer signs a posting may not be an open role, and says how to check
 
-## Read the posting (2)
+## Read the posting (3)
 
-- **`/job-posting-decoder`** — Read a job posting the way a hiring manager wrote it — must-haves vs. wishlist, the real level and scope, the three worries behind the requirements, the pay range against the person's minimum pay, and the red flags worth a question — before an hour goes into the application
+- **`/job-posting-decoder`** — Read a job posting the way a hiring manager wrote it — whether it shows signs it isn't real or isn't an open role, must-haves vs. wishlist, the real level and scope, the three worries behind the requirements, the pay against the person's minimum pay, fit, who they know there, and the red flags worth a question — before an hour goes into the application
 - **`/comp-research`** — Organize pay research for the person's target roles — hourly rates, salaries, commission structures, or salary schedules, as reported by the sources they supply or that public search returns — how their experience maps to the role's levels or steps, where their minimum pay sits against the evidence, and the questions to ask a recruiter
+- **`/jobsearch-company-brief`** — A one-page company brief with sources, for the Job Search AI Operating System — what the employer does, recent news, how the team and role fit, what their own pages say they value, and questions worth asking
 
-## Apply (4)
+## Apply (5)
 
 - **`/resume-tailor`** — Rewrite a resume for one specific job posting — leads with what you did and what came of it, ahead of titles, matches the posting's real vocabulary, handles what a hiring manager might question in the text, and flags every claim that isn't backed by the person's record
 - **`/cover-letter-draft`** — Write a specific, 250–350 word cover letter for one company and role in the person's own voice — a real opening about their problem, two wins paired with the posting's top worries, one line that gets ahead of what a hiring manager might question, no adjectives about yourself, no pay
 - **`/linkedin-rewrite`** — Rewrite a LinkedIn headline and About section for the person's target roles — leads with what you did and what came of it, addresses what a hiring manager might question before a recruiter wonders about it, uses the vocabulary recruiters search, and sets visibility defaults that keep a search quiet from your current employer
 - **`/ai-use-positioning`** — Answer the 2026 interview question "how do you use AI in your work" — a concrete, honest account of what the person actually uses it for, what they don't trust it with, one example with a result, and how they'd bring it to this team, plus the resume and LinkedIn lines that say the same thing without buzzwords
+- **`/jobsearch-application-questions`** — Answer the questions on an online job application for the Job Search AI Operating System — why do you want to work here, why this job, desired pay, how did you hear about us, work authorization, licenses, notice period, and short written questions — in your voice, from your own record and a sourced company brief
 
-## Interview (6)
+## Interview (7)
 
 - **`/story-bank-builder`** — Build or grow the person's Story Bank — each win turned into a reusable interview story with situation, what they did, what changed, and the questions it answers — as a live tracker the interview jobs read
 - **`/star-answer-builder`** — Turn one behavioral interview question into a spoken-register answer built from a named entry in the person's Story Bank — situation, what they did, what changed — and say plainly when no story fits
@@ -45,6 +50,7 @@ Type `/` in any task inside your Project and pick a skill, or type the command d
 - **`/hiring-manager-prep`** — Prep for the hiring-manager round — the likely questions for this specific role, the person's win stories mapped to the manager's probable worries, how to talk about the manager's known problem, and the questions to ask back that show judgment
 - **`/panel-and-final-round-prep`** — Prep for a panel loop or a final executive round — per-interviewer angles, keeping one consistent story across a long day, the cross-functional and conflict questions, strategic framing and "why now" for the executive, how to close, and an energy plan
 - **`/reference-call-prep`** — Prep the person's references — for each one, a short brief on what this role needs them to emphasize, the two or three stories worth telling, the questions they're likely to get, and a heads-up note to send them
+- **`/jobsearch-mock-interview`** — Mock interview for the Job Search AI Operating System — practice out loud, one question at a time, with feedback after each answer and a debrief that adds new stories to your Story Bank
 
 ## Offers & exits (4)
 
@@ -53,9 +59,11 @@ Type `/` in any task inside your Project and pick a skill, or type the command d
 - **`/decline-offer-letter`** — Write a gracious, specific note declining an offer or withdrawing from a process — sincere enough to mean it, short enough to send, and clear about the one thing that would have changed the answer, so the door stays open
 - **`/thirty-sixty-ninety-plan`** — Write a 30-60-90 day plan for a specific role — as an interview artifact for a final round or as the real plan after accepting — built from what the posting and the interviews revealed, with listening before deciding and one visible win by day 60
 
-## Network (1)
+## Network & pipeline (3)
 
 - **`/outbound-networking`** — Draft short, specific outreach for the search — a warm intro request, a former colleague, a cold-but-relevant hiring manager, an alum, or a reply to inbound recruiter interest — each opening with something specific to the recipient and asking for one small thing, never "pick your brain"
+- **`/jobsearch-people-tracker`** — People tracker for the Job Search AI Operating System — who you know at the companies you're applying to
+- **`/jobsearch-funnel-report`** — Diagnose your job-search funnel for the Job Search AI Operating System — reply rate by source (referral, job board, recruiter reached out, applied direct) and where applications die (no reply, screens that stall, interviews without a final, finals without an offer), from your Application Board, with one fix tied to each stall point
 
 ## Just laid off (1)
 

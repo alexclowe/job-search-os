@@ -45,7 +45,7 @@ know — with an offer to introduce someone else if they have a name.
 
 ## After
 
-"Want me to move the row to Closed on your Application Board? Say 'close it'."
+"Want me to move the row to Closed on your Application Board (Closed why: offer declined, or withdrew)? Say 'close it'."
 
 ## About this plugin
 

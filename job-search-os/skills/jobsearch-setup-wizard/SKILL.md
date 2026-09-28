@@ -86,7 +86,7 @@ Say, briefly:
 > - your **profile from an earlier setup** (the "Job Search AI Operating System — Profile" block), if you have one
 >
 > Or say **"ask me"** and I'll ask three quick questions instead. (Prefer the full
-> setup? Say **"full setup"**.)
+> setup? Say **"full setup"**. No resume yet? Say **"build my resume"**.)
 
 **Read what they give you.**
 - **Resume or profile text:** read it as-is. Save a pasted resume as
@@ -100,6 +100,12 @@ Say, briefly:
   "$44/hour", "$68,000/year", "$55,000 base plus commission", "step 6 on the district
   schedule").
 - **"full setup":** go to Step 1.
+- **"build my resume"** (opt-in, never offered as a required step): run the
+  master-resume interview (`jobsearch-master-resume` — three short cards, then a master
+  resume in current conventions saved as "Master resume.docx" and "Master resume.md"
+  in this Project). Then treat that resume as the paste and continue with the confirm
+  card below — the resume interview replaces the paste, so the two-exchange rule still
+  holds for the rest of setup.
 
 Fill as many **Step 2 fields** as the material supports — current role, years, target
 roles, career stage, location and remote preference, **pay type**, wins (pull the
@@ -301,6 +307,9 @@ reply; don't wait to be asked.
   target:` → `Target pay:`; `Target level:` → `Career stage:`; `Positioning
   challenges:` → `Things a hiring manager might question:`; **Shipped artifacts** →
   **Wins**).
+- **Written later by jobs (optional, never asked in setup):** `People import:` in the
+  **Target** section — `offered [date]` once Tailor & apply has offered the LinkedIn
+  connections import, `done [date]` after an import. Keep it when rewriting a profile.
 - This skill is the ONLY one in the plugin that runs setup. Jobs ask for a missing
   detail once, just in time, and save it into the profile; every other skill assumes
   the profile exists and reads from it.

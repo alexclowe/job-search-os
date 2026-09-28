@@ -21,7 +21,9 @@ and `Target level:` means career stage. Read them the same way.
 
 ## Inputs
 
-Who (name, role, company, how they're connected), which kind of message, the one
+Check the **People** board first (the people tracker) for the recipient's row — how
+they're connected, last touch, intro status — and update it after drafting. Who (name,
+role, company, how they're connected), which kind of message, the one
 thing the person wants (an intro, a 15-minute call, a referral, a read on the team),
 and anything specific they know about the recipient (something they wrote, shipped,
 or said).

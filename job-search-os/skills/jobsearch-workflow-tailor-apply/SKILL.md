@@ -1,13 +1,14 @@
 ---
 name: jobsearch-workflow-tailor-apply
-description: Tailor and apply for the Job Search AI Operating System. Invoke when a job seeker says "tailor and apply", "tailor my resume to this posting", "apply to this job", "here's a posting", "write my cover letter for this role", or pastes a job description and asks for a resume or application. Runs a salary check on the posting first, decodes the real requirements, produces a tailored resume and cover letter that lead with real results and trace every claim to the person's own record, and files the application on the Application Board.
+description: Tailor and apply for the Job Search AI Operating System. Invoke when a job seeker says "tailor and apply", "tailor my resume to this posting", "apply to this job", "here's a posting", "write my cover letter for this role", or pastes a job description and asks for a resume or application. Starts with one check card — is it real, does the pay clear your minimum, how well you fit, and whether you know someone there — then produces a tailored resume and cover letter that lead with real results, shows which posting terms made it in and which your record can't support yet, drafts the application-form answers, and files it on the Application Board.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Never name profile or connection filenames in conversation.
 
-One posting, start to finish: is it worth your hour, what they actually want, a resume
-and letter built from what you did and what came of it, and a row on the board so it doesn't vanish.
+One posting, start to finish: is it real and worth your hour, do you know someone
+there, what they actually want, a resume and letter built from what you did and what
+came of it, the form answers, and a row on the board so it doesn't vanish.
 
 ## How this job delivers its outputs
 
@@ -72,9 +73,13 @@ profile so I won't ask again — say 'undo' to remove it." Never block the job o
    location and remote terms, the schedule (shift, hours, days), and the pay exactly
    as posted — an hourly range, an annual range, base plus commission, or a
    salary-schedule placement.
-2. **The resume** — the current resume in this Project, a file they point to, or
-   pasted text. If none exists anywhere, ask for it; never write a resume from the
-   profile alone.
+2. **The resume** — the master resume in this Project ("Master resume.docx" or
+   "Master resume.md"), a file they point to, or pasted text. If none exists anywhere,
+   offer, as clickable options: **Paste it now** · **Build one from scratch (about ten
+   minutes)**. On build, run the master-resume method inline (the
+   `jobsearch-master-resume` interview: three short cards, then a master resume in
+   current conventions, saved to this Project), then come back here and continue.
+   Never write a resume from the profile alone.
 3. **How they're applying** (clickable): company site or ATS · through a recruiter ·
    through a referral (name) · by email to a hiring manager.
 4. **Anything to get ahead of for this one** — a gap, a title mismatch, a location
@@ -92,10 +97,26 @@ resume's ordering; it never supplies a claim, a number, or a keyword the person'
 record doesn't support. If no archetype matches, continue without one and say nothing
 about it. Anyone can add one — see `archetypes/_template.md`.
 
-## Salary check — before any materials (non-negotiable)
+## Before you tailor — one check card (non-negotiable)
 
-Compare the posting against the minimum pay on file, **like with like** (the salary
-guard's rules):
+Four checks, in this order, on **one card** — not four interruptions. Decode the
+posting while you run them (must-haves vs. nice-to-haves in their own words, the three
+things the hiring manager is most likely worried about, the terms an
+applicant-tracking system will match on, the schedule and pay exactly as posted), then
+show the card and wait for one choice.
+
+**1. Is this real?** Run the `jobsearch-real-check` signals on the posting and any
+recruiter message: the stop-and-check signals from official consumer-protection
+guidance (pay to start, a check to send back, ID or bank details before an interview,
+crypto, an unexpected text about a job never applied for, chat-only interviews, a
+free or look-alike email domain, big pay for vague work, pressure, reshipping) and the
+softer maybe-not-an-open-role signals (not on the employer's own careers page, old or
+reposted, no named team, a legally required pay range missing, a posting that says
+it isn't for a current vacancy). Report counts and what showed them — **signals,
+never a verdict**, and never call a named company a scam.
+
+**2. Pay.** Compare the posting against the minimum pay on file, **like with like**
+(the salary guard's rules):
 - **Hourly:** the top of the posted hourly range against the hourly minimum.
   Differentials, overtime, and sign-on bonuses are noted separately, never added to
   the base. If one side is annual and the other hourly, convert with a stated hours
@@ -106,16 +127,61 @@ guard's rules):
   expected-total minimum. "Up to" and "top producers earn" figures don't count.
 - **Salary schedule:** the step and lane the posting or district would likely place
   you at, and that step's figure on the published schedule, against the minimum.
-No pay posted → look in the recruiter's message; if none, mark "pay unknown — ask on
-the first call" and continue.
-- **At or below your minimum pay:** stop and say it plainly, before drafting anything:
-  "This role posts at [pay as posted], and your minimum is [minimum pay]. Flagging it
-  now, not after three rounds. Want to (a) skip it, (b) apply anyway and raise pay on
-  the first call, or (c) apply and mark it as a fallback?" Continue only on (b) or (c),
-  and record the choice on the board.
-- **Above your minimum pay or unknown:** one line, then move on. For hourly and
-  commission roles, add the one pay question worth asking on the first call (for
-  example guaranteed hours and the differential schedule, or the split, draw, and ramp).
+No pay posted → look in the recruiter's message; if none, "pay unknown — ask on the
+first call". For hourly and commission roles, add the one pay question worth asking
+on the first call (guaranteed hours and the differential schedule, or the split,
+draw, and ramp).
+
+**3. Fit.** Match the must-haves against the person's record (profile wins, master
+resume, Story Bank): **strong** (every must-have has a matching result) · **partial**
+(most do; name the gaps) · **stretch** (two or more must-haves have nothing behind
+them). Always name the two biggest gaps and whether each is a real gap or just
+missing from the resume ("you've done this — it's not on your resume yet").
+
+**4. Do you know someone there?** Read the **People** board (and the LinkedIn
+connections file in this Project, if there is one) for this company — the
+`jobsearch-people-tracker` method: match by company name, not email. If there's no
+People board and no connections file, and the profile doesn't say `People import:
+offered` yet, add one line offering it once: "Want to check whether you know anyone
+here? Your LinkedIn connections export takes up to a day to arrive — say 'import my
+connections' anytime." Then write `People import: offered [date]` into the profile's
+**Target** section so it isn't offered again.
+
+**The card** (clickable, then wait):
+
+```
+[Company] — [Role] · [location / remote] · [schedule]
+Is this real?  [0 caution signals · or: N stop-and-check signals — check before replying]
+Pay            [posted pay] vs your minimum [minimum] → [above · below · unknown] [+ the one pay question]
+Fit            [strong · partial · stretch] — gaps: [gap 1] · [gap 2]
+People         [You know N people there: Name (role) · or: nobody on your list yet]
+What they want [three must-haves, in their words]
+
+→ Tailor it   → Skip it   → Get the intro first
+```
+
+- **Any stop-and-check signal** fired → the card leads with "Check this before you
+  reply or send anything," lists the ten-minute checks, and **Tailor it** becomes
+  "Tailor it after I've checked". Never draft a "YES" reply to an unsolicited text;
+  never put an SSN, SIN, bank details, or ID number into anything before a written
+  offer.
+- **Pay below the minimum** → the card says it plainly: "This role posts at [pay as
+  posted], and your minimum is [minimum pay]. Flagging it now, not after three
+  rounds." **Tailor it** becomes two choices: "Apply anyway and raise pay on the first
+  call" · "Apply and mark it as a fallback". Record the choice on the board.
+- **Stretch fit** → say it once, kindly, and still let them choose.
+- **Someone there** → **Get the intro first** is pre-selected.
+
+**On "Skip it":** add the row at stage **Closed**, Closed why "skipped — [reason]",
+and stop. **On "Get the intro first":** draft the intro request (the people-tracker
+method: 60–120 words in the person's voice, the role by name and link, one small ask,
+an easy out, plus a three-line forwardable blurb), as a Gmail draft when connected or
+paste-ready; update the **People** row (Intro status "asked", Last touch today, Next
+"follow up once in five business days") and add the Application Board row at stage
+**Interested** with Source "referral (pending)", Next action "intro from [name]", Due
+five business days out. Then offer: "Want the tailored resume and letter ready now, so
+you can send them the moment the intro lands?" — and continue to Produce only on yes.
+**On "Tailor it":** continue.
 
 Before any tool writes, say once: "As I work, Claude may ask you to approve actions —
 this run involves about [N] (the resume file, the cover letter, one folder, and the
@@ -124,15 +190,10 @@ tracker updates always take a quick confirm."
 
 ## Produce
 
-1. **Posting decoded** (in chat, short) — must-haves vs. nice-to-haves in their own
-   words; the three things the hiring manager is most likely worried about; keywords an
-   applicant-tracking system will match on; anything ambiguous to ask about; red flags
-   (a "wishlist of six jobs", a range far below market for the title, "fast-paced" as a
-   euphemism) named once, without drama.
-2. **Tailored resume (.docx)** — the person's real resume, reordered and rewritten for
-   this posting:
-   - Summary (3 lines max) that names the target role and leads with the two wins most relevant to their worries — **what was done and its result before
-     any title**.
+1. **Tailored resume (.docx)** — the person's real resume (the master resume when
+   there is one), reordered and rewritten for this posting:
+   - Summary (3 lines max) that names the target role and leads with the two wins most
+     relevant to their worries — **what was done and its result before any title**.
    - Each bullet: action, scope, result, in the posting's vocabulary where the person's
      record honestly supports it. Quantify only with figures the person supplied; a
      bullet with no figure says what changed, not a made-up percentage.
@@ -142,15 +203,36 @@ tracker updates always take a quick confirm."
      the new field's words; someone returning to work gets a one-line, factual entry
      for the gap; a license from another state names its status plainly.
    - Same page count as the original unless they asked to cut. Plain formatting an
-     ATS can parse: no tables, no columns, no graphics.
+     ATS can parse: one column, standard section titles, no tables, text boxes, or
+     graphics, no contact details in the page header or footer.
    - A **change log** at the end of the chat message: what moved, what was reworded,
      what was cut, and any claim the person should double-check.
+2. **Posting terms — what made it in, and what your record can't support yet** (in
+   chat, right after the resume):
+   - **Now on your resume:** the posting's key terms the tailored resume uses, each
+     with the resume line that backs it.
+   - **Not supported by your record yet — tell me if you've done these:** each missing
+     term as a question — "Did you do [X]? Tell me what and I'll add it." **Never add a
+     term, skill, or tool to the resume because the posting wants it.** A term goes in
+     only after the person gives you the real experience behind it.
 3. **Cover letter (.docx, 250–350 words)** in the person's voice: a specific opening
    about this company or problem (never "I am excited to apply"), two short paragraphs
-   pairing their two strongest wins with the posting's top worries, one line that
-   gets ahead of what a hiring manager might question, a plain close. No adjectives about
+   pairing their two strongest wins with the posting's top worries, one line that gets
+   ahead of what a hiring manager might question, a plain close. No adjectives about
    themselves ("results-driven", "passionate"), no mention of pay.
-4. **Application note** (only for referral or email applications) — 60–120 words to
+4. **Application-form answers** (when they're applying through a company site or ATS,
+   or paste the form's questions) — the `jobsearch-application-questions` method:
+   why us (one sourced fact about the company — from **Company brief — [Company].md**
+   in this Project, or a short brief built now with sources; never a guess), why this
+   role, desired pay in the role's pay unit (inside a posted range and never below the
+   minimum; for a numbers-only field, explain the trade-off and let the person pick the
+   number), how they heard about it (the true source), licenses from the record.
+   Salary-history questions: note that many states and some provinces bar them and
+   the person can leave them blank or decline where that applies (not legal advice).
+   **Never answer voluntary self-identification questions** (race, gender, veteran,
+   disability) — say they're voluntary and theirs to answer or decline. Saved as
+   "Application answers — [Company].md".
+5. **Application note** (only for referral or email applications) — 60–120 words to
    the referrer or hiring manager, in their voice, attaching or naming the two files.
 
 ## Compliance pass (inline — do not hand off)
@@ -162,6 +244,14 @@ Screen every file in this turn:
 - **Every claim holds up:** for each claim, could the person back it with a specific example
   in an interview? Flag any that reads stronger than the record ("led" where they
   "contributed to"; "owned" where they "worked on").
+- **Nothing undersold:** judged against the same record — any win that answers one of
+  the posting's top worries but is buried, understated ("helped with" where the record
+  says they did it), or left out gets flagged with the stronger honest line (the
+  undersell check). Never adds anything the record doesn't support.
+- **Posting terms:** no term went onto the resume just because the posting used it;
+  every added term has a record line behind it.
+- **Form answers:** no voluntary self-identification answer, no pay history, no SSN,
+  SIN, bank, or ID number anywhere.
 - **AI-register tells:** remove "leverage", "synergy", "results-driven", "passionate",
   "spearheaded", "dynamic", stacked adjectives, and any sentence that could open any
   cover letter. Read the letter aloud in your head; if it doesn't sound like the voice
@@ -183,22 +273,38 @@ Append one short **Before you submit** checklist with only the checks that fired
 - **Calendar connected:** one reminder titled "Follow up — [Company]" only if the
   person gives a follow-up date; never invent one.
 - **Otherwise:** both files saved to this Project's folder, the note paste-ready.
+- **Form answers** go in the same company folder (Drive) or this Project as
+  "Application answers — [Company].md". Nothing is typed into the employer's form for
+  them.
 
 ## Application Board (living tracker)
 
 List this Project's artifacts first, including ones from earlier conversations. If an
 **"Application Board"** artifact exists, add this application; create it only if
-absent. Columns: Company · Role · Stage (Interested → Applied → Screening →
-Interviewing → Onsite → Offer → Closed) · Posted range · Salary check (above / below,
-applying anyway / unknown) · Source · Applied on · Last touch · Next action · Due ·
-Contact · Notes. Board views: by stage, plus a "Due this week" list at the top. Sample
-rows sit under "Samples" and never count.
+absent. This job owns the board's columns; every other job and skill writes to them:
+
+Company · Role · Stage (Interested → Applied → Screening → Interviewing → Onsite →
+Offer → Closed) · Posted range · Salary check (above / below, applying anyway / below,
+fallback / unknown) · Real check (0 signals / N stop-and-check / N maybe-not-open) ·
+Fit (strong / partial / stretch) · Source (referral · job board · recruiter reached
+out · applied direct · other) · Referral (name, or blank) · Applied on · Reply on ·
+Screen on · Interview on (one date per round, separated by semicolons) · Final on ·
+Offer on · Closed on · Closed why (no reply · rejected after screen · rejected after
+interview · rejected after final · withdrew · skipped · offer declined · accepted
+elsewhere) · Last touch · Next action · Due · Contact · Notes.
+
+Set **Applied on** when the person says they've submitted (ask on the next run if it's
+still blank at stage Interested). **An older board without the newer columns keeps
+working:** add the missing columns and leave them blank — blank means unknown, never
+zero — rather than rebuilding it. Board views: by stage, plus a "Due this week" list at
+the top. Sample rows sit under "Samples" and never count.
 
 ## Close
 
 Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
 
-List what was made and where (resume / letter / note / folder / board row), the
-`[confirm]` list, the salary check verdict in one line, then "What's next?" — offer the
-command center. If a Story Bank exists and a strong story surfaced during tailoring
+List what was made and where (resume / letter / answers / note / folder / board row),
+the `[confirm]` list, the check card in one line (real · pay · fit · people), the
+"did you do these?" questions still open, then "What's next?" — offer the command
+center. If a Story Bank exists and a strong story surfaced during tailoring
 that isn't on it, offer to add it.

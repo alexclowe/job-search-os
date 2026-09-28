@@ -16,6 +16,12 @@ Work inside your Project so your career profile loads. The rules under everythin
 | Get ready for a round | **"prep me for an interview"** · "hiring manager round tomorrow" |
 | The day after, or an offer | **"follow up and negotiate"** · "I got an offer" · "help me counter" |
 | Plan the week | **"run my weekly review"** |
+| See where your search stalls | **"where is my search stalling"** · "funnel report" |
+| Check a posting or recruiter | **"is this job real?"** · "is this recruiter legit?" |
+| Find who you know there | **"import my LinkedIn connections"** · "who do I know at [company]" |
+| Practice out loud | **"mock interview"** · "practice it with me" |
+| Answer an online application | **"answer these application questions"** |
+| No resume yet | **"build my resume"** |
 | Link Gmail, Calendar, Drive | **"connect my tools"** (personal accounts only) |
 | Make a recurring job automatic | **"schedule this"** at the end of it |
 | Set up or update your profile | **set up my Job Search OS** |
@@ -26,20 +32,22 @@ Everything lands as a draft. Nothing sends, submits, accepts, or declines withou
 
 ## Ten prompts worth knowing
 
-`/job-posting-decoder` · `/resume-tailor` · `/cover-letter-draft` · `/story-bank-builder` · `/star-answer-builder` · `/recruiter-screen-prep` · `/salary-negotiation-script` · `/outbound-networking` · `/linkedin-rewrite` · `/thirty-sixty-ninety-plan`
+`/job-posting-decoder` · `/jobsearch-master-resume` · `/jobsearch-company-brief` · `/jobsearch-application-questions` · `/story-bank-builder` · `/jobsearch-mock-interview` · `/recruiter-screen-prep` · `/salary-negotiation-script` · `/jobsearch-people-tracker` · `/jobsearch-funnel-report`
 
 All of them: say "browse all skills" or type `/`.
 
-**Triggered moments:** a posting → `/job-posting-decoder` · "what are you currently making?" → `/recruiter-screen-prep` · a behavioral question → `/star-answer-builder` · an offer → `/salary-negotiation-script` · your employer counters → `/counter-offer-handler` · you were laid off today → `/severance-leverage-script`.
+**Triggered moments:** a posting → `/job-posting-decoder` · a text about a job you never applied for → `/jobsearch-real-check` · "what are you currently making?" → `/recruiter-screen-prep` · a behavioral question → `/star-answer-builder` · an offer → `/salary-negotiation-script` · your employer counters → `/counter-offer-handler` · you were laid off today → `/severance-leverage-script`.
 
 ---
 
-## The three guardrails (they flag, never block)
+## The guardrails (they flag, never block)
 
 | Guard | Speaks up when |
 |---|---|
+| Is this real? | a posting or message shows caution signals of a job scam, or signs it isn't an open role — signals and how to check, never a verdict |
 | Minimum pay | a role, message, or offer is at or below your minimum pay — before you spend an hour on it |
 | Every claim holds up | a resume, letter, or answer claims more than your record — could you back it in the room? |
+| Nothing undersold | a real win from your record got buried, understated, or left out |
 | No invention | a figure, title, or date has no source in your profile or resume — it becomes `[confirm]` |
 
 ---
@@ -50,7 +58,9 @@ All of them: say "browse all skills" or type `/`.
 2. **Whether to take the offer** — the memo lays it against your must-haves; the yes is yours.
 3. **Anything with legal weight** — separation agreements, equity, non-competes, notice periods: it flags, a professional answers.
 4. **What to say about why you're leaving** — it uses the one line you approved, nothing more.
-5. **Whether a claim is true** — it checks that every claim traces to your record; you confirm it happened the way it's written.
+5. **Whether a claim is true** — it checks that every claim traces to your record; you confirm it happened the way it's written. A posting term your record doesn't support comes back as a question, never as a line on your resume.
+
+It also never answers the voluntary demographic questions on an application, and never sends anything to your LinkedIn contacts.
 
 ---
 

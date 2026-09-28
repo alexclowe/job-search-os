@@ -1,14 +1,14 @@
 ---
 name: jobsearch-workflow-interview-prep
-description: Prep for an interview for the Job Search AI Operating System. Invoke when a job seeker says "prep me for an interview", "I have a recruiter screen Tuesday", "hiring manager round tomorrow", "panel loop next week", "final round with the VP", "prep me for [company]", or names an upcoming interview and asks how to prepare. Builds a stage-specific prep brief — likely questions, the person's Story Bank mapped to the interviewers' concerns, answers to the hard questions, questions to ask back — and files it for the company. Never invents stories.
+description: Prep for an interview for the Job Search AI Operating System. Invoke when a job seeker says "prep me for an interview", "I have a recruiter screen Tuesday", "hiring manager round tomorrow", "panel loop next week", "final round with the VP", "prep me for [company]", or names an upcoming interview and asks how to prepare. Starts with a sourced company brief, then builds a stage-specific prep brief — likely questions, the person's Story Bank mapped to the interviewers' concerns, answers to the hard questions, questions to ask back — files it for the company, and offers a practice round, one question at a time. Never invents stories.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Never name profile or connection filenames in conversation.
 
 A recruiter screen, a hiring-manager round, a panel loop, and a final round are four
-different interviews. This job preps the one that's actually next, from the person's
-own stories.
+different interviews. This job preps the one that's actually next — company brief
+first, then the person's own stories — and then lets them practice it out loud.
 
 ## How this job delivers its outputs
 
@@ -87,8 +87,32 @@ and save it as the **Story Bank** artifact before writing the brief. Ask for at 
 one missing detail per story; the rest is `[confirm]`.
 
 Before tool writes, say once: "As I work, Claude may ask you to approve actions — about
-[N] (the prep brief file, the Story Bank, and the Application Board). **Allow for this
-task** covers the rest of this run; tracker updates always take a quick confirm."
+[N] (the company brief, the prep brief file, the Story Bank, and the Application
+Board). **Allow for this task** covers the rest of this run; tracker updates always
+take a quick confirm."
+
+## Company brief first (before any questions or answers)
+
+Look in this Project for **"Company brief — [Company].md"**. Under 30 days old → use it
+and add a short section for this round. Older or missing → build it now with the
+company-brief method (`jobsearch-company-brief`), inline:
+- **Sources or nothing.** With web search: the company's own pages (about, careers, the
+  posting, news or press, annual report if public; for hospitals and districts, board
+  minutes, strategic plans, published salary schedules) and recent reputable news.
+  Every fact gets a source and a date. Without web search in this conversation, say so
+  in one line and ask the person to paste the posting or the about page — never fill
+  the gap from memory. Review sites are opinion, quoted as "people on [site] say".
+- **One page:** what they do (two lines) · recent news, three items at most, dated ·
+  the team and why this role is likely open · what they say they value (quoted, with
+  the link) · two or three of the person's wins that line up · five questions the
+  website doesn't answer · sources.
+- Save as "Company brief — [Company].md" in this Project (and in the company's Drive
+  folder when connected).
+
+**For a recruiter screen, the brief comes before the screen questions** and feeds both
+sides: the "why this role / why us" answer is built from what they value and the wins
+that line up, and the questions to ask back start from the brief's open questions.
+Later rounds reuse the same brief and add to it.
 
 ## Produce
 
@@ -100,8 +124,10 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
    what a hiring manager might question (e.g. "will a former manager be happy back in the
    weeds?"). Each with the story that answers it.
 3. **Questions to expect** — for the round:
-   - *Recruiter screen:* why this role, walk me through your background, compensation
-     expectations, timeline, other processes, remote and location.
+   - *Recruiter screen:* the five or six that always come up — walk me through your
+     background, why this role and why us (from the company brief), why you're looking
+     (the approved line only), what you want next, pay expectations, timeline and
+     other processes, remote and location.
    - *Hiring manager:* the top three things the posting is worried about, a "tell me
      about a time" for each, how you'd approach their known problem, working style.
    - *Panel or loop:* per-interviewer angle (peer, cross-functional partner, skip-level),
@@ -120,7 +146,7 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
 5. **Getting ahead of what a hiring manager might question** — one prepared paragraph that
    addresses it before they ask, plus the one-line version.
 6. **Questions to ask back** — five, specific to this company and round, none
-   answerable from the website.
+   answerable from the website, starting from the company brief's open questions.
 7. **The 2026 question** — "How do you use AI in your work?" — a concrete, honest
    answer from the person's real practice (what they use it for, what they don't trust
    it with, an example), never a boast.
@@ -134,6 +160,10 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
   these three from your record" rather than a fabricated one.
 - **Every claim holds up:** every claim survives a follow-up question ("what exactly did you
   do?"); soften anything the person didn't personally do.
+- **Nothing undersold:** the same record, the other direction — a stronger honest win
+  that answers one of their worries isn't left out of the answers.
+- **Company facts are sourced:** every fact about the employer comes from the company
+  brief's sources; nothing about them is guessed.
 - **Minimum pay:** the compensation answer holds to your minimum pay and gives no history.
 - **AI-register tells** removed; answers sound like the voice samples, spoken.
 - **Privacy:** nothing confidential about the current employer; competitors' names and
@@ -155,13 +185,37 @@ Append one short **Before you walk in** checklist with only the checks that fire
 List this Project's artifacts first, including ones from earlier conversations. Update
 the **Story Bank** with any story refined during prep (columns: Story · Win ·
 Situation · What I did · What changed · Answers these questions · Used with). Update
-the **Application Board** row: stage, interview date, interviewers in Contact, Next
-action "thank-you note" with Due = interview date.
+the **Application Board** row (columns as in Tailor & apply): stage; the round's date
+in **Screen on** (recruiter screen), **Interview on** (add the date — one per round,
+separated by semicolons), or **Final on** (final or executive round); interviewers in
+Contact; Next action "thank-you note" with Due = interview date. An older board
+without these columns gets them added, blank where unknown.
+
+## Practice it with me (offer once, after the brief)
+
+Offer as clickable options: **Practice this round now** · **Later**. On "now", run a
+mock interview inline (the `jobsearch-mock-interview` method):
+- The format for this round and profession — behavioral for everyone; clinical
+  scenario and prioritization practice for nurses; a demo-lesson plan and panel
+  questions for teachers; a sell-me-this role-play for sales and lending (common, not
+  guaranteed); technical plus behavioral for tech; the five or six screen questions
+  plus the pay answer for a recruiter screen.
+- **One question at a time**, then wait. After each answer, five lines at most: what
+  worked · structure (situation, what you did, what changed) · does it hold up ·
+  anything undersold from their own record · length and register. Offer "try that
+  one again" or "next question".
+- Clinical scenarios are practice only — feedback on structure and communication, not
+  clinical correctness; say once to check clinical content against their training and
+  facility policy.
+- **Debrief:** per-question read (strong · solid · needs a story · needs a shorter
+  version), three fixes with the exact line to practice, and any new story the person
+  told — offered for the Story Bank, only what they actually said. Saved as "Practice —
+  [Company] — [round] — [date].md".
 
 ## Close
 
 Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
 
-The three stories to lead with in one line each, what was saved and where, the
-`[confirm]` list, then "What's next?" — offer the command center, and name **Follow up
+The three stories to lead with in one line each, the company brief's most useful
+finding, what was saved and where, the `[confirm]` list, then "What's next?" — offer the command center, and name **Follow up
 & negotiate** for the day after the interview.

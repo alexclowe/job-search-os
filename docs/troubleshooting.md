@@ -43,12 +43,30 @@ Open it from **Artifacts** in the sidebar to confirm it exists, then tell the jo
 **My scheduled run didn't show up in Gmail or on my calendar.**
 Scheduled runs prepare everything and save it for your review — they don't read your inbox or write to your email or calendar on their own. Open the conversation it created, review, and say "move these to Gmail" or "add my focus blocks."
 
+**My LinkedIn connections file hasn't arrived, or I can't find it.**
+Ask for the **larger data archive** (Me → Settings & Privacy → Data privacy → Get a copy of your data) — that's the one with connections. LinkedIn emails a download link, usually within a day, and the link works for 72 hours. Unzip it and upload the connections spreadsheet (the file named **Connections**) to your Project. Until then, say "add a contact" to put people on your People board by hand.
+
+**The People board shows fewer people than my LinkedIn network.**
+On purpose. It only keeps people at companies on your Application Board — never your whole export — and it matches by company name, since LinkedIn usually leaves email addresses blank. If someone's missing, their company name may be written differently: say "who do I know at [company]" and confirm the possible matches.
+
+**The company brief says it can't search the web.**
+Then it won't guess. Paste the posting and the company's about or careers page (or a recent article), and it builds the brief from those, with each fact's source.
+
+**The funnel report says "too few to tell yet."**
+That's honest, not broken: under about 10 applications from a source, a reply rate is noise. It fills in as the board grows. Blank Source or date columns on older rows count as unknown — say "fill in the sources" to add them.
+
+**It flagged a posting with caution signals, but I know the company is real.**
+The check lists signals, not verdicts — scammers copy real company names, and real employers sometimes do clumsy things. Find the role on the company's own careers site and check the recruiter's email domain; if it checks out, say "it checked out" and carry on.
+
 **I want to start over.**
 Say **"open my command center"** from anywhere — it drops what was in progress and shows home again.
 
 ---
 
 ## Claims, numbers & your minimum pay
+
+**It asked "did you do this?" about a term from the posting.**
+That's the point: a term the posting uses but your record doesn't show comes back as a question instead of going on your resume. Answer with what you actually did and it adds the line; say "no" and it stays off.
 
 **It put something on my resume I didn't do, or a number I don't recognize.**
 It shouldn't — every figure, title, and date is meant to trace to your resume or profile, and anything without a source becomes `[confirm]`. If one slipped through, say "where did this come from?" and give the real figure or tell it to cut the line. Never send a draft with an unconfirmed claim.

@@ -1,8 +1,8 @@
 {
   "name": "job-search-os",
   "displayName": "Job Search AI Operating System",
-  "description": "The AI operating system for a job search in any profession: a command center and five end-to-end jobs — tailor and apply, work my inbox, prep for an interview, follow up and negotiate, run my weekly review — drafting into Gmail, Calendar, and Drive with your approval, with living trackers. Hourly, salaried, commission, or salary-schedule pay, each checked against your minimum pay like with like; every claim traces to your own record.",
-  "version": "1.1.0",
+  "description": "The AI operating system for a job search in any profession: a command center and five end-to-end jobs — tailor and apply, work my inbox, prep for an interview, follow up and negotiate, run my weekly review — with a check card before every application, a people tracker for referrals, sourced company briefs, mock interviews, and a funnel report. Drafts into Gmail, Calendar, and Drive with your approval; every claim traces to your own record.",
+  "version": "1.2.0",
   "author": {
     "name": "The AI Career Lab",
     "email": "alex@theaicareerlab.com"

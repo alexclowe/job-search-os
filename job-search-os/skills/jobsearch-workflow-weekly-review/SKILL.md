@@ -1,6 +1,6 @@
 ---
 name: jobsearch-workflow-weekly-review
-description: Run my weekly review for the Job Search AI Operating System. Invoke when a job seeker says "run my weekly review", "weekly search review", "plan my search week", "Monday search planning", "what should I do this week", "how is my search going", or pastes notes about the week and asks what to focus on. Reads the Application Board, names what moved and what's stale, sets exactly three moves for the week, drafts the outreach those moves need, puts focus blocks on the calendar, and logs the week on the Weekly Search Log. Can run on a schedule.
+description: Run my weekly review for the Job Search AI Operating System. Invoke when a job seeker says "run my weekly review", "weekly search review", "plan my search week", "Monday search planning", "what should I do this week", "how is my search going", or pastes notes about the week and asks what to focus on. Reads the Application Board, names what moved and what's stale, reports reply rate by source and where applications stall, sets exactly three moves for the week, drafts the outreach those moves need, puts focus blocks on the calendar, and logs the week on the Weekly Search Log. Can run on a schedule.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
@@ -94,17 +94,40 @@ confirm."
 2. **The board, honestly** — active by stage; anything with no touch in 10+ business
    days named as stale with a one-line decision each (nudge once, park, or close);
    any Due dates missed.
-3. **Three moves** — exactly three, each with: done looks like (a Friday check anyone
+3. **Where the search stalls** — the funnel report (the `jobsearch-funnel-report`
+   method), from the Application Board only, samples excluded:
+   - A small table by **Source** (referral · job board · recruiter reached out ·
+     applied direct · other): applied, replied, screen, interview, final, offer, and
+     reply rate.
+   - **Minimum sample:** a source with fewer than 10 applications shows "too few to
+     tell yet" instead of a rate; under 10 applications in total, show the counts and
+     skip the diagnosis ("any pattern before about 10 is noise"). No outside
+     benchmarks, ever.
+   - **Where it stops:** rows with no stage change and no touch in 14+ days (and
+     closed rows) grouped by the last stage reached — no reply · screens that stall ·
+     interviews without a final · finals without an offer. Name the biggest drop with
+     enough rows, and one fix tied to it: no reply → rework the top of the master
+     resume, lean on referrals (who you know at target companies), run the fit check
+     before applying; screens stall → recruiter-screen prep with a company brief,
+     confirm pay on the first call; interviews stall → a mock interview on that round,
+     new Story Bank entries for the top worries; finals without offers → final-round
+     prep, a 30-60-90 plan, reference prep, and ask for feedback next time.
+   - Older boards without Source or stage dates: blank means unknown, never zero; say
+     how many rows were unknown and offer once to fill in Source for the active rows.
+4. **Three moves** — exactly three, each with: done looks like (a Friday check anyone
    could verify) · why this one now · hours · calendar block (day and time range).
-   Balance the funnel: if interviews are thin, one move is applications or outreach;
-   if applications are plentiful but replies aren't, one move is positioning (resume
-   or profile) rather than more volume. Total hours within what the person gave.
-4. **Not doing this week** — every other candidate, each with why it waits.
-5. **Outreach drafts** for the moves that need them — up to five, 60–120 words each,
-   in the person's voice: a warm intro request, a former colleague, a hiring manager at
-   a target company, a recruiter nudge. Each opens with something specific to the
+   Let the funnel pick them: the stall point's fix is one of the three whenever the
+   sample is big enough. Otherwise balance by feel: if interviews are thin, one move is
+   applications, referrals, or outreach; if applications are plentiful but replies
+   aren't, one move is positioning (resume or profile) rather than more volume. Total
+   hours within what the person gave.
+5. **Not doing this week** — every other candidate, each with why it waits.
+6. **Outreach drafts** for the moves that need them — up to five, 60–120 words each,
+   in the person's voice: a warm intro request (check the **People** board first for
+   someone at a target company), a former colleague, a hiring manager at a target
+   company, a recruiter nudge. Each opens with something specific to the
    recipient and asks for one small thing. No "picking your brain".
-6. **Monday note** — two or three sentences to reread at 9am, matching the mood they
+7. **Monday note** — two or three sentences to reread at 9am, matching the mood they
    picked without pretending.
 
 ## Compliance pass (inline — do not hand off)
@@ -112,7 +135,7 @@ confirm."
 - **Exactly three moves;** more requested → rank and move the rest to Not doing with a
   reason.
 - **No invented counts:** every number comes from the board or the log; unknown →
-  `[confirm]`.
+  `[confirm]`. No rate below the minimum sample; no outside benchmark.
 - **Minimum pay:** any new target role with a posted range below your minimum pay is flagged in
   the plan before it becomes a move.
 - **Traceability and AI-register:** outreach claims come from the profile; tells
@@ -139,8 +162,9 @@ Append one short **Before you commit** checklist with only the checks that fired
 List this Project's artifacts first, including ones from earlier conversations. If a
 **"Weekly Search Log"** artifact exists, add this week's row and fill last week's Done
 column; create it only if absent. Columns: Week of · Applications · Replies ·
-Interviews · Offers · Outreach sent · Move 1 · Move 2 · Move 3 · Done (filled next
-week) · Not doing · Mood · Notes. Four rows in, add one line at the top: applications
+Interviews · Offers · Outreach sent · Where it stops (or "too few to tell yet") · Move 1
+· Move 2 · Move 3 · Done (filled next week) · Not doing · Mood · Notes. An older log
+without "Where it stops" gets the column added, blank for past weeks. Four rows in, add one line at the top: applications
 to interviews and moves completed per week, from the rows.
 
 ## Make it automatic
@@ -159,8 +183,8 @@ signed), this run is the last one. Do this instead of a plan:
 1. Say congratulations once, plainly, in their voice's register — no confetti.
 2. **Close the loop:** add a final row to the Weekly Search Log (Week of · Outcome ·
    where it came from · how many applications and interviews it took, from the board),
-   mark every other active row on the Application Board **Closed — accepted elsewhere**
-   with a 60–120-word withdrawal note drafted for each conversation that's still live
+   mark every other active row on the Application Board **Closed** (Closed on today,
+   Closed why "accepted elsewhere") with a 60–120-word withdrawal note drafted for each conversation that's still live
    (Gmail draft when connected, paste-ready otherwise, never sent), and archive the
    board: rename it "Application Board — [year] search (closed)". **Keep the Story
    Bank as is** — it is the one thing worth carrying into the new role.
