@@ -1,6 +1,6 @@
 ---
 name: comp-research
-description: Organize compensation research for the person's target roles — base, bonus, and equity by level as reported by the sources they supply or that public search returns, how their experience maps to levels, where their floor sits against those ranges, and the questions to ask a recruiter. Never a live pay feed; every figure carries its source. Activates on "what should this role pay" / "research comp for" / "is my floor reasonable".
+description: Organize compensation research for the person's target roles — base, bonus, and equity by level as reported by the sources they supply or that public search returns, how their experience maps to levels, where their minimum salary sits against those ranges, and the questions to ask a recruiter. Never a live pay feed; every figure carries its source. Activates on "what should this role pay" / "research comp for" / "is my minimum salary reasonable".
 disable-model-invocation: true
 ---
 
@@ -32,7 +32,7 @@ and cite each result.
    artifacts, not years alone).
 3. **The range, honestly** — the spread across sources for the mapped level, the
    middle, and how thin the evidence is (three postings is not a market).
-4. **The floor against it** — whether the floor sits below, inside, or above the
+4. **Your minimum salary against it** — whether it sits below, inside, or above the
    evidence, and what that means for the ask.
 5. **What's missing** — the two or three figures that would make this a real picture,
    and where to get them (posted ranges where the law requires them
@@ -44,8 +44,8 @@ and cite each result.
 
 - No invented or "typical" figures. No figure without a source and a date.
 - Pay-transparency laws vary by state and country: flag, don't assert.
-- The floor is never questioned as too high; the brief informs the ask, the person
-  owns the floor.
+- Your minimum salary is never questioned as too high; the brief informs the ask, the person
+  owns the number.
 
 ## About this plugin
 

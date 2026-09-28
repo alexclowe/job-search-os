@@ -17,12 +17,12 @@ render this screen fresh.
 Look for the career profile where every skill in this pack looks, in this order: the
 Project file `./job-search-os-profile.md`, then this Project's instructions, then a
 profile block pasted in this chat. Accept any block with the profile fields (current
-role, target roles, salary floor, positioning challenges, shipped artifacts, search
+role, target roles, minimum salary, positioning challenges, shipped artifacts, search
 stage) whatever its heading says. Check all three before deciding it's missing.
 Read the profile only from those three places — never from account memory or other
 conversations; if it's missing, the wizard collects it fresh.
 - **Present:** use the person's name and target roles in the header. Note whether the
-  salary floor, shipped artifacts, and positioning challenges are filled in — the
+  minimum salary, shipped artifacts, and positioning challenges are filled in — the
   guards depend on them.
 - **Absent:** don't render the command center. Say: "Let's get your career story set up
   first — about two minutes. Say 'run the setup wizard'." Stop there.
@@ -57,7 +57,7 @@ Bank, Offer Tracker, or Weekly Search Log exists yet, show this one extra card a
 Jobs list. Hide it once any real tracker exists.
 
 **Jobs** — all five, this order, these labels:
-1. **Tailor & apply** — a posting and your resume → a floor check first, then a
+1. **Tailor & apply** — a posting and your resume → a salary check first, then a
    tailored resume and cover letter that lead with what you shipped, filed on your
    Application Board.
 2. **Work my inbox** — recruiter messages, scheduling requests, and rejections → replies
@@ -67,7 +67,7 @@ Jobs list. Hide it once any real tracker exists.
    brief for that stage: likely questions, your stories mapped to their concerns, the
    questions to ask back.
 4. **Follow up & negotiate** — after any round or an offer → thank-you notes, a
-   follow-up cadence, and a counter built on your floor, logged on the Offer Tracker.
+   follow-up cadence, and a counter built on your minimum salary, logged on the Offer Tracker.
 5. **Run my weekly review** — your board and your week → what moved, what's stale,
    three moves for the week, outreach drafted, focus blocks on your calendar.
    *(Can run on a schedule.)*
@@ -80,7 +80,7 @@ yet → tag 1.
 **Setup & more** — always these, in this order:
 - **Connect my tools** — Gmail, Google Calendar, and Google Drive.
 - **Complete your profile** — *only when the profile has no shipped artifacts, no
-  positioning challenges, or no salary floor*. Adds the three fields every draft and
+  positioning challenges, or no minimum salary*. Adds the three fields every draft and
   guard depends on.
 - **Browse all skills** — every individual prompt in the pack still runs on its own.
 
@@ -91,11 +91,11 @@ the sample below, end to end, without asking intake questions. Label every outpu
 **SAMPLE**, prefix saved files and the tracker with "SAMPLE — ", and make **no connector
 writes and no inbox reads**: show what would land in Drive and on the calendar instead
 ("This is the folder that would appear in your Drive"). Close with: "That's one
-application, floor-checked and tailored. Now run it on a real posting?"
+application, checked against your minimum salary and tailored. Now run it on a real posting?"
 
 > **SAMPLE (fictional):** Sam Okafor, 11 years in data engineering, two of them as an
 > engineering manager leading four people, now returning to a senior individual role.
-> Floor: $185,000 base, remote in the US. Positioning challenge: "reads as a manager on
+> Minimum salary: $185,000 base, remote in the US. Positioning challenge: "reads as a manager on
 > paper; the hands-on work of the last two years is invisible on the resume." Shipped
 > artifacts: cut over a nightly batch pipeline to streaming with no customer-visible
 > downtime; cut warehouse spend by about a third by re-partitioning the ten largest

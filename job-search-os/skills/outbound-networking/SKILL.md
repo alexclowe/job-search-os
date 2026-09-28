@@ -33,7 +33,7 @@ or said).
 4. **Alum or community member:** the shared thing, the specific ask, an easy out.
 5. **Inbound recruiter reply** (interested): two lines on fit leading with an
    artifact, then the three qualifying questions — range for the level, remote terms,
-   where the role sits. The floor is stated only if the profile says so; otherwise ask
+   where the role sits. Your minimum salary is stated only if the profile says so; otherwise ask
    for their range first. (Declining: specific, kind, door open.)
 
 Each message ends with a one-sentence ask and no pressure. Subject lines under 50

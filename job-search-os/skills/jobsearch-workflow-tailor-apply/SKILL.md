@@ -1,6 +1,6 @@
 ---
 name: jobsearch-workflow-tailor-apply
-description: Tailor and apply for the Job Search AI Operating System. Invoke when a job seeker says "tailor and apply", "tailor my resume to this posting", "apply to this job", "here's a posting", "write my cover letter for this role", or pastes a job description and asks for a resume or application. Runs a salary-floor check on the posting first, decodes the real requirements, produces a tailored resume and cover letter that lead with shipped work and trace every claim to the person's own record, and files the application on the Application Board.
+description: Tailor and apply for the Job Search AI Operating System. Invoke when a job seeker says "tailor and apply", "tailor my resume to this posting", "apply to this job", "here's a posting", "write my cover letter for this role", or pastes a job description and asks for a resume or application. Runs a salary check on the posting first, decodes the real requirements, produces a tailored resume and cover letter that lead with shipped work and trace every claim to the person's own record, and files the application on the Application Board.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
@@ -32,12 +32,12 @@ and letter built from what you shipped, and a row on the board so it doesn't van
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
 pasted in this chat. Accept any block with the profile fields, whatever its heading says.
-- **Present:** use current role, years, target roles, salary floor, positioning
+- **Present:** use current role, years, target roles, minimum salary, positioning
   challenges, shipped artifacts, location and remote preference, and voice samples.
   Don't re-ask.
 - **Absent:** say the profile isn't set up and that "run the setup wizard" takes about
-  two minutes. If they decline, continue with what they paste, mark the floor check
-  "no floor on file", and say so in the close.
+  two minutes. If they decline, continue with what they paste, mark the salary check
+  "no minimum salary on file", and say so in the close.
 
 ## Pre-flight 2 — Connections
 
@@ -61,7 +61,7 @@ choices — and produce a first draft. Anything still unknown goes in the draft 
 `[confirm]`, not another question.
 
 **Missing profile detail?** If this job needs something the profile doesn't have
-(salary floor, remote preference, the current resume), ask for it once here, use it,
+(minimum salary, remote preference, the current resume), ask for it once here, use it,
 then save it into the matching section of the profile with one line: "Saved to your
 profile so I won't ask again — say 'undo' to remove it." Never block the job on it.
 
@@ -87,17 +87,17 @@ resume's ordering; it never supplies a claim, a number, or a keyword the person'
 record doesn't support. If no archetype matches, continue without one and say nothing
 about it. Anyone can add one — see `archetypes/_template.md`.
 
-## Floor check — before any materials (non-negotiable)
+## Salary check — before any materials (non-negotiable)
 
-Compare the posting against the salary floor on file. Posted range → compare the top
-of the range to the floor. No range → look for a range in the recruiter's message; if
+Compare the posting against the minimum salary on file. Posted range → compare the top
+of the range to your minimum salary. No range → look for a range in the recruiter's message; if
 none, mark "range unknown — ask on the first call" and continue.
-- **At or below the floor:** stop and say it plainly, before drafting anything: "This
-  role posts at [range], and your floor is [floor]. Flagging it now, not after three
+- **At or below your minimum salary:** stop and say it plainly, before drafting anything: "This
+  role posts at [range], and your minimum salary is [minimum salary]. Flagging it now, not after three
   rounds. Want to (a) skip it, (b) apply anyway and raise comp on the first call, or
   (c) apply and mark it as a fallback?" Continue only on (b) or (c), and record the
   choice on the board.
-- **Above the floor or unknown:** one line, then move on.
+- **Above your minimum salary or unknown:** one line, then move on.
 
 Before any tool writes, say once: "As I work, Claude may ask you to approve actions —
 this run involves about [N] (the resume file, the cover letter, one folder, and the
@@ -140,7 +140,7 @@ Screen every file in this turn:
 - **Traceability:** every metric, title, date, employer, and accomplishment traces to
   the resume or profile the person supplied. Anything else is cut or replaced with
   `[confirm]`. Never round a number up.
-- **Defensibility:** for each claim, could the person back it with a specific example
+- **Every claim holds up:** for each claim, could the person back it with a specific example
   in an interview? Flag any that reads stronger than the record ("led" where they
   "contributed to"; "owned" where they "worked on").
 - **AI-register tells:** remove "leverage", "synergy", "results-driven", "passionate",
@@ -150,7 +150,7 @@ Screen every file in this turn:
 - **Privacy:** no home street address, no date of birth, no photo, no current-employer
   confidential figures (name the scale in relative terms if the profile marks it
   confidential), no salary history.
-- **Floor:** the floor-check result is recorded on the board; the letter never names
+- **Minimum salary:** the salary-check result is recorded on the board; the letter never names
   a number.
 Append one short **Before you submit** checklist with only the checks that fired.
 
@@ -170,7 +170,7 @@ Append one short **Before you submit** checklist with only the checks that fired
 List this Project's artifacts first, including ones from earlier conversations. If an
 **"Application Board"** artifact exists, add this application; create it only if
 absent. Columns: Company · Role · Stage (Interested → Applied → Screening →
-Interviewing → Onsite → Offer → Closed) · Posted range · Floor check (above / below,
+Interviewing → Onsite → Offer → Closed) · Posted range · Salary check (above / below,
 applying anyway / unknown) · Source · Applied on · Last touch · Next action · Due ·
 Contact · Notes. Board views: by stage, plus a "Due this week" list at the top. Sample
 rows sit under "Samples" and never count.
@@ -180,6 +180,6 @@ rows sit under "Samples" and never count.
 Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
 
 List what was made and where (resume / letter / note / folder / board row), the
-`[confirm]` list, the floor-check verdict in one line, then "What's next?" — offer the
+`[confirm]` list, the salary check verdict in one line, then "What's next?" — offer the
 command center. If a Story Bank exists and a strong story surfaced during tailoring
 that isn't on it, offer to add it.

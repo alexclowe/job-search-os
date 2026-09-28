@@ -10,7 +10,7 @@ First public release.
 - Command center (`/jobsearch-os`) with a "Try it on a sample" first run.
 - Five end-to-end jobs: Tailor & apply, Work my inbox, Prep for an interview, Follow up & negotiate, Run my weekly review.
 - Living trackers: Application Board, Story Bank, Offer Tracker, Weekly Search Log.
-- Three always-on guardrails: salary floor, defensibility, no invention.
+- Three always-on guardrails: minimum salary, every claim holds up, no invention.
 - Connect-tools flow for Gmail, Google Calendar, and Google Drive (personal accounts only; every send behind approval).
 - 18 standalone skills: posting decoder, comp research, resume tailor, cover letter, LinkedIn rewrite, AI-use positioning, story bank, STAR answers, recruiter-screen, hiring-manager, panel and final-round, and reference-call prep, negotiation script, counter-offer handler, decline letter, 30-60-90 plan, outbound networking, severance-leverage script.
 - Profession archetype registry with eight seeded archetypes and a template.

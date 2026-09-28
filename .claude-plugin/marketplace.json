@@ -5,14 +5,14 @@
     "email": "hello@theaicareerlab.com"
   },
   "metadata": {
-    "description": "The job search that runs in the Claude app — a free plugin: tailor and apply, work your inbox, prep interviews, negotiate, plan the week, with your salary floor protected.",
+    "description": "The job search that runs in the Claude app — a free plugin: tailor and apply, work your inbox, prep interviews, negotiate, plan the week, checked against your minimum salary first.",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "job-search-os",
       "source": "./job-search-os",
-      "description": "Five end-to-end job-search jobs (tailor and apply, work my inbox, prep for an interview, follow up and negotiate, run my weekly review) with living trackers and three guardrails: salary floor, defensibility, no invention",
+      "description": "Five end-to-end job-search jobs (tailor and apply, work my inbox, prep for an interview, follow up and negotiate, run my weekly review) with living trackers and three guardrails: minimum salary, every claim holds up, no invention",
       "category": "career",
       "tags": [
         "job-search",

@@ -2,13 +2,13 @@
 
 Your **command center** is home base. Say **"open my command center"** (or "what should I work on") in any conversation inside your Project. It shows five jobs as cards, a one-line summary of active applications, interviews this week, offers in play, and follow-ups due, and runs whichever job you pick.
 
-**First time?** Pick **Try it on a sample** — it tailors one application for a made-up job seeker in about two minutes: the floor check, the posting decoded, a tailored resume and cover letter, and an Application Board row, so you see exactly what you'll get before you paste anything real.
+**First time?** Pick **Try it on a sample** — it tailors one application for a made-up job seeker in about two minutes: the salary check, the posting decoded, a tailored resume and cover letter, and an Application Board row, so you see exactly what you'll get before you paste anything real.
 
 **Connecting your tools is optional.** Say **"connect my tools"** to link Gmail, Google Calendar, and Google Drive — **personal accounts only, never an employer's.** Connected, jobs put replies and notes in your Drafts folder, interview holds and focus blocks on your calendar, and tailored files in a per-company Drive folder. Not connected, you get the same work copy-paste-ready, with files saved in your Project. **Nothing is ever sent, submitted, accepted, or declined without your click.**
 
 Every job keeps a **living tracker** — an Application Board, a Story Bank, an Offer Tracker, and a Weekly Search Log — so the next job picks up where the last one left off. Find them anytime in the **Artifacts** section of the sidebar.
 
-Under everything: **the floor is the floor**, and **nothing goes on a resume that your own record can't back**.
+Under everything: **never below your minimum salary**, and **nothing goes on a resume that your own record can't back**.
 
 ---
 
@@ -17,7 +17,7 @@ Under everything: **the floor is the floor**, and **nothing goes on a resume tha
 **When to use it:** every time a posting is worth more than a glance.
 **Say:** "tailor and apply" · "apply to this job" · "here's a posting"
 **Give it:** the posting (text or link), your resume (the master in your Project, or paste it), how you're applying (site, recruiter, referral, email), and anything about this one you'd rather get ahead of.
-**You get:** the **floor check first** — if the range is at or below your floor, it says so before drafting anything and asks whether to skip, apply anyway, or park it as a fallback; then the **posting decoded** (must-haves, wishlist, the three worries behind it, the words an applicant-tracking system will match); a **tailored resume (Word)** that leads with what you shipped, in the posting's vocabulary where your record honestly supports it, with a change log; a **cover letter (Word, 250–350 words)** that couldn't be sent anywhere else; and a short **application note** for a referral or hiring manager.
+**You get:** the **salary check first** — if the range is at or below your minimum salary, it says so before drafting anything and asks whether to skip, apply anyway, or park it as a fallback; then the **posting decoded** (must-haves, wishlist, the three worries behind it, the words an applicant-tracking system will match); a **tailored resume (Word)** that leads with what you shipped, in the posting's vocabulary where your record honestly supports it, with a change log; a **cover letter (Word, 250–350 words)** that couldn't be sent anywhere else; and a short **application note** for a referral or hiring manager.
 **Where it lands:** a per-company folder in Drive with both files; the note as a Gmail draft; the row on your **Application Board**. Otherwise the files in your Project and the note paste-ready.
 **It never:** invents a figure, title, or date (every claim traces to your resume or profile — anything else becomes `[confirm]`), overwrites your master resume, mentions pay, or drafts into an employer's inbox.
 
@@ -45,9 +45,9 @@ Under everything: **the floor is the floor**, and **nothing goes on a resume tha
 **When to use it:** the day after any interview, when a process goes quiet, or when an offer lands.
 **Say:** "write my thank-you note" · "I haven't heard back" · "I got an offer" · "help me counter"
 **Give it:** which application and what happened; for an offer, the written terms and the two things you want most.
-**You get:** after an interview, **thank-you notes** per interviewer (no two alike) and a **follow-up cadence** with dates — two touches, each with one new piece of information, never a third nudge; for an offer, an **offer worksheet (Excel)** with each component as stated, the annual value as formulas, any competing offer side by side, and the **floor check** in the first line; a **counter script** with the exact words for the call and the email; a short **decision memo** against your must-haves; and a **decline note** only if you choose it.
+**You get:** after an interview, **thank-you notes** per interviewer (no two alike) and a **follow-up cadence** with dates — two touches, each with one new piece of information, never a third nudge; for an offer, an **offer worksheet (Excel)** with each component as stated, the annual value as formulas, any competing offer side by side, and the **salary check** in the first line; a **counter script** with the exact words for the call and the email; a short **decision memo** against your must-haves; and a **decline note** only if you choose it.
 **Where it lands:** notes as Gmail drafts in the interview thread; the worksheet in the company's Drive folder; follow-up dates and the decision deadline on your calendar; the **Offer Tracker** and **Application Board** updated.
-**It never:** accepts, declines, resigns, or gives notice for you; asks for less than your floor; invents a market rate (figures only with a source you supplied); or answers an equity-tax or non-compete question — those get "worth a professional's eyes."
+**It never:** accepts, declines, resigns, or gives notice for you; asks for less than your minimum salary; invents a market rate (figures only with a source you supplied); or answers an equity-tax or non-compete question — those get "worth a professional's eyes."
 
 ## 5. Run my weekly review
 
@@ -56,7 +56,7 @@ Under everything: **the floor is the floor**, and **nothing goes on a resume tha
 **Give it:** which of last week's three moves got done, how you're feeling about it (steady, stalled, stretched, close), your hours this week, and any new targets.
 **You get:** a **week plan (Word)** — last week in five lines from the board, the board honestly (anything untouched for ten business days named as stale with a decision each: nudge, park, or close), **exactly three moves** each with "done looks like", hours, and a calendar block, a **not-doing list**, up to five **outreach drafts** in your voice for the moves that need them, and a Monday note that matches the mood you picked without pretending.
 **Where it lands:** three focus blocks on your calendar at the times you picked; the plan in a Drive "Weekly reviews" folder; outreach as Gmail drafts; the **Weekly Search Log**. Otherwise the plan in your Project and the blocks as a list.
-**It never:** gives you a fourth move, books time you didn't pick, invents a count, or lets "apply to twenty more" stand as a plan — one volume move gets swapped for a positioning move, because the product's philosophy is fewer, better, floor-protected.
+**It never:** gives you a fourth move, books time you didn't pick, invents a count, or lets "apply to twenty more" stand as a plan — one volume move gets swapped for a positioning move, because the product's philosophy is fewer, better, and never below your minimum salary.
 **Make it automatic:** say **"schedule this"** for every Monday. A scheduled run reads your board and log and saves the plan for review — it doesn't touch your calendar or draft outreach on its own.
 
 ---
@@ -67,9 +67,9 @@ Every one of the individual search skills is included. Type `/` to see them, or 
 
 - `/job-posting-decoder` — is this role worth the hour, and what are they really asking for
 - `/story-bank-builder` — your shipped work as reusable interview stories, once
-- `/recruiter-screen-prep` — the compensation conversation script that protects your floor
+- `/recruiter-screen-prep` — the compensation conversation script that holds to your minimum salary
 - `/salary-negotiation-script` — the anchor, the reason, the exact words, the walk-away line
 - `/outbound-networking` — five shapes of outreach that get answered
 - `/severance-leverage-script` — if you were just laid off: a copy, time, and what to ask for
 
-The three guardrails — the salary floor, defensibility, and no invention — run on every job and every prompt.
+The three guardrails — your minimum salary, every claim holds up, and no invention — run on every job and every prompt.

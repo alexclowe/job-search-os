@@ -8,7 +8,7 @@
 
   <!-- guard band -->
   <rect x="40" y="40" width="1120" height="440" rx="18" fill="none" stroke="#ffb86b" stroke-width="2" stroke-dasharray="10 8" opacity="0.7"/>
-  <text x="70" y="70" fill="#ffb86b" font-size="13" font-weight="700" letter-spacing="2">THREE GUARDRAILS, ALWAYS ON: SALARY FLOOR · DEFENSIBILITY · NO INVENTION</text>
+  <text x="70" y="70" fill="#ffb86b" font-size="13" font-weight="700" letter-spacing="2">THREE GUARDRAILS, ALWAYS ON: MINIMUM SALARY · EVERY CLAIM HOLDS UP · NO INVENTION</text>
   <text x="70" y="465" fill="#7f8da6" font-size="12">They flag; the decisions stay yours. Nothing is sent, submitted, accepted, or declined without your click.</text>
 
   <!-- you -->

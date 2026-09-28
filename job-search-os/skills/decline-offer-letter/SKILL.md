@@ -16,7 +16,7 @@ pasted material if none.
 
 Company, role, who to write to (recruiter, hiring manager, or both), where in the
 process it is (offer in hand or mid-process), the real reason (clickable: accepted
-elsewhere · comp below my floor · level or scope · remote or location · timing ·
+elsewhere · pay below my minimum · level or scope · remote or location · timing ·
 other), and whether the person wants to name the reason.
 
 ## Output

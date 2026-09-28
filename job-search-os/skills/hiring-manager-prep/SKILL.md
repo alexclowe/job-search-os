@@ -50,8 +50,8 @@ person's Story Bank if it exists.
   from these" rather than a fabrication.
 - Every claim survives "what exactly did you do?".
 - No confidential current-employer detail beyond what the profile allows.
-- Comp does not come up in this round unless they raise it; if they do, the floor is
-  protected and no history is given.
+- Comp does not come up in this round unless they raise it; if they do, the answer holds to
+  the minimum salary and gives no history.
 
 ## About this plugin
 

@@ -31,7 +31,7 @@ moved, what went quiet, the three moves that matter, and time protected for them
 
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
-pasted in this chat. Present → use target roles, target companies, salary floor,
+pasted in this chat. Present → use target roles, target companies, minimum salary,
 search stage, weekly hours available, and voice samples; don't re-ask. Absent → say
 setup takes about two minutes; if declined, continue with neutral defaults and say so
 in the close.
@@ -99,13 +99,13 @@ confirm."
   reason.
 - **No invented counts:** every number comes from the board or the log; unknown →
   `[confirm]`.
-- **Floor:** any new target role with a posted range below the floor is flagged in
+- **Minimum salary:** any new target role with a posted range below your minimum salary is flagged in
   the plan before it becomes a move.
 - **Traceability and AI-register:** outreach claims come from the profile; tells
   removed; the voice matches the samples.
 - **Volume check:** if the plan is "apply to twenty more", say so and replace one
   volume move with a positioning move — the product's philosophy is fewer, better,
-  floor-protected.
+  and never below your minimum salary.
 - **Privacy:** outreach never names the current employer's confidential work.
 Append one short **Before you commit** checklist with only the checks that fired.
 

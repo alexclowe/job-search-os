@@ -46,7 +46,7 @@ Bank if it exists.
 7. **Judgment questions** — the thing you'd push back on, the biggest risk you've
    taken, what you'd want to be true a year from now.
 8. **The close** — how to ask about next steps and timing, and how to state interest
-   without over-promising. If comp comes up: the floor protected, no history.
+   without over-promising. If comp comes up: holding to your minimum salary, no history.
 
 **Both:** a **day-of card** — lead with, avoid, close with, names.
 

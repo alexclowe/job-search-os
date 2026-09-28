@@ -1,6 +1,6 @@
 # Why This Works
 
-The thinking behind the Job Search AI Operating System — why it's built around five jobs and a weekly rhythm, why the salary floor comes first, why every claim has to trace to your own record, and what it deliberately leaves to you. Optional reading; nothing here is needed to run a job.
+The thinking behind the Job Search AI Operating System — why it's built around five jobs and a weekly rhythm, why the minimum salary comes first, why every claim has to trace to your own record, and what it deliberately leaves to you. Optional reading; nothing here is needed to run a job.
 
 ---
 
@@ -18,13 +18,13 @@ The Operating System is built to avoid both.
 
 ---
 
-## Why the floor comes first
+## Why your minimum salary comes first
 
 The most expensive mistake in a senior search isn't a bad interview. It's three rounds with a company that was never going to pay what you need. It costs a week of evenings, and it costs the energy that should have gone to the right process.
 
-So the floor check runs before anything else. Paste a posting, and the first line you see is whether its range clears your floor. A recruiter's message with a number gets the same check. An offer's first line is the same comparison. The flag is plain — "at or below your floor, flagging it now, not after three rounds" — and it never soft-pedals. You can still apply; it just won't let a below-floor role become your main option by accident.
+So the salary check runs before anything else. Paste a posting, and the first line you see is whether its range clears your minimum salary. A recruiter's message with a number gets the same check. An offer's first line is the same comparison. The flag is plain — "at or below your minimum salary, flagging it now, not after three rounds" — and it never soft-pedals. You can still apply; it just won't let a below-floor role become your main option by accident.
 
-This is the product's one opinion: fewer, better, floor-protected. It will swap an "apply to twenty more" plan for one positioning move, and it will tell you when replies are thin because the story isn't landing, not because you haven't applied enough.
+This is the product's one opinion: fewer, better, and never below your minimum salary. It will swap an "apply to twenty more" plan for one positioning move, and it will tell you when replies are thin because the story isn't landing, not because you haven't applied enough.
 
 ---
 
@@ -54,7 +54,7 @@ What no job does: send, submit, accept, decline, resign, or give notice. Reading
 
 The system is careful about the line between structure and judgment.
 
-- **The floor** — it protects the number; you set it, and you can change it.
+- **Your minimum salary** — it holds to the number; you set it, and you can change it.
 - **Whether to take an offer** — the decision memo lays the terms against your must-haves and names the thing to sleep on. The yes is yours.
 - **Anything with legal weight** — separation agreements, equity treatment, non-competes, notice periods. The severance and negotiation skills help you ask the right questions and flag every statutory point for a professional; they don't answer them.
 - **What you say about why you're leaving** — the one line you approved in setup, and nothing beyond it.
@@ -64,10 +64,10 @@ The system is careful about the line between structure and judgment.
 
 ## What changes when it's working
 
-- A posting takes fifteen minutes to evaluate and apply to, not an evening — and the ones that don't clear the floor take one minute.
+- A posting takes fifteen minutes to evaluate and apply to, not an evening — and the ones that don't clear your minimum salary take one minute.
 - The inbox stops being where processes die. Every recruiter gets a reply that asks the right questions; every scheduling thread ends up on the calendar; every rejection from a human teaches one thing and is then closed.
 - Interview prep starts from your stories, not from a question bank, and the story is the same in every round.
-- The offer conversation happens with a worksheet in front of you and the exact words written down, with your floor in the first line.
+- The offer conversation happens with a worksheet in front of you and the exact words written down, with your minimum salary in the first line.
 - Monday has three moves with time protected for them, and a log that shows, four weeks in, whether the funnel is moving.
 
 That's the whole idea: the structure of a search is repetitive; the judgment about what to pursue isn't. The system handles the structure. You bring the judgment.

@@ -1,6 +1,6 @@
 ---
 name: jobsearch-workflow-inbox
-description: Work my inbox for the Job Search AI Operating System. Invoke when a job seeker says "work my inbox", "check my inbox for recruiters", "reply to this recruiter", "they want to schedule a call", "I got a rejection", "here's what came in this week", or pastes recruiter messages, scheduling requests, or rejections and asks what to do. Sorts what came in, drafts replies in the person's voice with the salary floor protected, puts interviews on the calendar, and moves each application to its new stage on the Application Board. Can run on a schedule.
+description: Work my inbox for the Job Search AI Operating System. Invoke when a job seeker says "work my inbox", "check my inbox for recruiters", "reply to this recruiter", "they want to schedule a call", "I got a rejection", "here's what came in this week", or pastes recruiter messages, scheduling requests, or rejections and asks what to do. Sorts what came in, drafts replies in the person's voice with the minimum salary protected, puts interviews on the calendar, and moves each application to its new stage on the Application Board. Can run on a schedule.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
@@ -32,9 +32,9 @@ and keeps the board honest.
 
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
-pasted in this chat. Present → use target roles, salary floor, remote and location
+pasted in this chat. Present → use target roles, minimum salary, remote and location
 preference, search stage, and voice samples; don't re-ask. Absent → say setup takes
-about two minutes; if declined, continue with neutral defaults and no floor check, and
+about two minutes; if declined, continue with neutral defaults and no salary check, and
 say so in the close.
 
 ## Pre-flight 2 — Connections
@@ -61,7 +61,7 @@ clickable choices — and produce a first draft. Unknowns go in the draft as `[c
    alerts unless asked.
 2. **Window** (clickable): since my last inbox run · last 7 days · last 14 days.
 3. **For inbound recruiter outreach** — reply, decline politely, or ignore (clickable,
-   per message). Any role the person hasn't seen: run the floor check on whatever
+   per message). Any role the person hasn't seen: run the salary check on whatever
    range the message gives.
 4. **For scheduling requests** — if Calendar is connected, offer to read the days they
    proposed and list open slots; the person picks. Never propose a time you haven't
@@ -78,7 +78,7 @@ for reaching out!" opener:
 - **Recruiter outreach, interested:** two lines on fit that lead with a shipped
   artifact, then the three qualifying questions before a call — the compensation range
   for the level, remote terms, and where the role sits (team, manager, why it's open).
-  State the floor only if the person's profile says "share my floor up front";
+  State your minimum salary only if the person's profile says "share my minimum salary up front";
   otherwise ask for their range first.
 - **Recruiter outreach, declining:** specific, kind, door open — name the one thing
   that would change the answer (level, comp, location).
@@ -99,8 +99,8 @@ the evidence.
 
 ## Compliance pass (inline — do not hand off)
 
-- **Floor:** every new role is compared to the floor before a reply is drafted; below
-  the floor gets the plain flag, not a softened one.
+- **Minimum salary:** every new role is compared to your minimum salary before a reply is drafted; below
+  your minimum salary gets the plain flag, not a softened one.
 - **No commitments:** no reply accepts, declines, or promises a start date, references,
   or a number the person hasn't decided.
 - **Traceability:** claims in replies come from the profile and resume only.
@@ -128,10 +128,10 @@ Append one short **Before you send** checklist with only the checks that apply.
 List this Project's artifacts first, including ones from earlier conversations. Update
 the **"Application Board"** if it exists; create it only if absent (columns as in Tailor
 & apply). For each message: move the stage, set Last touch to today, set Next action
-and Due, add the contact. New inbound roles get a row at Interested with the floor
+and Due, add the contact. New inbound roles get a row at Interested with your minimum salary
 check filled in. Rejections move to Closed with the read in Notes. Offers get a row on
 the **Offer Tracker** too (created if absent: Company · Role · Base · Bonus · Equity ·
-Other · Total · Floor check · Deadline · Status (Received → Countered → Accepted /
+Other · Total · Salary check · Deadline · Status (Received → Countered → Accepted /
 Declined) · Counter · Next).
 
 ## Make it automatic

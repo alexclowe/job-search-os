@@ -44,7 +44,7 @@ positioning challenges." Continue only with pasted material.
 - Every claim traces to the resume or profile. No invented figures.
 - No AI-register words or self-adjectives (passionate, results-driven, visionary).
 - Nothing confidential about the current employer beyond what the profile allows.
-- Never state pay or the floor on a public profile.
+- Never state pay or your minimum salary on a public profile.
 
 ## After
 

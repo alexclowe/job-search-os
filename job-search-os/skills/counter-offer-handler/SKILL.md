@@ -1,6 +1,6 @@
 ---
 name: counter-offer-handler
-description: Handle a counter-offer from the current employer after resigning, or a revised offer from the new company — a clear-eyed comparison against why the person started looking, the floor and must-haves, the questions to ask each side, and the words for accepting or declining without burning either bridge. Activates on "my company countered" / "they matched the offer" / "should I stay" / "revised offer".
+description: Handle a counter-offer from the current employer after resigning, or a revised offer from the new company — a clear-eyed comparison against why the person started looking, their minimum salary and must-haves, the questions to ask each side, and the words for accepting or declining without burning either bridge. Activates on "my company countered" / "they matched the offer" / "should I stay" / "revised offer".
 disable-model-invocation: true
 ---
 
@@ -12,7 +12,7 @@ the reasons and helps the person decide with the reasons.
 Look for the `Job Search AI Operating System — Profile` block: `./job-search-os-profile.md`
 (Project folder), then this Project's instructions, then a pasted block; and the
 **Offer Tracker** if it exists. If none, continue with what the person pastes and say
-the floor check is off.
+the salary check is off.
 
 ## Inputs
 
@@ -24,7 +24,7 @@ said to each side.
 ## Output
 
 1. **The two offers, side by side** — base, bonus, equity, title, remote, manager,
-   start or continuation, each against the floor and the must-haves. Numbers only
+   start or continuation, each against your minimum salary and the must-haves. Numbers only
    from what the person pasted.
 2. **The reasons test** — the three reasons they started looking, and whether the
    counter fixes any of them beyond the money (a raise doesn't change a manager, a
@@ -43,7 +43,7 @@ said to each side.
 
 ## Constraints
 
-- The floor and must-haves are checked first; a counter below the floor is named as
+- Your minimum salary and must-haves are checked first; a counter below your minimum salary is named as
   such.
 - No invented figures or tendencies about either company.
 - Never resign, accept, or decline for the person — words only.

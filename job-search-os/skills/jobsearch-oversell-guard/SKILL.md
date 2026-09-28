@@ -1,6 +1,6 @@
 ---
 name: jobsearch-oversell-guard
-description: Passive guard that fires on any resume, cover letter, profile rewrite, or interview answer. Appends a defensibility check — can every claim be backed with a specific example in the room — and strips the AI-register words that get applications flagged. Does not block.
+description: Passive guard that fires on any resume, cover letter, profile rewrite, or interview answer. Appends a check that every claim holds up — can every claim be backed with a specific example in the room — and strips the AI-register words that get applications flagged. Does not block.
 disable-model-invocation: false
 ---
 
@@ -26,7 +26,7 @@ Then append:
 ```markdown
 ---
 
-⚠️ **Defensibility check** (from the Job Search AI Operating System)
+⚠️ **Does every claim hold up?** (from the Job Search AI Operating System)
 
 Every claim above should survive "what exactly did you do?" in the room. Flagged for you to confirm:
 - [claim] — reads stronger than your record; suggested: [softer version]
@@ -35,7 +35,7 @@ Every claim above should survive "what exactly did you do?" in the room. Flagged
 An oversell that collapses in an interview costs more than a modest claim that holds. Tell me which to keep and I'll fix the rest.
 ```
 
-If nothing is flagged, append the single line: "Defensibility check: every claim
+If nothing is flagged, append the single line: "Every claim holds up: every claim
 traces to your record."
 
 ## Constraints

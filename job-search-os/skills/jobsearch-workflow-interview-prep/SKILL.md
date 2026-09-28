@@ -32,7 +32,7 @@ own stories.
 
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
-pasted in this chat. Present → use current role, target roles, salary floor,
+pasted in this chat. Present → use current role, target roles, minimum salary,
 positioning challenges, shipped artifacts, and voice samples; don't re-ask. Absent →
 say setup takes about two minutes; if declined, continue from what they paste and say
 so in the close.
@@ -100,7 +100,7 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
 4. **Your answers** — for each expected question, a tight answer in the person's voice
    (60–120 words), built from a named Story Bank entry: situation, what you did, what
    changed, in that order. The **compensation answer** for the recruiter screen: ask
-   for their range first; if pushed, state the floor as a floor, not a target; never
+   for their range first; if pushed, state your minimum salary as the lowest you'd take, not a target; never
    give salary history.
 5. **Getting ahead of the positioning challenge** — one prepared paragraph that
    addresses it before they ask, plus the one-line version.
@@ -117,9 +117,9 @@ task** covers the rest of this run; tracker updates always take a quick confirm.
 - **No invented stories:** every answer names its Story Bank entry or the resume line
   it comes from. A question with no matching story gets "no story yet — pick one of
   these three from your record" rather than a fabricated one.
-- **Defensibility:** every claim survives a follow-up question ("what exactly did you
+- **Every claim holds up:** every claim survives a follow-up question ("what exactly did you
   do?"); soften anything the person didn't personally do.
-- **Floor:** the compensation answer protects the floor and gives no history.
+- **Minimum salary:** the compensation answer holds to your minimum salary and gives no history.
 - **AI-register tells** removed; answers sound like the voice samples, spoken.
 - **Privacy:** nothing confidential about the current employer; competitors' names and
   figures only from public sources.

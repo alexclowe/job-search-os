@@ -1,6 +1,6 @@
 ---
 name: recruiter-screen-prep
-description: Prep for a recruiter screen — the five or six questions that always come up, tight answers in the person's voice, the compensation conversation script that protects the floor without giving salary history, and the red flags to listen for. Activates on "prep me for a recruiter screen" / "recruiter call tomorrow" / "phone screen prep".
+description: Prep for a recruiter screen — the five or six questions that always come up, tight answers in the person's voice, the compensation conversation script that holds to your minimum salary without giving salary history, and the red flags to listen for. Activates on "prep me for a recruiter screen" / "recruiter call tomorrow" / "phone screen prep".
 disable-model-invocation: true
 ---
 
@@ -11,7 +11,7 @@ time on you, and to find out what you cost. Prep for exactly that.
 
 Look for the `Job Search AI Operating System — Profile` block: `./job-search-os-profile.md`
 (Project folder), then this Project's instructions, then a pasted block. If none, say:
-"Run `jobsearch-setup-wizard` first — the compensation script needs your floor and the
+"Run `jobsearch-setup-wizard` first — the compensation script needs your minimum salary and the
 answers need your shipped artifacts." Continue only with pasted material.
 
 ## Inputs
@@ -36,12 +36,12 @@ range or process.
 3. **The compensation conversation** — the script:
    - First: ask for their range for the level ("What's the range you've budgeted for
      this?").
-   - If they insist: if the profile says share the floor, state it as a floor for base
+   - If they insist: if the profile says share your minimum salary, state it as the lowest base you'd take
      and say total comp depends on the package; otherwise give the market range the
-     person supplied, with the floor as the bottom, never a single number. Never give
+     person supplied, with your minimum salary as the bottom, never a single number. Never give
      salary history; if asked, "I'd rather talk about what this role pays than what
      the last one did."
-   - If their range is below the floor: say so kindly on the call and ask whether
+   - If their range is below your minimum salary: say so kindly on the call and ask whether
      there's flexibility at the level; if not, thank them and keep the door open.
 4. **Questions to ask them** — five: the range, why the role is open, the process and
    timeline, who the hiring manager is, what a strong first year looks like.
@@ -52,7 +52,7 @@ range or process.
 ## Constraints
 
 - No invented stories; every answer names its source.
-- The floor is protected in every branch of the comp script.
+- Your minimum salary holds in every branch of the comp script.
 - AI-register tells removed; spoken, not written, register.
 
 ## About this plugin

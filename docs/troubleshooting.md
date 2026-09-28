@@ -15,8 +15,8 @@ Open **Customize → Plugins → Yours** and check it's listed with its toggle o
 **Error: "zip cannot contain nested zip files."**
 You picked the documentation zip. Upload the **plugin** zip (the smaller one with `-claude-plugin` in the name).
 
-**It keeps asking for my salary floor.**
-That's the one field the wizard insists on — the floor guard can't run without it. If you genuinely don't want one, say "no floor" and it records that the guard is off; roles below market will not be flagged until you set one.
+**It keeps asking for my minimum salary.**
+That's the one field the wizard insists on — the salary guard can't run without it. If you genuinely don't want one, say "no minimum" and it records that the guard is off; roles below market will not be flagged until you set one.
 
 **Outputs don't use my background / sound generic.**
 Work inside the Project where you ran setup. If you skipped setup, say **set up my Job Search OS** — paste your resume and it fills in most of your profile in two minutes. If setup ran but drafts still feel thin, the fix is almost always more **shipped artifacts** and better **voice samples**: say "complete my profile".
@@ -48,13 +48,13 @@ Say **"open my command center"** from anywhere — it drops what was in progress
 
 ---
 
-## Claims, numbers & the floor
+## Claims, numbers & your minimum salary
 
 **It put something on my resume I didn't do, or a number I don't recognize.**
 It shouldn't — every figure, title, and date is meant to trace to your resume or profile, and anything without a source becomes `[confirm]`. If one slipped through, say "where did this come from?" and give the real figure or tell it to cut the line. Never send a draft with an unconfirmed claim.
 
-**It flagged a role as below my floor and I want to apply anyway.**
-Say "applying anyway." It marks the row "below floor — applying" on your board and carries on. The flag exists so a below-floor role doesn't quietly become your main option.
+**It flagged a role as below my minimum salary and I want to apply anyway.**
+Say "applying anyway." It marks the row "below minimum — applying" on your board and carries on. The flag exists so a role below your minimum doesn't quietly become your main option.
 
 **It won't tell me what the role "should" pay.**
 Correct — it organizes evidence you supply or that public search returns, each figure with a source and date, and it never invents a "typical" rate. Run `/comp-research` and give it what you have.

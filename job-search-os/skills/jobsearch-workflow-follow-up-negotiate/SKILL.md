@@ -1,13 +1,13 @@
 ---
 name: jobsearch-workflow-follow-up-negotiate
-description: Follow up and negotiate for the Job Search AI Operating System. Invoke when a job seeker says "follow up and negotiate", "write my thank-you note", "I haven't heard back", "I got an offer", "help me counter", "negotiate this offer", "should I take it", or pastes offer terms or an interview recap and asks what to send next. Drafts thank-you and follow-up notes on a cadence, reads an offer against the salary floor and market notes, builds a counter with the exact words, and keeps the Offer Tracker current. Never accepts or declines on its own.
+description: Follow up and negotiate for the Job Search AI Operating System. Invoke when a job seeker says "follow up and negotiate", "write my thank-you note", "I haven't heard back", "I got an offer", "help me counter", "negotiate this offer", "should I take it", or pastes offer terms or an interview recap and asks what to send next. Drafts thank-you and follow-up notes on a cadence, reads an offer against the minimum salary and market notes, builds a counter with the exact words, and keeps the Offer Tracker current. Never accepts or declines on its own.
 ---
 
 > **Naming rule (never break):** the product is the **Job Search AI Operating System**.
 > Use only this product name — never an older one. Never name profile or connection filenames in conversation.
 
 Everything after the interview: the note the same day, the nudge that isn't needy, and
-the counter that protects the floor without burning the offer.
+the counter that holds to your minimum salary without burning the offer.
 
 ## How this job delivers its outputs
 
@@ -31,10 +31,10 @@ the counter that protects the floor without burning the offer.
 
 Look for the career profile where every skill in this pack looks: the Project file
 `./job-search-os-profile.md`, then this Project's instructions, then a profile block
-pasted in this chat. Present → use salary floor, target roles, location and remote
+pasted in this chat. Present → use minimum salary, target roles, location and remote
 preference, must-haves (equity, remote, title, start date), and voice samples; don't
-re-ask. Absent → say setup takes about two minutes; without a floor, negotiation
-drafts are marked "no floor on file" and the person supplies the number.
+re-ask. Absent → say setup takes about two minutes; without a minimum salary, negotiation
+drafts are marked "no minimum salary on file" and the person supplies the number.
 
 ## Pre-flight 2 — Connections
 
@@ -86,15 +86,15 @@ take a quick confirm."
 3. **Offer worksheet (.xlsx)** — each component as the company stated it, the annual
    value where the person supplied the inputs (formulas, never estimates), total
    first-year and steady-state, the same for any competing offer side by side, and the
-   floor check: base vs. floor, total vs. the target on file. Any market figure the
+   salary check: base vs. your minimum salary, total vs. the target on file. Any market figure the
    person pastes goes in a "notes" column with its source; the worksheet never
    invents a market rate.
 4. **Counter script** — the exact words for the call and a matching email (120–200
    words): open with genuine interest, name the two priorities, anchor the ask on a
    specific number with a reason drawn from the role's scope or a competing offer
    (only if real), leave the other components alone, and close with a date. If the
-   offer is **below the floor**, say so plainly to the person first and give two
-   scripts: the counter that would bring it to the floor, and the walk-away that keeps
+   offer is **below your minimum salary**, say so plainly to the person first and give two
+   scripts: the counter that would bring it to your minimum salary, and the walk-away that keeps
    the door open. Include the questions to ask before countering (level calibration,
    bonus history, refresh policy, remote guarantee in writing).
 5. **Decision memo** (in chat, short) — the offer against the person's must-haves,
@@ -104,15 +104,15 @@ take a quick confirm."
 
 ## Compliance pass (inline — do not hand off)
 
-- **Floor:** an offer at or below the floor is called that in the first line of the
-  memo; no draft soft-pedals it or asks for less than the floor.
+- **Minimum salary:** an offer at or below your minimum salary is called that in the first line of the
+  memo; no draft soft-pedals it or asks for less than your minimum salary.
 - **No commitments:** no draft accepts, declines, resigns, or gives notice. Acceptance
   wording is produced only when the person says "write my acceptance".
 - **No invented figures:** market ranges appear only when the person supplies them
   with a source; equity value only from inputs the company gave. Pay-transparency
   rules vary by state and country — note "[verify your state's pay-range disclosure
   rule]" when relevant; never state one as fact.
-- **Defensibility:** every reason in a counter is true and specific.
+- **Every claim holds up:** every reason in a counter is true and specific.
 - **Privacy:** never share a competing offer's letter or exact terms unless the person
   chose to; no salary history.
 - **Professional advice:** equity taxation, separation timing against a current
@@ -135,7 +135,7 @@ Append one short **Before you send** checklist with only the checks that fired.
 List this Project's artifacts first, including ones from earlier conversations. Update
 the **Application Board** row: Last touch, Next action, Due. Update the **Offer
 Tracker** (create only if absent): Company · Role · Base · Bonus · Equity · Other ·
-Total · Floor check · Deadline · Status (Received → Countered → Accepted / Declined) ·
+Total · Salary check · Deadline · Status (Received → Countered → Accepted / Declined) ·
 Counter · Next. When an offer is accepted, offer to move every other open row to
 Closed with a decline note each.
 
@@ -143,6 +143,6 @@ Closed with a decline note each.
 
 Never narrate your own tooling in the close: nothing about files you could not open, workbooks you could not recalculate, pages you did not open, or what the sandbox lacks. State what was produced, what needs confirming, and where it landed.
 
-What was drafted and where, the floor verdict on any offer in one line, the
+What was drafted and where, your minimum salary verdict on any offer in one line, the
 `[confirm]` list, then "What's next?" — offer the command center. If they accepted,
 name `/thirty-sixty-ninety-plan` as the next thing to run.

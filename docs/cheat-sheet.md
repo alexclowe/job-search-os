@@ -2,7 +2,7 @@
 
 _One page. Print it or keep it open. Setup is in `START HERE`; each job is explained in [jobs-guide.md](./jobs-guide.md)._
 
-Work inside your Project so your career profile loads. The rules under everything: **the floor is the floor, nothing invented goes on a resume — and the decisions stay yours.**
+Work inside your Project so your career profile loads. The rules under everything: **never below your minimum salary, nothing invented goes on a resume — and the decisions stay yours.**
 
 ---
 
@@ -38,15 +38,15 @@ All of them: say "browse all skills" or type `/`.
 
 | Guard | Speaks up when |
 |---|---|
-| Floor | a role, message, or offer is at or below your salary floor — before you spend an hour on it |
-| Defensibility | a resume, letter, or answer claims more than your record — could you back it in the room? |
+| Minimum salary | a role, message, or offer is at or below your minimum salary — before you spend an hour on it |
+| Every claim holds up | a resume, letter, or answer claims more than your record — could you back it in the room? |
 | No invention | a figure, title, or date has no source in your profile or resume — it becomes `[confirm]` |
 
 ---
 
 ## The 5 things the system should never decide for you
 
-1. **Your salary floor** — it protects the number; you set it.
+1. **Your minimum salary** — it holds to the number; you set it.
 2. **Whether to take the offer** — the memo lays it against your must-haves; the yes is yours.
 3. **Anything with legal weight** — separation agreements, equity, non-competes, notice periods: it flags, a professional answers.
 4. **What to say about why you're leaving** — it uses the one line you approved, nothing more.

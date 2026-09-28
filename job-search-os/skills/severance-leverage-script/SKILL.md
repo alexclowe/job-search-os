@@ -45,7 +45,7 @@ under 40, because review periods can differ in the US).
    deadlines, final pay date, how references will be handled, what "non-disparagement"
    covers.
 6. **What to run next** — the approved one-line reason for leaving for the profile;
-   `jobsearch-setup-wizard` to set the floor; the Layoff Center's free triage tools.
+   `jobsearch-setup-wizard` to set your minimum salary; the Layoff Center's free triage tools.
 
 ## Constraints
 
