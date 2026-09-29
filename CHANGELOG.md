@@ -2,6 +2,15 @@
 
 All notable changes to the Job Search AI Operating System are recorded here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versions follow the plugin's `version` in `job-search-os/.claude-plugin/plugin.json`, and each version is also a [GitHub Release](https://github.com/alexclowe/job-search-os/releases) with the plugin zip and the documentation zip attached.
 
+## [1.4.1] — 2026-09-29
+
+The board check now runs every time.
+
+### Fixed
+- **Moves you make on the Application Board are always picked up.** In testing, a job sometimes said "nothing moved" while a move you'd made on the board was still waiting, or stopped to ask "apply it?". Every job that reads or changes the board now starts with the same board check: it reads the moves saved on the board, applies them without asking (they're your edits), saves the board once, and tells you in one line what it found, including "no moves saved since last time". It never reports what moved or counts stages before that check has run.
+- **If the board can't be written this time** (a permission prompt is declined, or the file is locked), the job still uses the stages you set and says so; the move is saved to the board on the next run.
+- The board check now also runs in interview prep, the people tracker, application questions, and the decline letter, which read or change board rows too.
+
 ## [1.4.0] — 2026-09-28
 
 Views you can see at a glance. Still five jobs.

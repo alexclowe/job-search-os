@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-0b1220?labelColor=ffb86b&color=0b1220"></a>
-  <a href="CHANGELOG.md"><img alt="Version 1.4.0" src="https://img.shields.io/badge/version-1.4.0-0b1220?labelColor=ffb86b&color=0b1220"></a>
+  <a href="CHANGELOG.md"><img alt="Version 1.4.1" src="https://img.shields.io/badge/version-1.4.1-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="docs/skill-catalog.md"><img alt="38 skills" src="https://img.shields.io/badge/skills-38-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="#requirements"><img alt="Works with Claude Pro, Max, Team" src="https://img.shields.io/badge/works%20with-Claude%20Pro%20%C2%B7%20Max%20%C2%B7%20Team-0b1220?labelColor=ffb86b&color=0b1220"></a>
   <a href="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/alexclowe/job-search-os/actions/workflows/validate.yml/badge.svg"></a>

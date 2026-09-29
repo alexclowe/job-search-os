@@ -40,6 +40,9 @@ That's by design — nothing touches your email, calendar, or files without your
 **A job didn't find my Application Board, Story Bank, Offer Tracker, or Weekly Search Log.**
 Open it from **Artifacts** in the sidebar to confirm it exists, then tell the job: "use the Application Board" (or whichever it is). Trackers named "SAMPLE — …" came from the sample run and are ignored on purpose.
 
+**I moved a card on the board, but the job doesn't seem to know.**
+Every job that reads the board starts with a one-line **Board check** that says what it found ("applied 1 move you made on the board…" or "no moves saved on the board since last time"). If that line is missing, or it says it can't read moves saved on the board, say "check the board for moves" and it runs the check again. If a move can't be saved to the board right then (a permission prompt was declined), the job still uses the stage you set and saves it to the board next time. You can always say "move [company] to [stage]" instead.
+
 **My scheduled run didn't show up in Gmail or on my calendar.**
 Scheduled runs prepare everything and save it for your review — they don't read your inbox or write to your email or calendar on their own. Open the conversation it created, review, and say "move these to Gmail" or "add my focus blocks."
 
