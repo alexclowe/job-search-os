@@ -92,6 +92,51 @@ Download `job-search-os-claude-plugin-v*.zip` from the [latest release](https://
 3. Pick **"Try it on a sample"** and choose a made-up job seeker: **Maria, a nurse moving to a clinic job (paid hourly)**, or **Sam, a data engineer going back to hands-on work (paid a salary)**. It tailors one application so you see the check card (is it real, the pay, the fit, who you know there), the resume and cover letter, the posting terms that made it in, and the Application Board row before you paste anything real.
 4. Optional: say **"connect my tools"** to link Gmail, Google Calendar, and Google Drive. Personal accounts only. Not connected, you get the same work copy-paste-ready with files saved in your Project.
 
+## How to use it, step by step
+
+Every screenshot below is the real plugin (v1.4) on claude.ai, running a made-up job seeker's search: Priya, a registered nurse paid hourly with a $44/hour minimum. Click any image for the full size. The same walkthrough, with the videos beside each step, is on [theaicareerlab.com/job-search-os](https://theaicareerlab.com/job-search-os).
+
+### 1. Install (about a minute)
+
+| | |
+|---|---|
+| <a href="assets/screens/01-install-add-menu.png"><img src="assets/screens/01-install-add-menu-800.png" alt="Customize, Plugins, the Add menu" width="100%"></a><br><sub>In the Claude app, open Customize → Plugins and click **Add**.</sub> | <a href="assets/screens/02-install-add-marketplace.png"><img src="assets/screens/02-install-add-marketplace-800.png" alt="Add marketplace dialog" width="100%"></a><br><sub>Choose **Add from a repository**.</sub> |
+| <a href="assets/screens/03-install-repository.png"><img src="assets/screens/03-install-repository-800.png" alt="Repository field with alexclowe/job-search-os and Sync" width="100%"></a><br><sub>Type `alexclowe/job-search-os` and click **Sync**. Leave Sync automatically on to get new releases.</sub> | <a href="assets/screens/04-install-discover-add.png"><img src="assets/screens/04-install-discover-add-800.png" alt="Discover with the Add button" width="100%"></a><br><sub>The plugin shows up under Discover. Click **Add**.</sub> |
+| <a href="assets/screens/05-install-plugin-details.png"><img src="assets/screens/05-install-plugin-details-800.png" alt="Installed plugin details: version 1.4, 38 skills" width="100%"></a><br><sub>Installed. It adds instructions for Claude and nothing else.</sub> | <a href="assets/screens/06-install-upload-zip.png"><img src="assets/screens/06-install-upload-zip-800.png" alt="Upload plugin with the zip chosen" width="100%"></a><br><sub>Or upload the zip from the free download: Add → Upload plugin → Upload.</sub> |
+
+### 2. Your first ten minutes
+
+| | |
+|---|---|
+| <a href="assets/screens/07-setup-paste.png"><img src="assets/screens/07-setup-paste-800.png" alt="Setup reading a resume and asking what it still needs" width="100%"></a><br><sub>In a Project, say **"set up my Job Search OS"** and attach your resume (or say "build my resume"). It reads your wins and pay type and asks only what it can't read.</sub> | <a href="assets/screens/08-setup-confirm.png"><img src="assets/screens/08-setup-confirm-800.png" alt="One reply setting minimum pay at $44 an hour" width="100%"></a><br><sub>One reply sets your minimum pay in your own pay type and saves your profile.</sub> |
+| <a href="assets/screens/09-command-center.png"><img src="assets/screens/09-command-center-800.png" alt="The command center with five jobs and Your Search This Week" width="100%"></a><br><sub>Your command center. Say **"open my command center"** any time. Not ready for real details? Pick **Try it on a sample**.</sub> | <a href="assets/screens/15-your-search-this-week.png"><img src="assets/screens/15-your-search-this-week-800.png" alt="Your Search This Week view" width="100%"></a><br><sub>Your Search This Week, at a glance.</sub> |
+
+### 3. Run a job
+
+**Tailor & apply.** Say *"Here's a posting. Tailor and apply."* One check card comes first, then you choose: tailor it, skip it, or get the intro first. Anything your record can't back up comes back as a question, never a line on your resume.
+
+| | |
+|---|---|
+| <a href="assets/screens/10-check-card.png"><img src="assets/screens/10-check-card-800.png" alt="The check card: real, pay, fit, who you know, and three choices" width="100%"></a><br><sub>Is it real, the pay, the fit, who you know.</sub> | <a href="assets/screens/11-tailored-output.png"><img src="assets/screens/11-tailored-output-800.png" alt="Did-you-do-this questions and the updated resume and cover letter" width="100%"></a><br><sub>It asks before it adds anything your record doesn't show.</sub> |
+
+**Work my inbox** and **Run my weekly review** keep the Application Board current. Move a card yourself and the next job you run picks it up.
+
+| | |
+|---|---|
+| <a href="assets/screens/12-application-board.png"><img src="assets/screens/12-application-board-800.png" alt="The Application Board with a column per stage" width="100%"></a><br><sub>Your Application Board.</sub> | <a href="assets/screens/13-search-funnel.png"><img src="assets/screens/13-search-funnel-800.png" alt="The Search Funnel by source" width="100%"></a><br><sub>Where your search stalls, by source.</sub> |
+
+**Prep for an interview.** Say *"Prep me for my recruiter screen with Brightline on Tuesday."* A sourced company brief first, then the likely questions, and a practice round in your profession's format.
+
+| | |
+|---|---|
+| <a href="assets/screens/18-company-brief.png"><img src="assets/screens/18-company-brief-800.png" alt="A company brief that left its facts blank for a made-up employer" width="100%"></a><br><sub>Company briefs use sources or say nothing.</sub> | <a href="assets/screens/16-practice-round.png"><img src="assets/screens/16-practice-round-800.png" alt="The Practice Round view with a timer and feedback" width="100%"></a><br><sub>Practice out loud, one question at a time.</sub> |
+| <a href="assets/screens/19-nurse-guide-in-use.png"><img src="assets/screens/19-nurse-guide-in-use-800.png" alt="A nurse's mock interview with a clinic scenario and five-line feedback" width="100%"></a><br><sub>A nurse gets a clinic scenario. 108 professions have their own guide.</sub> | <a href="assets/screens/17-people.png"><img src="assets/screens/17-people-800.png" alt="The People board from a LinkedIn export" width="100%"></a><br><sub>Who you know at the companies you're applying to. It never messages anyone.</sub> |
+
+**Follow up & negotiate.** Say *"I got an offer. Help me counter."* Offers side by side in your pay type, then a counter with the exact words. It never accepts or declines for you.
+
+<a href="assets/screens/14-offer-comparison.png"><img src="assets/screens/14-offer-comparison-800.png" alt="Two hourly offers side by side" width="100%"></a>
+<sub>Two offers, side by side, hour for hour. "Not stated" means ask.</sub>
+
 ## What it does
 
 Say **"open my command center"** (or `/jobsearch-os`) and pick a job. Each one runs start to finish and files its results on a living tracker.
@@ -132,7 +177,7 @@ Every view is built from a fixed template that ships inside the plugin, so it lo
 
 <p align="center"><img src="assets/how-it-works.svg" alt="You talk to the command center; it runs one of five jobs; jobs draft into your connected tools behind approval and write to living trackers; five guardrails surround everything" width="100%"></p>
 
-The plugin is 30 markdown skill files and one manifest. There is no server, no scraper, and no code of its own; Claude reads the skill for the job you asked for, your profile, and the trackers, and does the work inside your account.
+The plugin is 38 markdown skill files and one manifest. There is no server, no scraper, and no code of its own; Claude reads the skill for the job you asked for, your profile, and the trackers, and does the work inside your account.
 
 ## Profession archetypes
 
